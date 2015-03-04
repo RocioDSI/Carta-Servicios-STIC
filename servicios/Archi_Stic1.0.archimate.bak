@@ -6,12 +6,11 @@
     </element>
     <element xsi:type="archimate:BusinessRole" id="57d55f0c" name="Personal Docente"/>
     <element xsi:type="archimate:BusinessService" id="14636a2f" name="Soporte a Aulas multimedia">
-      <property key="Descripcion"/>
+      <property key="Descripcion" value="Esta es mi descripcion4"/>
     </element>
     <element xsi:type="archimate:BusinessRole" id="f653d8da" name="Personal Investigación"/>
     <element xsi:type="archimate:BusinessService" id="3430a7f9" name="Alojamiento de Infraestructuras">
       <property key="Descripcion" value="Esta es mi descripcion"/>
-      <property key="Valor nulo"/>
     </element>
     <element xsi:type="archimate:BusinessService" id="c5c175fd" name="Supercomputación">
       <property key="Descripcion" value="Esta es mi descripcion2"/>

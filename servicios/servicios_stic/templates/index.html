@@ -1,0 +1,18 @@
+{% extends "plantilla.html" %}
+
+{% block contenido %}
+{% block titulo %}
+	<li class="active">Universidad de La Laguna - Carta de Servicios del STIC</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+				 <li class="active"><a href="{% url "servicios_stic.views.soporte_tic_a_la_investigacion" %}"><h1 class="main-title">Soporte TIC a la Investigación</h1></a></li>
+				 <li class="active"><a href="{% url "servicios_stic.views.soporte_tic_a_la_docencia" %}"><h1 class="main-title">Soporte TIC a la Docencia</h1></a></li>
+				 <li class="active"><a href="{% url "servicios_stic.views.soporte_tic_a_la_gestion" %}"><h1 class="main-title">Soporte TIC a la gestión</h1></a></li>
+			</div>
+{% endblock %}
+{% endblock %}

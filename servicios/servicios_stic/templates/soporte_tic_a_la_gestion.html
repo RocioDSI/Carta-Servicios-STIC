@@ -1,0 +1,21 @@
+ 
+{% extends "menu.html" %}
+
+{% block contenido %}
+{% block titulo %}
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - Soporte TIC a la gestión</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title">Gestión Académica</h1> 
+					<p> ID: 4998c128 </p><p> Propiedad1: Esta es la primera propiedad del servicio Gestión académica </p>
+       <p> Propiedad2: Esta es la segunda propiedad del servicio Gestión académica </p>
+       <p> Propiedad3: Esta es la tercera propiedad del servicio Gestión académica </p>
+       		</div>
+{% endblock %}
+{% endblock %}  
+  

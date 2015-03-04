@@ -1,0 +1,18 @@
+{% extends "plantilla.html" %}
+
+{% block menu %}
+                       <div class="panel panel-default panel-ull color-336699">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-file"></i> Servicios</h3>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="nav nav-pills nav-stacked">
+                                 <li><a href="{% url "servicios_stic.views.soporte_tic_a_la_investigacion" %}">Soporte TIC a la Investigación</a></li>
+                                 <li><a href="{% url "servicios_stic.views.soporte_tic_a_la_docencia" %}">Soporte TIC a la Docencia</a></li>
+                                 <li><a href="{% url "servicios_stic.views.soporte_tic_a_la_gestion" %}">Soporte TIC a la gestión</a></li>
+                                </ul>
+                            </div>
+                        </div>
+{%endblock%}
+{%block contenido%}{%endblock%}
+
