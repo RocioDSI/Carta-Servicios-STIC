@@ -20,6 +20,7 @@
     <element xsi:type="archimate:BusinessService" id="185fb28a" name="Calendarios Colaborativos">
       <property key="Descripción" value="Descripcion123"/>
     </element>
+    <element xsi:type="archimate:BusinessRole" id="eaccde2a" name="Estudiante"/>
   </folder>
   <folder name="Application" id="6ee50dd0" type="application"/>
   <folder name="Technology" id="383ed331" type="technology"/>
@@ -36,7 +37,7 @@
   <folder name="Views" id="082fba3d" type="diagrams">
     <element xsi:type="archimate:ArchimateDiagramModel" id="1ee75722" name="Carta de servicios">
       <child xsi:type="archimate:Group" id="fd5a95c7" name="Soporte TIC a la Investigación">
-        <bounds x="264" y="156" width="277" height="181"/>
+        <bounds x="264" y="156" width="349" height="181"/>
         <child xsi:type="archimate:DiagramObject" id="7ba46f01" textAlignment="2" targetConnections="8852be48" archimateElement="3430a7f9">
           <bounds x="60" y="36" width="145" height="37"/>
         </child>
@@ -71,7 +72,7 @@
         <bounds x="96" y="564" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:Group" id="68821cb1" name="Soporte TIC a la Gestión">
-        <bounds x="696" y="84" width="400" height="140"/>
+        <bounds x="696" y="84" width="400" height="217"/>
         <child xsi:type="archimate:DiagramObject" id="fc87775f" textAlignment="2" archimateElement="185fb28a">
           <bounds x="108" y="48" width="120" height="55"/>
         </child>
