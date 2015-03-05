@@ -77,6 +77,9 @@
           <bounds x="108" y="48" width="120" height="55"/>
         </child>
       </child>
+      <child xsi:type="archimate:DiagramObject" id="39972710" textAlignment="2" archimateElement="eaccde2a">
+        <bounds x="804" y="432" width="120" height="55"/>
+      </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="de88d321" name="Criticidad">
       <child xsi:type="archimate:Group" id="2810a262" name="Servicios Críticos" fillColor="#ef2929">

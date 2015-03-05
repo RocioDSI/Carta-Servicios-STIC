@@ -59,6 +59,10 @@ def cargaBusinessService():
       else:
        valor.append("Campo Vacío")
     criticidad = ServiceCritic(id_servicio)
+    for i in BusinessServiceArray:
+        if (i[0] == id_servicio or i[1] == nombre_servicio):
+         print("ERROR: Nombre de SERVICIO o ID repetido en el modelo")
+         return
     BusinessServiceArray.append([id_servicio,nombre_servicio, clave, valor, criticidad])
     #print("Servicio: " + nombre_servicio + " Id: " + id_servicio)
     
@@ -68,6 +72,10 @@ def cargaBusinessRole():
    if(nodo.attributes.get("xsi:type").value == "archimate:BusinessRole"):
     nombre_rol = nodo.attributes.get("name").value
     id_roles = nodo.attributes.get("id").value
+    for i in BusinessRoleArray:
+      if (i[0] == id_roles or i[1] == nombre_rol):
+         print("ERROR: Nombre de ROL o ID repetido en el modelo")
+         return
     BusinessRoleArray.append([id_roles,nombre_rol])
     #print("Rol: " + nombre_rol + " Id: " + id_roles)
     
@@ -90,6 +98,10 @@ def cargaGroup():
       if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
         nombre_grupo = hijo.attributes.get("name").value
         id_grupo = hijo.attributes.get("id").value
+        for i in GroupArray:
+         if (i[0] == id_grupo or i[1] == nombre_grupo):
+          print("ERROR: Nombre de GRUPO DE SERVICIOS o ID repetido en el modelo")
+          return
         #print("Grupo: " + nombre_grupo + " Id: " + id_grupo)
         GroupArray.append([id_grupo,nombre_grupo])
 
