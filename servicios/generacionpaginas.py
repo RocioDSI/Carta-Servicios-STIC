@@ -39,7 +39,8 @@ def generahtmlgrupo(nombreGrupo):
   for i in funcionesxml.getGroupServices(funcionesxml.getGroupID(nombreGrupo)):
    htmlstrii = """
 					<h1 class="main-title">""" + funcionesxml.getBusinessServiceName(str(i)) + """</h1> 
-					<p> ID: """ + i + """ </p>"""
+					<p> ID: """ + i + """ </p>
+					<p> Criticidad: """+ str(funcionesxml.ServiceCritic(i)) +"""</p>"""
    htmlstr += htmlstrii
  
    for k in range(0, len(funcionesxml.getServiceProperties(i)[0])):
