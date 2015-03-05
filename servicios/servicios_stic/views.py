@@ -33,7 +33,7 @@ def soporte_tic_a_la_docencia(request):
 def soporte_tic_a_la_gestion(request):
  funcionesxml.inicializacion()
  name = []
- servicios = funcionesxml.getGroupServices("2ce262c7")
+ servicios = funcionesxml.getGroupServices("68821cb1")
  for i in servicios:
   name.append(funcionesxml.getBusinessServiceName(i))
  response = render_to_response('soporte_tic_a_la_gestion.html',{'servicio': name })

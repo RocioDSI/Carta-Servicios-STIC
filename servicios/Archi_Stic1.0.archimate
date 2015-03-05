@@ -17,10 +17,8 @@
     </element>
     <element xsi:type="archimate:BusinessRole" id="6a697997" name="Estudiante"/>
     <element xsi:type="archimate:BusinessRole" id="6cdd409f" name="PAS"/>
-    <element xsi:type="archimate:BusinessService" id="4998c128" name="Gestión Académica">
-      <property key="Propiedad1" value="Esta es la primera propiedad del servicio Gestión académica"/>
-      <property key="Propiedad2" value="Esta es la segunda propiedad del servicio Gestión académica"/>
-      <property key="Propiedad3" value="Esta es la tercera propiedad del servicio Gestión académica"/>
+    <element xsi:type="archimate:BusinessService" id="185fb28a" name="Calendarios Colaborativos">
+      <property key="Descripción" value="Descripcion123"/>
     </element>
   </folder>
   <folder name="Application" id="6ee50dd0" type="application"/>
@@ -70,14 +68,42 @@
         <sourceConnection xsi:type="archimate:Connection" id="9a97e1e4" source="9fdf097a" target="5da008ec" relationship="596fd192"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="bf23b60e" textAlignment="2" archimateElement="6cdd409f">
-        <bounds x="132" y="612" width="120" height="55"/>
+        <bounds x="96" y="564" width="120" height="55"/>
       </child>
-      <child xsi:type="archimate:Group" id="2ce262c7" name="Soporte TIC a la gestión">
-        <bounds x="564" y="336" width="313" height="140"/>
-        <child xsi:type="archimate:DiagramObject" id="56e86538" textAlignment="2" archimateElement="4998c128">
-          <bounds x="97" y="60" width="120" height="55"/>
+      <child xsi:type="archimate:Group" id="68821cb1" name="Soporte TIC a la Gestión">
+        <bounds x="696" y="84" width="400" height="140"/>
+        <child xsi:type="archimate:DiagramObject" id="fc87775f" textAlignment="2" archimateElement="185fb28a">
+          <bounds x="108" y="48" width="120" height="55"/>
+        </child>
+      </child>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" id="de88d321" name="Criticidad">
+      <child xsi:type="archimate:Group" id="2810a262" name="Servicios Críticos" fillColor="#ef2929">
+        <bounds x="744" y="132" width="337" height="397"/>
+        <child xsi:type="archimate:DiagramObject" id="79670e2b" textAlignment="2" archimateElement="5cc18672">
+          <bounds x="96" y="60" width="163" height="32"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="85be4395" textAlignment="2" archimateElement="3430a7f9">
+          <bounds x="96" y="108" width="163" height="37"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Group" id="94f5f712" name="Servicios Normales" fillColor="#fce94f">
+        <bounds x="420" y="133" width="317" height="396"/>
+        <child xsi:type="archimate:DiagramObject" id="9de0eb9f" textAlignment="2" archimateElement="c5c175fd">
+          <bounds x="72" y="72" width="157" height="25"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Group" id="23956b5a" name="Servicios Poco Críticos" fillColor="#8ae234">
+        <bounds x="96" y="133" width="316" height="396"/>
+        <child xsi:type="archimate:DiagramObject" id="9aef947d" textAlignment="2" archimateElement="185fb28a">
+          <bounds x="36" y="72" width="205" height="37"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="49e627c1" textAlignment="2" archimateElement="14636a2f">
+          <bounds x="36" y="120" width="205" height="37"/>
         </child>
       </child>
     </element>
   </folder>
+  <property key="Vista Grupos de Servicio" value="Carta de servicios"/>
+  <property key="Vista Criticidad" value="Criticidad"/>
 </archimate:model>

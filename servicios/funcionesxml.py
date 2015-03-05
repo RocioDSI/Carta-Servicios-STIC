@@ -41,6 +41,7 @@ BusinessRoleArray =[]
 AssociationRelationshipArray = []
 GroupArray = []
 ServicesPerGroupArray = []
+ViewsNameArray = []
 
 #Almacenamiento de servicios
 def cargaBusinessService():
@@ -57,7 +58,8 @@ def cargaBusinessService():
        valor.append(hijo.attributes.get("value").value)     
       else:
        valor.append("Campo Vacío")
-    BusinessServiceArray.append([id_servicio,nombre_servicio, clave, valor])
+    criticidad = ServiceCritic(id_servicio)
+    BusinessServiceArray.append([id_servicio,nombre_servicio, clave, valor, criticidad])
     #print("Servicio: " + nombre_servicio + " Id: " + id_servicio)
     
 #Almacenamiento de roles
@@ -82,7 +84,7 @@ def cargaAssociationRelationship():
 #Almacenamiento de los grupos
 def cargaGroup():
   for nodo in lista:  
-   if(nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel"):
+   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and nodo.attributes.get("name").value == "Carta de servicios"):
     listahijos = nodo.getElementsByTagName("child")
     for hijo in listahijos:
       if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
@@ -104,6 +106,20 @@ def BusinessServicePorGroup():
        if (nieto.attributes.get("xsi:type").value == "archimate:DiagramObject"):
         id_nieto = nieto.attributes.get("archimateElement").value
         ServicesPerGroupArray.append([id_grupo,id_nieto])
+
+#Almacenamiento de Criticidad de Servicio
+def ServiceCritic(serviceID):
+  for nodo in lista:
+   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and (str(nodo.attributes.get("name").value)) == "Criticidad"):
+    listahijos = nodo.getElementsByTagName("child")
+    for hijo in listahijos:
+      if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
+       listanietos = hijo.getElementsByTagName("child")
+       for nieto in listanietos:
+        id_nieto = nieto.attributes.get("archimateElement").value
+        if(serviceID == id_nieto):
+         return hijo.attributes.get("name").value
+
 	    
 # Obtener el grupo de un servicio a partir del identificador de servicio
 def getServiceGroup(serviceID):
@@ -146,7 +162,7 @@ def getRoleServices(roleID):
     elif (roleID == i[2]):
       print("\n"+ str(j)+") " + str(getBusinessServiceName(i[1])))
       j = j+1
-      
+
 # Visualizacion de Grupos
 def showGroups():
   j = 1
