@@ -1,0 +1,8 @@
+*.pyc
+*~
+*.html
+*.bak
+*.swp
+!*/plantilla.html
+*/views.py
+*/urls.py
