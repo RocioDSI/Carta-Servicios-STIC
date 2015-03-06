@@ -62,7 +62,7 @@ sortorder: 2
         <li class="active">4. Clonar el repositorio.</li>
     </ul>
     <div class="content">
-        <pre>git clone git@github.com:RocioDSI/Carta-Servicios-STIC.git</pre>
+        <pre>git clone https://github.com/RocioDSI/Carta-Servicios-STIC.git</pre>
     </div>
 </div>
 
