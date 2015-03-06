@@ -283,7 +283,8 @@ def service_nogroup_test():
     break
   if (k == 0):
    print " \n [!] WARNING [!] El Servicio "+ i[1] + " no pertenece a ningún Grupo de Servicios \n"
-   raise SystemExit(0)
+
+   
 def service_nocriticgroup_test():
  for i in BusinessServiceArray:
   k = 0
@@ -293,7 +294,7 @@ def service_nocriticgroup_test():
     break
   if (k == 0):
    print " \n [!] WARNING [!] El Servicio "+ i[1] + " no pertenece a ningún Grupo de Criticidad \n"
-   raise SystemExit(0)
+
 
 def service_multiplegroup_test():
  for i in BusinessServiceArray:
@@ -306,7 +307,7 @@ def service_multiplegroup_test():
     break
   if (k == 2):
    print " \n [!] WARNING [!] El Servicio "+ i[1] + " pertenece a varios Grupos de Servicios \n"
-   raise SystemExit(0)
+
 
 def service_multiplecriticgroup_test():
  for i in BusinessServiceArray:
@@ -319,6 +320,6 @@ def service_multiplecriticgroup_test():
     break
   if (k == 2):
    print " \n [!] WARNING [!] El Servicio "+ i[1] + " pertenece a varios Grupos de Criticidad \n"
-   raise SystemExit(0)
+
 	
 
