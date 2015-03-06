@@ -25,7 +25,13 @@
       <element xsi:type="archimate:BusinessRole" id="556d30a2" name="PAS"/>
       <element xsi:type="archimate:BusinessRole" id="9ae1bbf0" name="PDI"/>
     </folder>
-    <element xsi:type="archimate:BusinessRole" id="7d31c983" name="Rol"/>
+    <folder name="Metamodelo" id="5c8dbf67">
+      <element xsi:type="archimate:BusinessRole" id="7d31c983" name="Rol"/>
+      <element xsi:type="archimate:BusinessService" id="b65f8bb5" name="Servicio"/>
+      <element xsi:type="archimate:BusinessService" id="1f312631" name="Servicio 1"/>
+      <element xsi:type="archimate:BusinessService" id="d3c674ca" name="Servicio 2"/>
+      <element xsi:type="archimate:BusinessService" id="ccac76fa" name="Servicio 3"/>
+    </folder>
   </folder>
   <folder name="Application" id="6ee50dd0" type="application"/>
   <folder name="Technology" id="383ed331" type="technology"/>
@@ -147,19 +153,63 @@
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="18c265bd" name="Metamodelo">
       <child xsi:type="archimate:Note" id="797e034a" textAlignment="1">
-        <bounds x="216" y="60" width="185" height="80"/>
+        <bounds x="144" y="24" width="185" height="80"/>
+        <sourceConnection id="b0d59801" source="797e034a" target="ce852395"/>
+        <content>La figura Business Service es utilizada para representar los Servicios ofertados. Por ejemplo: Docencia Virtual o Supercomputación</content>
       </child>
       <child xsi:type="archimate:DiagramObject" id="1bb0fece" textAlignment="2" archimateElement="7d31c983">
-        <bounds x="48" y="180" width="120" height="55"/>
+        <bounds x="12" y="132" width="120" height="55"/>
+        <sourceConnection id="b3feec73" source="1bb0fece" target="74964603"/>
       </child>
       <child xsi:type="archimate:Group" id="dcb4875e" name="Grupo">
-        <bounds x="43" y="288" width="129" height="121"/>
+        <bounds x="12" y="216" width="120" height="94"/>
+        <sourceConnection id="dcca3db9" source="dcb4875e" target="6bfd6843"/>
       </child>
-      <child xsi:type="archimate:Note" id="74964603" textAlignment="1">
-        <bounds x="216" y="168" width="185" height="80"/>
+      <child xsi:type="archimate:Note" id="74964603" textAlignment="1" targetConnections="b3feec73">
+        <bounds x="144" y="120" width="185" height="67"/>
+        <content>La figura Business Role es utilizada para mostrar los roles de los usuarios. Por ejemplo, Estudiantes o PDI</content>
       </child>
-      <child xsi:type="archimate:Note" id="6bfd6843" textAlignment="1">
-        <bounds x="216" y="309" width="185" height="80"/>
+      <child xsi:type="archimate:Note" id="6bfd6843" textAlignment="1" targetConnections="dcca3db9">
+        <bounds x="144" y="240" width="185" height="50"/>
+        <content>La figura Group se utiliza para realizar agrupaciones de Servicios, Roles, o ambas.</content>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="ce852395" textAlignment="2" targetConnections="b0d59801" archimateElement="b65f8bb5">
+        <bounds x="12" y="36" width="120" height="36"/>
+      </child>
+      <child xsi:type="archimate:Group" id="de139f27" name="Grupo" targetConnections="7dd42792">
+        <bounds x="360" y="69" width="217" height="181"/>
+        <child xsi:type="archimate:DiagramObject" id="acf0cbcb" textAlignment="2" archimateElement="1f312631">
+          <bounds x="12" y="36" width="120" height="35"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="7a384d57" textAlignment="2" archimateElement="d3c674ca">
+          <bounds x="12" y="84" width="120" height="36"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="1df868bf" textAlignment="2" archimateElement="ccac76fa">
+          <bounds x="12" y="132" width="120" height="37"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Note" id="d216ad0a" textAlignment="1">
+        <bounds x="600" y="84" width="185" height="90"/>
+        <sourceConnection id="7dd42792" source="d216ad0a" target="de139f27"/>
+        <content>Un Group se puede utilizar para agrupar varios Business Service, que comparten alguna caracteristica, como podría ser su nivel de Criticidad
+</content>
+      </child>
+      <child xsi:type="archimate:Group" id="f0dbc46e" name="Grupo">
+        <bounds x="360" y="276" width="217" height="181"/>
+        <sourceConnection id="03619050" source="f0dbc46e" target="b4f9c3f5"/>
+        <child xsi:type="archimate:DiagramObject" id="9fc8af01" textAlignment="2" archimateElement="1f312631">
+          <bounds x="36" y="84" width="120" height="33"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="0e7aa524" textAlignment="2" archimateElement="d3c674ca">
+          <bounds x="36" y="132" width="120" height="31"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="b836e343" textAlignment="2" archimateElement="7d31c983">
+          <bounds x="36" y="36" width="120" height="31"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Note" id="b4f9c3f5" textAlignment="1" targetConnections="03619050">
+        <bounds x="612" y="307" width="185" height="120"/>
+        <content>En un Group, pueden aparecer Business Role y Business Service, lo que permite asociar grandes cantidades de Roles y Servicios de una forma más visual que a través de Relaciones</content>
       </child>
     </element>
   </folder>
