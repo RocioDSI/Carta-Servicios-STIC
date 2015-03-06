@@ -42,28 +42,29 @@
   <folder name="Views" id="082fba3d" type="diagrams">
     <element xsi:type="archimate:ArchimateDiagramModel" id="1ee75722" name="Carta de servicios">
       <child xsi:type="archimate:Group" id="fd5a95c7" name="Soporte TIC a la Investigación">
-        <bounds x="264" y="156" width="373" height="181"/>
+        <bounds x="240" y="177" width="373" height="175"/>
         <child xsi:type="archimate:DiagramObject" id="7ba46f01" textAlignment="2" archimateElement="3430a7f9">
-          <bounds x="60" y="36" width="145" height="37"/>
+          <bounds x="12" y="48" width="145" height="37"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="d79b67ba" textAlignment="2" archimateElement="c5c175fd">
-          <bounds x="56" y="84" width="153" height="55"/>
+          <bounds x="12" y="96" width="173" height="25"/>
         </child>
       </child>
       <child xsi:type="archimate:Group" id="e589b1c3" name="Soporte TIC a la Docencia">
-        <bounds x="264" y="384" width="337" height="181"/>
-        <child xsi:type="archimate:DiagramObject" id="5da008ec" textAlignment="2" archimateElement="5cc18672">
-          <bounds x="36" y="36" width="120" height="49"/>
-        </child>
+        <bounds x="-96" y="180" width="325" height="169"/>
         <child xsi:type="archimate:DiagramObject" id="f8d26ba5" textAlignment="2" archimateElement="14636a2f">
-          <bounds x="36" y="108" width="120" height="55"/>
+          <bounds x="12" y="84" width="157" height="37"/>
         </child>
       </child>
       <child xsi:type="archimate:Group" id="68821cb1" name="Soporte TIC a la Gestión">
-        <bounds x="648" y="156" width="400" height="181"/>
+        <bounds x="624" y="176" width="301" height="178"/>
         <child xsi:type="archimate:DiagramObject" id="fc87775f" textAlignment="2" archimateElement="185fb28a">
-          <bounds x="108" y="48" width="120" height="55"/>
+          <bounds x="12" y="36" width="120" height="37"/>
         </child>
+      </child>
+      <child xsi:type="archimate:Note" id="20d6523d" font="1|DejaVu Sans|24.0|1|GTK|1|" textAlignment="1" borderType="2">
+        <bounds x="216" y="96" width="421" height="44"/>
+        <content>GRUPOS DE SERVICIOS</content>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="de88d321" name="Criticidad">
@@ -91,10 +92,14 @@
           <bounds x="36" y="120" width="205" height="37"/>
         </child>
       </child>
+      <child xsi:type="archimate:Note" id="25b4a6c6" font="1|DejaVu Sans|24.0|1|GTK|1|" textAlignment="1" borderType="2">
+        <bounds x="348" y="72" width="445" height="44"/>
+        <content>GRUPOS DE CRITICIDAD</content>
+      </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="0c773fcd" name="Roles">
       <child xsi:type="archimate:Group" id="8e132732" name="Alumnos" fillColor="#e9b96e">
-        <bounds x="228" y="48" width="217" height="325"/>
+        <bounds x="252" y="144" width="217" height="325"/>
         <child xsi:type="archimate:DiagramObject" id="af75d503" textAlignment="2" archimateElement="edf7d8ea">
           <bounds x="12" y="24" width="121" height="25"/>
         </child>
@@ -109,7 +114,7 @@
         </child>
       </child>
       <child xsi:type="archimate:Group" id="ab9ab0df" name="PAS" fillColor="#e9b96e">
-        <bounds x="456" y="48" width="193" height="325"/>
+        <bounds x="480" y="144" width="193" height="325"/>
         <child xsi:type="archimate:DiagramObject" id="7da2ebd1" textAlignment="2" archimateElement="556d30a2">
           <bounds x="12" y="24" width="157" height="25"/>
         </child>
@@ -118,7 +123,7 @@
         </child>
       </child>
       <child xsi:type="archimate:Group" id="0159aabe" name="PDI" fillColor="#e9b96e">
-        <bounds y="48" width="205" height="325"/>
+        <bounds x="36" y="144" width="205" height="325"/>
         <child xsi:type="archimate:DiagramObject" id="30bb1909" textAlignment="2" archimateElement="5cc18672">
           <bounds x="24" y="123" width="145" height="25"/>
         </child>
@@ -133,7 +138,7 @@
         </child>
       </child>
       <child xsi:type="archimate:Group" id="15e890fb" name="ExAlumnos" fillColor="#e9b96e">
-        <bounds x="840" y="48" width="205" height="325"/>
+        <bounds x="864" y="144" width="205" height="325"/>
         <child xsi:type="archimate:DiagramObject" id="349f8afc" textAlignment="2" archimateElement="5b8631bd">
           <bounds x="12" y="24" width="120" height="23"/>
         </child>
@@ -142,7 +147,7 @@
         </child>
       </child>
       <child xsi:type="archimate:Group" id="ad712805" name="AAAAULL" fillColor="#e9b96e">
-        <bounds x="660" y="48" width="169" height="325"/>
+        <bounds x="684" y="144" width="169" height="325"/>
         <child xsi:type="archimate:DiagramObject" id="0771fd3a" textAlignment="2" archimateElement="6c2f82dd">
           <bounds x="12" y="24" width="120" height="25"/>
         </child>
@@ -150,34 +155,38 @@
           <bounds x="12" y="60" width="120" height="55"/>
         </child>
       </child>
+      <child xsi:type="archimate:Note" id="18c35600" font="1|DejaVu Sans|24.0|1|GTK|1|" textAlignment="1" borderType="2">
+        <bounds x="228" y="60" width="927" height="44"/>
+        <content>SERVICIOS OFERTADOS A CADA ROL</content>
+      </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="18c265bd" name="Metamodelo">
       <child xsi:type="archimate:Note" id="797e034a" textAlignment="1">
-        <bounds x="156" y="192" width="185" height="80"/>
+        <bounds x="246" y="108" width="185" height="80"/>
         <sourceConnection id="b0d59801" source="797e034a" target="ce852395"/>
         <content>La figura Business Service es utilizada para representar los Servicios ofertados. Por ejemplo: Docencia Virtual o Supercomputación</content>
       </child>
       <child xsi:type="archimate:DiagramObject" id="1bb0fece" textAlignment="2" archimateElement="7d31c983">
-        <bounds x="24" y="300" width="120" height="55"/>
+        <bounds x="114" y="216" width="120" height="55"/>
         <sourceConnection id="b3feec73" source="1bb0fece" target="74964603"/>
       </child>
       <child xsi:type="archimate:Group" id="dcb4875e" name="Grupo">
-        <bounds x="24" y="384" width="120" height="94"/>
+        <bounds x="114" y="300" width="120" height="94"/>
         <sourceConnection id="dcca3db9" source="dcb4875e" target="6bfd6843"/>
       </child>
       <child xsi:type="archimate:Note" id="74964603" textAlignment="1" targetConnections="b3feec73">
-        <bounds x="156" y="288" width="185" height="67"/>
+        <bounds x="246" y="204" width="185" height="67"/>
         <content>La figura Business Role es utilizada para mostrar los roles de los usuarios. Por ejemplo, Estudiantes o PDI</content>
       </child>
       <child xsi:type="archimate:Note" id="6bfd6843" textAlignment="1" targetConnections="dcca3db9">
-        <bounds x="156" y="408" width="185" height="50"/>
+        <bounds x="246" y="324" width="185" height="50"/>
         <content>La figura Group se utiliza para realizar agrupaciones de Servicios, Roles, o ambas.</content>
       </child>
       <child xsi:type="archimate:DiagramObject" id="ce852395" textAlignment="2" targetConnections="b0d59801" archimateElement="b65f8bb5">
-        <bounds x="24" y="204" width="120" height="36"/>
+        <bounds x="114" y="120" width="120" height="36"/>
       </child>
       <child xsi:type="archimate:Group" id="de139f27" name="Grupo" targetConnections="7dd42792">
-        <bounds x="360" y="192" width="217" height="181"/>
+        <bounds x="450" y="108" width="217" height="181"/>
         <child xsi:type="archimate:DiagramObject" id="acf0cbcb" textAlignment="2" archimateElement="1f312631">
           <bounds x="12" y="36" width="120" height="35"/>
         </child>
@@ -189,13 +198,13 @@
         </child>
       </child>
       <child xsi:type="archimate:Note" id="d216ad0a" textAlignment="1">
-        <bounds x="600" y="207" width="185" height="90"/>
+        <bounds x="690" y="123" width="185" height="90"/>
         <sourceConnection id="7dd42792" source="d216ad0a" target="de139f27"/>
         <content>Un Group se puede utilizar para agrupar varios Business Service, que comparten alguna caracteristica, como podría ser su nivel de Criticidad
 </content>
       </child>
       <child xsi:type="archimate:Group" id="f0dbc46e" name="Grupo">
-        <bounds x="360" y="399" width="217" height="181"/>
+        <bounds x="450" y="315" width="217" height="181"/>
         <sourceConnection id="03619050" source="f0dbc46e" target="b4f9c3f5"/>
         <child xsi:type="archimate:DiagramObject" id="9fc8af01" textAlignment="2" archimateElement="1f312631">
           <bounds x="36" y="84" width="120" height="33"/>
@@ -208,12 +217,12 @@
         </child>
       </child>
       <child xsi:type="archimate:Note" id="b4f9c3f5" textAlignment="1" targetConnections="03619050">
-        <bounds x="612" y="430" width="185" height="120"/>
+        <bounds x="702" y="346" width="185" height="120"/>
         <content>En un Group, pueden aparecer Business Role y Business Service, lo que permite asociar grandes cantidades de Roles y Servicios de una forma más visual que a través de Relaciones</content>
       </child>
-      <child xsi:type="archimate:Note" id="9a3afca6" font="1|DejaVu Sans|24.0|1|GTK|1|" textAlignment="1">
-        <bounds x="288" y="108" width="265" height="44"/>
-        <content>METAMODELO V2.0</content>
+      <child xsi:type="archimate:Note" id="9a3afca6" font="1|DejaVu Sans|24.0|1|GTK|1|" textAlignment="1" borderType="2">
+        <bounds x="384" y="36" width="349" height="44"/>
+        <content>METAMODELO v2.0</content>
       </child>
     </element>
   </folder>
