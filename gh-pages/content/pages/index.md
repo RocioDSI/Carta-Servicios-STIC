@@ -1,5 +1,4 @@
 Title: Carta de Servicios STIC
-URL:
 menulabel: Inicio
 save_as: index.html
 sortorder: 0
