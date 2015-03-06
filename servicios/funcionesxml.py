@@ -41,6 +41,7 @@ BusinessRoleArray =[]
 AssociationRelationshipArray = []
 GroupArray = []
 GroupCriticArray = []
+GroupRoleArray = []
 ServicesPerGroupArray = []
 ViewsNameArray = []
 
@@ -117,16 +118,31 @@ def cargaCriticGroup():
         id_grupo = hijo.attributes.get("id").value
         for i in GroupCriticArray:
          if (i[0] == id_grupo or i[1] == nombre_grupo):
-          print("ERROR: Nombre de GRUPO DE SERVICIOS o ID repetido en el modelo")
+          print("ERROR: Nombre de GRUPO DE SERVICIOS POR CRITICIDAD o ID repetido en el modelo")
           return
         #print("Grupo: " + nombre_grupo + " Id: " + id_grupo)
         GroupCriticArray.append([id_grupo,nombre_grupo])
 
+#Almacenamiento de los grupos por rol
+def cargaRoleGroup():
+  for nodo in lista:  
+   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and nodo.attributes.get("name").value == "Roles"):
+    listahijos = nodo.getElementsByTagName("child")
+    for hijo in listahijos:
+      if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
+        nombre_grupo = hijo.attributes.get("name").value
+        id_grupo = hijo.attributes.get("id").value
+        for i in GroupRoleArray:
+         if (i[0] == id_grupo or i[1] == nombre_grupo):
+          print("ERROR: Nombre de GRUPO DE SERVICIOS POR ROL o ID repetido en el modelo")
+          return
+        #print("Grupo: " + nombre_grupo + " Id: " + id_grupo)
+        GroupRoleArray.append([id_grupo,nombre_grupo])
 
 #Almacenamiento de todos los servicios por grupo        
 def BusinessServicePorGroup():
   for nodo in lista:
-   if(nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel"):
+   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel")):
     listahijos = nodo.getElementsByTagName("child")
     for hijo in listahijos:
      if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
@@ -134,8 +150,12 @@ def BusinessServicePorGroup():
       listanietos = hijo.getElementsByTagName("child")
       for nieto in listanietos:
        if (nieto.attributes.get("xsi:type").value == "archimate:DiagramObject"):
-        id_nieto = nieto.attributes.get("archimateElement").value
-        ServicesPerGroupArray.append([id_grupo,id_nieto])
+        for i in BusinessServiceArray:
+          if( i[0] == nieto.attributes.get("archimateElement").value):
+           id_nieto = nieto.attributes.get("archimateElement").value
+           ServicesPerGroupArray.append([id_grupo,id_nieto])
+           
+        
 
 #Almacenamiento de Criticidad de Servicio
 def ServiceCritic(serviceID):
@@ -178,10 +198,22 @@ def getGroupServices(groupID):
        listanietos = hijo.getElementsByTagName("child")
        for nieto in listanietos:
         if (nieto.attributes.get("xsi:type").value == "archimate:DiagramObject"):
-         id_nieto = nieto.attributes.get("archimateElement").value
-         services.append(id_nieto)
+         for i in BusinessServiceArray:
+          if( i[0] == nieto.attributes.get("archimateElement").value):
+           id_nieto = nieto.attributes.get("archimateElement").value
+           services.append(id_nieto)
   return services
-            	    
+
+def getServiceRoles(serviceID):
+  roles = []
+  for i in ServicesPerGroupArray:
+   if(serviceID == i[1]):
+    for k in GroupRoleArray:
+      if(k[0] == i[0]):
+       roles.append(i[0])
+  return roles
+
+
 # Obtener los servicios de un rol a traves del identificador de rol
 def getRoleServices(roleID):
   j = 1
@@ -239,7 +271,15 @@ def getGroupName(GroupID):
     if(GroupID == i[0]):
        name = i[1]
        return name
-     
+  for i in GroupRoleArray:
+    if(GroupID == i[0]):
+       name = i[1]
+       return name
+  for i in GroupCriticArray:
+    if(GroupID == i[0]):
+       name = i[1]
+       return name
+        
 def getAnyName(ID):
   for i in BusinessRoleArray:
    if(ID == i[0]):
@@ -273,6 +313,10 @@ def getGroupID(GroupName):
        ID = i[0]
        return ID
   for i in GroupCriticArray:
+    if(GroupName == i[1]):
+       ID = i[0]
+       return ID
+  for i in GroupRoleArray:
     if(GroupName == i[1]):
        ID = i[0]
        return ID
@@ -369,6 +413,8 @@ def inicializacion():
  cargaAssociationRelationship()
  cargaGroup()
  cargaCriticGroup()
+ cargaRoleGroup()
  BusinessServicePorGroup()
+
 
  

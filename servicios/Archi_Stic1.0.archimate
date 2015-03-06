@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Archi_STIC_1.0" id="8add2b99" version="3.1.1">
   <folder name="Business" id="8f04dd69" type="business">
-    <element xsi:type="archimate:BusinessService" id="5cc18672" name="Docencia Virtual">
-      <property key="Descripcion" value="Esta es mi descripcion3"/>
-    </element>
-    <element xsi:type="archimate:BusinessService" id="14636a2f" name="Soporte a Aulas multimedia">
-      <property key="Descripcion" value="Esta es mi descripcion4"/>
-    </element>
-    <element xsi:type="archimate:BusinessService" id="3430a7f9" name="Alojamiento de Infraestructuras">
-      <property key="Descripcion" value="Esta es mi descripcion"/>
-    </element>
-    <element xsi:type="archimate:BusinessService" id="c5c175fd" name="Supercomputación">
-      <property key="Descripcion" value="Esta es mi descripcion2"/>
-    </element>
-    <element xsi:type="archimate:BusinessService" id="185fb28a" name="Calendarios Colaborativos">
-      <property key="Descripción" value="Descripcion123"/>
-    </element>
-    <element xsi:type="archimate:BusinessRole" id="edf7d8ea" name="Alumnos"/>
-    <element xsi:type="archimate:BusinessService" id="c8242622" name="Servicio"/>
+    <folder name="Services" id="1355d78e">
+      <element xsi:type="archimate:BusinessService" id="3430a7f9" name="Alojamiento de Infraestructuras">
+        <property key="Descripcion" value="Esta es mi descripcion"/>
+      </element>
+      <element xsi:type="archimate:BusinessService" id="185fb28a" name="Calendarios Colaborativos">
+        <property key="Descripción" value="Descripcion123"/>
+      </element>
+      <element xsi:type="archimate:BusinessService" id="5cc18672" name="Docencia Virtual">
+        <property key="Descripcion" value="Esta es mi descripcion3"/>
+      </element>
+      <element xsi:type="archimate:BusinessService" id="14636a2f" name="Soporte a Aulas multimedia">
+        <property key="Descripcion" value="Esta es mi descripcion4"/>
+      </element>
+      <element xsi:type="archimate:BusinessService" id="c5c175fd" name="Supercomputación">
+        <property key="Descripcion" value="Esta es mi descripcion2"/>
+      </element>
+    </folder>
+    <folder name="Roles" id="3ac14d2d">
+      <element xsi:type="archimate:BusinessRole" id="6c2f82dd" name="AAAAULL"/>
+      <element xsi:type="archimate:BusinessRole" id="edf7d8ea" name="Alumnos"/>
+      <element xsi:type="archimate:BusinessRole" id="5b8631bd" name="ExAlumnos"/>
+      <element xsi:type="archimate:BusinessRole" id="556d30a2" name="PAS"/>
+      <element xsi:type="archimate:BusinessRole" id="9ae1bbf0" name="PDI"/>
+    </folder>
     <element xsi:type="archimate:BusinessRole" id="7d31c983" name="Rol"/>
   </folder>
   <folder name="Application" id="6ee50dd0" type="application"/>
@@ -80,32 +87,65 @@
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="0c773fcd" name="Roles">
-      <child xsi:type="archimate:Group" id="8e132732" name="Alumnos">
-        <bounds x="120" y="252" width="400" height="140"/>
+      <child xsi:type="archimate:Group" id="8e132732" name="Alumnos" fillColor="#e9b96e">
+        <bounds x="228" y="48" width="217" height="325"/>
         <child xsi:type="archimate:DiagramObject" id="af75d503" textAlignment="2" archimateElement="edf7d8ea">
-          <bounds x="132" y="24" width="121" height="25"/>
+          <bounds x="12" y="24" width="121" height="25"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="6e92e9f4" textAlignment="2" archimateElement="5cc18672">
-          <bounds x="120" y="60" width="145" height="34"/>
+          <bounds x="12" y="72" width="145" height="37"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="e0ac095b" textAlignment="2" archimateElement="14636a2f">
+          <bounds x="13" y="120" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="82473862" textAlignment="2" archimateElement="3430a7f9">
+          <bounds x="13" y="180" width="120" height="55"/>
         </child>
       </child>
-      <child xsi:type="archimate:Group" id="ab9ab0df" name="PAS">
-        <bounds x="564" y="96" width="400" height="140"/>
+      <child xsi:type="archimate:Group" id="ab9ab0df" name="PAS" fillColor="#e9b96e">
+        <bounds x="456" y="48" width="193" height="325"/>
+        <child xsi:type="archimate:DiagramObject" id="7da2ebd1" textAlignment="2" archimateElement="556d30a2">
+          <bounds x="12" y="24" width="157" height="25"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="716e720c" textAlignment="2" archimateElement="185fb28a">
+          <bounds x="24" y="72" width="145" height="37"/>
+        </child>
       </child>
-      <child xsi:type="archimate:Group" id="0159aabe" name="PDI">
-        <bounds x="120" y="96" width="400" height="140"/>
+      <child xsi:type="archimate:Group" id="0159aabe" name="PDI" fillColor="#e9b96e">
+        <bounds y="48" width="205" height="325"/>
+        <child xsi:type="archimate:DiagramObject" id="30bb1909" textAlignment="2" archimateElement="5cc18672">
+          <bounds x="24" y="123" width="145" height="25"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="a6fbc2bf" textAlignment="2" archimateElement="14636a2f">
+          <bounds x="12" y="75" width="169" height="43"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="895073cd" textAlignment="2" archimateElement="9ae1bbf0">
+          <bounds x="12" y="24" width="120" height="33"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="569bde43" textAlignment="2" archimateElement="c5c175fd">
+          <bounds x="12" y="156" width="169" height="31"/>
+        </child>
       </child>
-      <child xsi:type="archimate:Group" id="15e890fb" name="Ex-Alumnos">
-        <bounds x="120" y="408" width="400" height="140"/>
+      <child xsi:type="archimate:Group" id="15e890fb" name="ExAlumnos" fillColor="#e9b96e">
+        <bounds x="840" y="48" width="205" height="325"/>
+        <child xsi:type="archimate:DiagramObject" id="349f8afc" textAlignment="2" archimateElement="5b8631bd">
+          <bounds x="12" y="24" width="120" height="23"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="ec186148" textAlignment="2" archimateElement="185fb28a">
+          <bounds x="24" y="72" width="120" height="55"/>
+        </child>
       </child>
-      <child xsi:type="archimate:Group" id="ad712805" name="AAAAULL">
-        <bounds x="564" y="252" width="400" height="140"/>
+      <child xsi:type="archimate:Group" id="ad712805" name="AAAAULL" fillColor="#e9b96e">
+        <bounds x="660" y="48" width="169" height="325"/>
+        <child xsi:type="archimate:DiagramObject" id="0771fd3a" textAlignment="2" archimateElement="6c2f82dd">
+          <bounds x="12" y="24" width="120" height="25"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="77ccbdfb" textAlignment="2" archimateElement="185fb28a">
+          <bounds x="12" y="60" width="120" height="55"/>
+        </child>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="18c265bd" name="Metamodelo">
-      <child xsi:type="archimate:DiagramObject" id="c99813c5" textAlignment="2" archimateElement="c8242622">
-        <bounds x="48" y="72" width="120" height="55"/>
-      </child>
       <child xsi:type="archimate:Note" id="797e034a" textAlignment="1">
         <bounds x="216" y="60" width="185" height="80"/>
       </child>

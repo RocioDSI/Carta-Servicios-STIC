@@ -40,9 +40,21 @@ def generahtmlgrupo(nombreGrupo):
    htmlstrii = """
 					<h1 class="main-title">""" + funcionesxml.getBusinessServiceName(str(i)) + """</h1> 
 					<p> ID: """ + i + """ </p>
-					<p> Criticidad: """+ str(funcionesxml.ServiceCritic(i)) +"""</p>"""
+					<p> Criticidad: """+ str(funcionesxml.ServiceCritic(i)) +"""</p>
+					<p> Roles: """  
    htmlstr += htmlstrii
- 
+   k = 0
+   for j in funcionesxml.getServiceRoles(i):
+    if (k < len(funcionesxml.getServiceRoles(i))-1):
+     htmlroles = """""" + str(funcionesxml.getGroupName(j)) + """, """   
+     htmlstr += htmlroles
+     k +=1
+    else:
+     htmlroles = """""" + str(funcionesxml.getGroupName(j)) + """. """   
+     htmlstr += htmlroles
+     
+   htmlstr += """</p>
+   """	  
    for k in range(0, len(funcionesxml.getServiceProperties(i)[0])):
        htmliii= """<p> """ + str((funcionesxml.getServiceProperties(i)[0][k])) + """: """ + str((funcionesxml.getServiceProperties(i)[1][k])) + """ </p>
        """
@@ -55,42 +67,6 @@ def generahtmlgrupo(nombreGrupo):
   htmlstr += htmlstriv
   fichero.write(htmlstr)
   fichero.close()
-
-def generahtmlgrupocritic(nombreGrupo):
-  formatstring(nombreGrupo)
-  fichero = open("servicios_stic/templates/" + formatstring(nombreGrupo) + ".html","w")
-  htmlstr = """ 
-{% extends "menu.html" %}
-
-{% block contenido %}
-{% block titulo %}
-	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - """ + nombreGrupo + """</li>
-{% endblock %}
-
-{% block content %}
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-9 col-md-push-3" role="main"> 
-				<br><br>"""
-  for i in funcionesxml.getGroupServices(funcionesxml.getGroupID(nombreGrupo)):
-   htmlstrii = """
-					<h1 class="main-title">""" + funcionesxml.getBusinessServiceName(str(i)) + """</h1> 
-					<p> ID: """ + i + """ </p>"""
-   htmlstr += htmlstrii
- 
-   for k in range(0, len(funcionesxml.getServiceProperties(i)[0])):
-       htmliii= """<p> """ + str((funcionesxml.getServiceProperties(i)[0][k])) + """: """ + str((funcionesxml.getServiceProperties(i)[1][k])) + """ </p>
-       """
-       htmlstr += htmliii
-
-  htmlstriv= """		</div>
-{% endblock %}
-{% endblock %}  
-  """	
-  htmlstr += htmlstriv
-  fichero.write(htmlstr)
-  fichero.close()
-
 
 def generahtmlmenu():
   fichero = open("servicios_stic/templates/menu.html","w")
@@ -127,7 +103,24 @@ def generahtmlmenu():
    grupostring = """                                 <li><a href="{% url "servicios_stic.views.""" + formatstring(str(i[1])) + """" %}">""" + str(i[1])+ """</a></li>
 """
    httmlstr+=grupostring 
-   
+  htmlstrii = """                                </ul>
+                            </div>
+                        </div>
+{%endblock%}
+
+{% block menurole %}
+                       <div class="panel panel-default panel-ull color-336699">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-file"></i> Roles</h3>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="nav nav-pills nav-stacked">
+"""
+  httmlstr += htmlstrii
+  for i in funcionesxml.GroupRoleArray:
+   grupostring = """                                 <li><a href="{% url "servicios_stic.views.""" + formatstring(str(i[1])) + """" %}">""" + str(i[1])+ """</a></li>
+"""
+   httmlstr+=grupostring 
   htmlstrii = """                                </ul>
                             </div>
                         </div>
@@ -183,6 +176,20 @@ def """ + formatstring(str(i[1])) + """(request):
 	   
 	   """
      pystr += viewgrupo
+
+  for i in funcionesxml.GroupRoleArray:
+     viewgrupo = """
+def """ + formatstring(str(i[1])) + """(request):
+ funcionesxml.inicializacion()
+ name = []
+ servicios = funcionesxml.getGroupServices(\""""+ str(i[0])+"""\")
+ for i in servicios:
+  name.append(funcionesxml.getBusinessServiceName(i))
+ response = render_to_response('""" + formatstring(str(i[1]))+ """.html',{'servicio': name })
+ return response
+	   
+	   """
+     pystr += viewgrupo
 	 	  
   fichero.write(pystr)
   fichero.close()
@@ -202,6 +209,10 @@ urlpatterns = patterns('',
  url(r'^""" + formatstring(str(i[1])) + """/$', 'servicios_stic.views.""" + formatstring(str(i[1])) + """', name='"""+ formatstring(str(i[1])) + """'),"""  
    pystr+= urlgrupo
   for i in funcionesxml.GroupCriticArray:
+   urlgrupo = """	
+ url(r'^""" + formatstring(str(i[1])) + """/$', 'servicios_stic.views.""" + formatstring(str(i[1])) + """', name='"""+ formatstring(str(i[1])) + """'),"""  
+   pystr+= urlgrupo
+  for i in funcionesxml.GroupRoleArray:
    urlgrupo = """	
  url(r'^""" + formatstring(str(i[1])) + """/$', 'servicios_stic.views.""" + formatstring(str(i[1])) + """', name='"""+ formatstring(str(i[1])) + """'),"""  
    pystr+= urlgrupo
@@ -248,6 +259,9 @@ def generahtmlindex():
 def generaplantillas():
   for i in funcionesxml.GroupArray:
    generahtmlgrupo(str(i[1]))
-  for i in funcionesxml.GroupCriticArray:		 
-   generahtmlgrupocritic(str(i[1]))
+  for j in funcionesxml.GroupCriticArray:		 
+   generahtmlgrupo(str(j[1]))
+  for k in funcionesxml.GroupRoleArray:		 
+   generahtmlgrupo(str(k[1]))
+
 
