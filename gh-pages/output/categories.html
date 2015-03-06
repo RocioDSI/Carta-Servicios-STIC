@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en"
+>
 <head>
-    <title>Instalación - Carta de Servicios STIC</title>
+    <title>Categories - Carta de Servicios</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -17,23 +18,23 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//static.ull.es/v3/dist/img/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="//static.ull.es/v3/dist/img/apple-touch-icon-57-precomposed.png">
 
-<link rel="canonical" href="/Carta-Servicios-STIC/instalacion.html">
 
         <meta name="author" content="Universidad de La Laguna" />
-        <meta name="description" content="La presente guía de instalación proporciona el paso a paso de la instalación y configuración del proyecto bajo un entorno con sistema operativo GNU/Linux, concretamente Ubuntu." />
 
-    <meta property="og:site_name" content="Instalación - Carta de Servicios" />
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Instalación - Carta de Servicios"/>
-    <meta property="og:url" content="/Carta-Servicios-STIC/instalacion.html"/>
-    <meta property="og:description" content="La presente guía de instalación proporciona el paso a paso de la instalación y configuración del proyecto bajo un entorno con sistema operativo GNU/Linux, concretamente Ubuntu." />
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="Carta de Servicios" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Carta de Servicios"/>
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="Carta de Servicios"/>
+
 
     <!-- ULL -->
         <link rel="stylesheet" href="//static.ull.es/v3/dist/css/ull.min.css" type="text/css"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.0.3a/ekko-lightbox.min.css"/>
 
-    <link href="/Carta-Servicios-STIC/theme/css/pygments/native.css" rel="stylesheet">
-    <link rel="stylesheet" href="/Carta-Servicios-STIC/theme/css/style.css" type="text/css"/>
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
     <noscript><style> .jsonly { display: none } </style></noscript>
 
 
@@ -84,16 +85,13 @@
     <div class="container-fluid">
         <div class="navbar-header">
                 <ol class="breadcrumb">
-                    <li class="active"><a href="/Carta-Servicios-STIC/">Carta de Servicios STIC</a></li>
+                    <li class="active"><a href="/">Carta de Servicios</a></li>
                 </ol>
         </div>
         <div class="collapse navbar-collapse navbar-app-collapse">
             <ul class="nav navbar-nav navbar-right">
-				        <li><a href="/Carta-Servicios-STIC/">Inicio</a></li>
-                        <li class="active"><a href="/Carta-Servicios-STIC/instalacion.html">Instalación</a></li>
-                        <li><a href="/Carta-Servicios-STIC/como-contribuir.html">Cómo Contribuir</a></li>
-                        <li><a href="/Carta-Servicios-STIC/team.html">Desarrolladores</a></li>
-                        <li><a href="/Carta-Servicios-STIC/contacto.html">Contacto</a></li>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/instalacion-de-carta-de-servicios.html">Instalacion</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -103,76 +101,21 @@
     <div class="row">
         <div class="col-md-9" role="main">
 
-    <section id="content" class="body">
-        <h1 class="page-header">Instalación - Carta de Servicios</h1>
-        
-        <div class="entry-content">
-			<p>
-				La presente guía de instalación proporciona el paso a paso de la instalación y configuración del proyecto bajo un entorno con sistema operativo GNU/Linux, concretamente Ubuntu.
-			</p>
-<div class="section">
-	<br>
-    <ul class="nav nav-tabs header">
-        <li class="active">1. Instalar Python</li>
-    </ul>
-    <div class="content">
-		<div class="alert alert-danger">
-			Debido a problemas de compatibilidad entre Django y el intérprete de Python 3.0, es importante instalar la version 2.7.X para evitar posibles errores.
-		</div>
-    <p>
-    Django es un framework de python y, por tanto, necesitamos tenerlo instalado antes de empezar. 
-    Para la instalación de dependencias de módulos Python se emplea <i>pip</i>. 
-            Se recomienda el uso de <i>virtualenv</i> junto con esta herramienta,
-            en las instrucciones no se entrará a explicar su funcionamiento. 
-	</p>
-
-        <pre>sudo apt-get install python-pip</pre>
-    </div>
-</div>
-
-<div class="section">
-    <ul class="nav nav-tabs header">
-        <li class="active">2. Instalación del Framework Django</li>
-    </ul>
-    <div class="content">
-        <pre>sudo pip install django</pre>
-    </div>
-</div>
-
-<div class="section">
-    <ul class="nav nav-tabs header">
-        <li class="active">3. Clonar el repositorio</li>
-    </ul>
-    <div class="content">
-        <pre>git clone git@github.com:RocioDSI/Carta-Servicios-STIC.git</pre>
-    </div>
-</div>
-
-<div class="section">
-    <ul class="nav nav-tabs header">
-        <li class="active">4. Añadir la plantilla</li>
-    </ul>
-    <div class="content">
-        <p>Colocar la plantilla con el nombre "plantilla.html" dentro del directorio "servicios/servicios_stic/templates"</p>
-    </div>
-</div>
-
-<div class="section">
-    <ul class="nav nav-tabs header">
-        <li class="active">5. Procesar el modelo</li>
-    </ul>
-    <div class="content">
-        <p>Desde el directorio "servicios" que está situado a nivel superior del proyecto ejecutar el siguiente comando:</p>
-        <pre>python main.py</pre>
-    </div>
-</div>
+    <section id="categories">
+        <h1>All Categories for Carta de Servicios</h1>
+        <div class="panel-group" id="accordion">
         </div>
+
     </section>
         </div>
         <div class="col-md-3 sidebar" id="sidebar">
     <div class="well" style="text-align:center">
-        <a href="https://github.com/RocioDSI/Carta-Servicios-STIC/" target="_blank"><img src="images/forkme.png" border="0" alt="Fork me on GitHub" title="Fork me on GitHub"/></a>
+        <a href="https://example.com/tic-ull/sample-site" target="_blank"><img src="images/forkme.png" border="0" alt="Fork me on GitHub" title="Fork me on GitHub"/></a>
     </div>
+
+
+
+
 
     <div class="panel panel-default panel-ull color-336699">
             <div class="panel-heading">
@@ -182,18 +125,17 @@
                     <a href="http://www.ull.es/" target="_blank"><img width="80%" style="margin-left: 10%; margin-right: 10%; margin-bottom: 5%;" title="Universidad de La Laguna" src="images/ull.png"></img></a>
             </div>
     </div>
-    
     <div class="panel panel-default panel-ull color-336699">
             <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-cogs"></i> Tecnología</h3>
             </div>
-            <div class="panel-body" style="text-align: center;">
-                <ul class="nav nav-pills nav-stacked">
-                    <li><div class="media"><a href="http://www.djangoproject.com/" target="_blank"><img src="https://www.djangoproject.com/m/img/badges/djangopowered126x54.gif" border="0" alt="Powered by Django." title="Powered by Django."/></a></div></li>
-                    <li><div class="media"><a href="https://www.python.org/" target="_blank"><img src="images/python.png" border="0" alt="Python" title="Python"/></a></div></li>
-                    <li><div class="media"><a href="http://www.archimatetool.com/" target="_blank"><img src="images/archi.png" border="0" width='128' height='56' alt="Archimate" title="Archimate"/></a></div></li>
-                    <li><div class="media"><a href="https://www.opengroup.org/togaf9/cert/showcase/participants/ffcg/index.html" target="_blank"><img src="images/togaf.jpg" border="0" width='128' height='56' alt="Togaf" title="Togaf"/></a></div></li>
-                </ul>
+            <div class="panel-body">
+                    <div class="panel-body" style="text-align: center;">
+                    <a href="http://www.djangoproject.com/" target="_blank"><img src="https://www.djangoproject.com/m/img/badges/djangopowered126x54.gif" border="0" alt="Powered by Django." title="Powered by Django."/></a>
+                    <a href="https://www.python.org/" target="_blank"><img src="images/python.png" border="0" alt="Python" title="Python"/></a>
+                    <a href="http://www.archimatetool.com/" target="_blank"><img src="images/archi.png" border="0" width="128" height="56" alt="Archimate" title="Archimate"/></a>
+                    <a href="https://www.opengroup.org/togaf9/cert/showcase/participants/ffcg/index.html" target="_blank"><img src="images/togaf.jpg" border="0" width="128" height="56" alt="Togaf" title="Togaf"/></a>
+                    </div>
             </div>
     </div>
         </div>

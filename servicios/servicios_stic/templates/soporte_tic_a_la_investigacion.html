@@ -1,0 +1,24 @@
+ 
+{% extends "menu.html" %}
+
+{% block contenido %}
+{% block titulo %}
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - Soporte TIC a la Investigación</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title">Alojamiento de Infraestructuras</h1> 
+					<p> ID: 3430a7f9 </p>
+					<p> Criticidad: Servicios Críticos</p><p> Descripcion: Esta es mi descripcion </p>
+       
+					<h1 class="main-title">Supercomputación</h1> 
+					<p> ID: c5c175fd </p>
+					<p> Criticidad: Servicios Normales</p><p> Descripcion: Esta es mi descripcion2 </p>
+       		</div>
+{% endblock %}
+{% endblock %}  
+  
