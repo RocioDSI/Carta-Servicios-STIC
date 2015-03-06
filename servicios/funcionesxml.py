@@ -40,6 +40,7 @@ BusinessServiceArray =[]
 BusinessRoleArray =[]
 AssociationRelationshipArray = []
 GroupArray = []
+GroupCriticArray = []
 ServicesPerGroupArray = []
 ViewsNameArray = []
 
@@ -89,7 +90,7 @@ def cargaAssociationRelationship():
     AssociationRelationshipArray.append([id_relacion_asociacion,source,target])
     #print("\nLa Id de relacion de asociacion: " + id_relacion_asociacion + " Origen: [" + str(getAnyName(source)) + "] Destino: [" + str(getAnyName(target))+"]")
 
-#Almacenamiento de los grupos
+#Almacenamiento de los grupos de servicio
 def cargaGroup():
   for nodo in lista:  
    if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and nodo.attributes.get("name").value == "Carta de servicios"):
@@ -104,6 +105,23 @@ def cargaGroup():
           return
         #print("Grupo: " + nombre_grupo + " Id: " + id_grupo)
         GroupArray.append([id_grupo,nombre_grupo])
+        
+#Almacenamiento de los grupos de criticidad
+def cargaCriticGroup():
+  for nodo in lista:  
+   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and nodo.attributes.get("name").value == "Criticidad"):
+    listahijos = nodo.getElementsByTagName("child")
+    for hijo in listahijos:
+      if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
+        nombre_grupo = hijo.attributes.get("name").value
+        id_grupo = hijo.attributes.get("id").value
+        for i in GroupCriticArray:
+         if (i[0] == id_grupo or i[1] == nombre_grupo):
+          print("ERROR: Nombre de GRUPO DE SERVICIOS o ID repetido en el modelo")
+          return
+        #print("Grupo: " + nombre_grupo + " Id: " + id_grupo)
+        GroupCriticArray.append([id_grupo,nombre_grupo])
+
 
 #Almacenamiento de todos los servicios por grupo        
 def BusinessServicePorGroup():
@@ -254,6 +272,10 @@ def getGroupID(GroupName):
     if(GroupName == i[1]):
        ID = i[0]
        return ID
+  for i in GroupCriticArray:
+    if(GroupName == i[1]):
+       ID = i[0]
+       return ID
   
 def getAnyID(name):
   for i in BusinessRoleArray:
@@ -346,5 +368,7 @@ def inicializacion():
  cargaBusinessRole()
  cargaAssociationRelationship()
  cargaGroup()
+ cargaCriticGroup()
  BusinessServicePorGroup()
+
  
