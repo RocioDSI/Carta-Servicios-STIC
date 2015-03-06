@@ -21,13 +21,13 @@
 <link rel="canonical" href="/instalacion-de-carta-de-servicios.html">
 
         <meta name="author" content="Universidad de La Laguna" />
-        <meta name="description" content="La presente guía de instalación proporciona el paso a paso de la instalación y configuración del proyecto bajo un entorno con sistema operativo GNU/Linux, concretamente Ubuntu. 1. Instalar Python Debido a problemas de compatibilidad entre Django y el intérprete de Python 3.0, es importante instalar la version 2 ..." />
+        <meta name="description" content="La presente guía de instalación proporciona el paso a paso de la instalación y configuración del proyecto bajo un entorno con sistema operativo GNU/Linux, concretamente Ubuntu. 1. Instalar Python. Debido a problemas de compatibilidad entre Django y el intérprete de Python 3.0, es importante instalar la version 2 ..." />
 
     <meta property="og:site_name" content="Carta de Servicios" />
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="Instalación de Carta de Servicios"/>
     <meta property="og:url" content="/instalacion-de-carta-de-servicios.html"/>
-    <meta property="og:description" content="La presente guía de instalación proporciona el paso a paso de la instalación y configuración del proyecto bajo un entorno con sistema operativo GNU/Linux, concretamente Ubuntu. 1. Instalar Python Debido a problemas de compatibilidad entre Django y el intérprete de Python 3.0, es importante instalar la version 2 ..." />
+    <meta property="og:description" content="La presente guía de instalación proporciona el paso a paso de la instalación y configuración del proyecto bajo un entorno con sistema operativo GNU/Linux, concretamente Ubuntu. 1. Instalar Python. Debido a problemas de compatibilidad entre Django y el intérprete de Python 3.0, es importante instalar la version 2 ..." />
 
 
     <!-- ULL -->
@@ -125,7 +125,7 @@
 <div class="section">
     <br>
     <ul class="nav nav-tabs header">
-        <li class="active">1. Instalar Python</li>
+        <li class="active">1. Instalar Python.</li>
     </ul>
     <div class="content">
         <div class="alert alert-danger">
@@ -145,7 +145,7 @@
 
 <div class="section">
     <ul class="nav nav-tabs header">
-        <li class="active">2. Instalación del Framework Django</li>
+        <li class="active">2. Instalación del Framework Django.</li>
     </ul>
     <div class="content">
         <pre>sudo pip install django</pre>
@@ -154,7 +154,16 @@
 
 <div class="section">
     <ul class="nav nav-tabs header">
-        <li class="active">3. Clonar el repositorio</li>
+        <li class="active">3. Instalación de Git.</li>
+    </ul>
+    <div class="content">
+        <pre>sudo apt-get install git</pre>
+    </div>
+</div>
+
+<div class="section">
+    <ul class="nav nav-tabs header">
+        <li class="active">4. Clonar el repositorio.</li>
     </ul>
     <div class="content">
         <pre>git clone git@github.com:RocioDSI/Carta-Servicios-STIC.git</pre>
@@ -163,10 +172,40 @@
 
 <div class="section">
     <ul class="nav nav-tabs header">
-        <li class="active">4. Añadir la plantilla</li>
+        <li class="active">5. Añadir la plantilla.</li>
     </ul>
     <div class="content">
         <p>Colocar la plantilla con el nombre "plantilla.html" dentro del directorio "servicios/servicios_stic/templates"</p>
+    </div>
+</div>
+
+<div class="section">
+    <ul class="nav nav-tabs header">
+        <li class="active">6. Procesar el modelo.</li>
+    </ul>
+    <div class="content">
+        <p>Desde el directorio "servicios" que está situado a nivel superior del proyecto ejecutar el siguiente comando:</p>
+        <pre>python main.py</pre>
+    </div>
+</div>
+
+<div class="section">
+    <ul class="nav nav-tabs header">
+        <li class="active">7. Procesar el modelo.</li>
+    </ul>
+    <div class="content">
+        <p>Desde el directorio "servicios" que está situado a nivel superior del proyecto ejecutar el siguiente comando:</p>
+        <pre>python manage.py runserver</pre>
+    </div>
+</div>
+
+<div class="section">
+    <ul class="nav nav-tabs header">
+        <li class="active">8. Acceder al contenido.</li>
+    </ul>
+    <div class="content">
+        <p>Visitar el sitio web en la dirección:</p>
+        <pre>http://127.0.0.1:8000/</pre>
     </div>
 </div>
         </div>
