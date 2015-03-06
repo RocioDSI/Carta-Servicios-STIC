@@ -1,0 +1,18 @@
+Sitio de Ejemplo de GitHub Page para proyectos de la Universidad de La Laguna
+
+Pasos a seguir para crear un nuevo sitio:
+
+* Reemplazar el contenido de las páginas de ejemplo (content/pages)
+* Aplicar los cambios necesarios en la configuración (pelicanconf.py y publishconf.py)
+* Para poder usar el formulario de contacto de ejemplo (content/pages/contact.md):
+    Habilitar el script apps.js (descomentar la línea correspondiente en pelicanconf.py)
+    Configurar el fichero content/php/mailer.php con las direcciones de correo a usar
+* Si no desea usar un formulario de contacto pueden eliminar los ficheros content/js/app.js y content/php/mailer.php
+* Existen algunos widgets extra en el tema que pueden activarse en la configuración (SOCIAL, WORK_SUPPORTED_BY_HTML, etc.)
+* Para emplear el plugin toc (Índice) debe añadir un id en cada h2 que desee que aparezca en el índice (Ej: <h2 id="sample">Sample</h2>)
+
+
+Comandos de utilidad:
+* make devserver - Servidor de Desarrollo
+* make html - Gerena el HTML de la página en el directorio output
+* make github - Genera el HTML y los pushea en la rama gh-pages
