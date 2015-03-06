@@ -1,6 +1,6 @@
 menulabel: Instalacion
 title: Instalación de Carta de Servicios
-URL: /Carta-Servicios-STIC/instalacion-de-carta-de-servicios
+save_as: instalacion.html
 sortorder: 2
 
 <div class="container-fluid">
