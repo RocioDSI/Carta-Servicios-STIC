@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Universidad de La Laguna'
 SITENAME = u'Carta de Servicios'
-SITEURL = 'http://rociodsi.github.io/Carta-Servicios-STIC/'
+# SITEURL = '<site_url>'
 
 PATH = 'content'
 
