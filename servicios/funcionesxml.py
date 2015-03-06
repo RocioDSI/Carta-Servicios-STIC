@@ -19,7 +19,7 @@ nombre_fichero = "Archi_Stic1.0.archimate"
 # Controla que la sintaxis del fichero xml sea correcta
 try:
   xml_analizador.parse(nombre_fichero) # Analizamos el fichero
-  print("\nEl fichero XML " + nombre_fichero + " estÃ¡ bien formado.")
+  print("\nEl fichero XML " + nombre_fichero + " está bien formado.")
 
 except getopt.GetoptError as err:
   print ("\nError " + err + ":\n\t " + nombre_fichero + " no es un fichero bien formado")
@@ -35,7 +35,7 @@ nodos = xml_documento.childNodes
 #Lista de todos los nodos de tipo "element"
 lista = nodos[0].getElementsByTagName("element")
 
-
+#Contenedores para los objetos Archimate
 BusinessServiceArray =[]
 BusinessRoleArray =[]
 AssociationRelationshipArray = []
@@ -44,6 +44,12 @@ GroupCriticArray = []
 GroupRoleArray = []
 ServicesPerGroupArray = []
 ViewsNameArray = []
+
+#Nombre de las vistas
+VistaGruposServicios = "Carta de servicios"
+VistaRoles = "Roles"
+VistaCriticidad = "Criticidad"
+
 
 #Almacenamiento de servicios
 def cargaBusinessService():
@@ -91,58 +97,27 @@ def cargaAssociationRelationship():
     AssociationRelationshipArray.append([id_relacion_asociacion,source,target])
     #print("\nLa Id de relacion de asociacion: " + id_relacion_asociacion + " Origen: [" + str(getAnyName(source)) + "] Destino: [" + str(getAnyName(target))+"]")
 
-#Almacenamiento de los grupos de servicio
+#Almacenamiento de los grupos de servicio por Criticidad, Rol o Grupo de Servicio
 def cargaGroup():
   for nodo in lista:  
-   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and nodo.attributes.get("name").value == "Carta de servicios"):
+   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel")):
     listahijos = nodo.getElementsByTagName("child")
     for hijo in listahijos:
       if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
         nombre_grupo = hijo.attributes.get("name").value
         id_grupo = hijo.attributes.get("id").value
-        for i in GroupArray:
-         if (i[0] == id_grupo or i[1] == nombre_grupo):
-          print("ERROR: Nombre de GRUPO DE SERVICIOS o ID repetido en el modelo")
-          return
         #print("Grupo: " + nombre_grupo + " Id: " + id_grupo)
-        GroupArray.append([id_grupo,nombre_grupo])
-        
-#Almacenamiento de los grupos de criticidad
-def cargaCriticGroup():
-  for nodo in lista:  
-   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and nodo.attributes.get("name").value == "Criticidad"):
-    listahijos = nodo.getElementsByTagName("child")
-    for hijo in listahijos:
-      if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
-        nombre_grupo = hijo.attributes.get("name").value
-        id_grupo = hijo.attributes.get("id").value
-        for i in GroupCriticArray:
-         if (i[0] == id_grupo or i[1] == nombre_grupo):
-          print("ERROR: Nombre de GRUPO DE SERVICIOS POR CRITICIDAD o ID repetido en el modelo")
-          return
-        #print("Grupo: " + nombre_grupo + " Id: " + id_grupo)
-        GroupCriticArray.append([id_grupo,nombre_grupo])
-
-#Almacenamiento de los grupos por rol
-def cargaRoleGroup():
-  for nodo in lista:  
-   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and nodo.attributes.get("name").value == "Roles"):
-    listahijos = nodo.getElementsByTagName("child")
-    for hijo in listahijos:
-      if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
-        nombre_grupo = hijo.attributes.get("name").value
-        id_grupo = hijo.attributes.get("id").value
-        for i in GroupRoleArray:
-         if (i[0] == id_grupo or i[1] == nombre_grupo):
-          print("ERROR: Nombre de GRUPO DE SERVICIOS POR ROL o ID repetido en el modelo")
-          return
-        #print("Grupo: " + nombre_grupo + " Id: " + id_grupo)
-        GroupRoleArray.append([id_grupo,nombre_grupo])
-
-#Almacenamiento de todos los servicios por grupo        
+        if(nodo.attributes.get("name").value == VistaGruposServicios):
+         GroupArray.append([id_grupo,nombre_grupo])
+        elif(nodo.attributes.get("name").value == VistaCriticidad):
+         GroupCriticArray.append([id_grupo,nombre_grupo])
+        elif(nodo.attributes.get("name").value == VistaRoles):
+         GroupRoleArray.append([id_grupo,nombre_grupo])
+         
+#Almacenamiento de todos los servicios por grupo para grupos de Servicio, Criticidad o Roles      
 def BusinessServicePorGroup():
   for nodo in lista:
-   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel")):
+   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and ((nodo.attributes.get("name").value) in [VistaCriticidad,VistaGruposServicios,VistaRoles])): 
     listahijos = nodo.getElementsByTagName("child")
     for hijo in listahijos:
      if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
@@ -154,13 +129,11 @@ def BusinessServicePorGroup():
           if( i[0] == nieto.attributes.get("archimateElement").value):
            id_nieto = nieto.attributes.get("archimateElement").value
            ServicesPerGroupArray.append([id_grupo,id_nieto])
-           
-        
-
-#Almacenamiento de Criticidad de Servicio
+                   
+#Almacenamiento de Criticidad de Servicio para un servicio concreto
 def ServiceCritic(serviceID):
   for nodo in lista:
-   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and (str(nodo.attributes.get("name").value)) == "Criticidad"):
+   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and (str(nodo.attributes.get("name").value)) == VistaCriticidad):
     listahijos = nodo.getElementsByTagName("child")
     for hijo in listahijos:
       if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
@@ -169,24 +142,16 @@ def ServiceCritic(serviceID):
         id_nieto = nieto.attributes.get("archimateElement").value
         if(serviceID == id_nieto):
          return hijo.attributes.get("name").value
-
-	    
+             
 # Obtener el grupo de un servicio a partir del identificador de servicio
 def getServiceGroup(serviceID):
-  for nodo in lista:
-   if(nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel"):
-    listahijos = nodo.getElementsByTagName("child")
-    for hijo in listahijos:
-     if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
-      id_grupo = hijo.attributes.get("id").value
-      listanietos = hijo.getElementsByTagName("child")
-      for nieto in listanietos:
-       if (nieto.attributes.get("xsi:type").value == "archimate:DiagramObject"):
-        id_nieto = nieto.attributes.get("archimateElement").value
-        if (id_nieto == serviceID): 
-         print ("\n El servicio " + str(getBusinessServiceName(serviceID)) +" pertenece al grupo " + str(getGroupName(id_grupo)))
+  groups=[]
+  for i in ServicesPerGroupArray:
+    if(i[1] == serviceID):
+     groups.append(i[0])
+  return group
 
-# Obtener los servicios de un grupo a travÃ©s del identificador de grupo
+# Obtener los servicios de un grupo (de Servicios, Crticidad o por Rol) a través del identificador de grupo
 def getGroupServices(groupID):
   services=[]
   for nodo in lista:
@@ -204,6 +169,7 @@ def getGroupServices(groupID):
            services.append(id_nieto)
   return services
 
+# Obtener los roles para los que un servicio está disponible
 def getServiceRoles(serviceID):
   roles = []
   for i in ServicesPerGroupArray:
@@ -224,34 +190,6 @@ def getRoleServices(roleID):
     elif (roleID == i[2]):
       print("\n"+ str(j)+") " + str(getBusinessServiceName(i[1])))
       j = j+1
-
-# Visualizacion de Grupos
-def showGroups():
-  j = 1
-  for i in GroupArray:
-   print("\n"+ str(j)+") " + i[1])
-   j = j+1
-   
-# Visualizacion de Servicios
-def showServices():
-  j = 1
-  for i in BusinessServiceArray:
-    print("\n"+ str(j)+") " + i[1])
-    j = j+1
-    
-# Visualizacion de Roles
-def showRoles():
-  j = 1
-  for i in BusinessRoleArray:
-   print("\n"+ str(j)+") " + i[1])
-   j = j+1
-  
-# Visualizacion de Relaciones Source->Target
-def showRelation():
-  j = 1;
-  for i in AssociationRelationshipArray:
-    print("\n"+ str(j)+") " + getAnyName(i[1]) + " >>>> " + getAnyName(i[2]))
-    j = j+1
 
 ##Obtener nombres a partir de IDs##
 def getBusinessRoleName(BusinessRoleID):
@@ -280,20 +218,6 @@ def getGroupName(GroupID):
        name = i[1]
        return name
         
-def getAnyName(ID):
-  for i in BusinessRoleArray:
-   if(ID == i[0]):
-    name = i[1]
-    return name
-  for i in BusinessServiceArray:
-    if(ID == i[0]):
-      name = i[1]
-      return name
-  for i in GroupArray:
-    if(ID == i[0]):
-       name = i[1]
-       return name
-     
 ##Obtener IDs a partir de nombres##
 def getBusinessRoleID(BusinessRoleName):
   for i in BusinessRoleArray:
@@ -321,20 +245,6 @@ def getGroupID(GroupName):
        ID = i[0]
        return ID
   
-def getAnyID(name):
-  for i in BusinessRoleArray:
-   if(name == i[1]):
-    ID = i[0]
-    return name
-  for i in BusinessServiceArray:
-    if(name == i[1]):
-      ID = i[0]
-      return ID
-  for i in GroupArray:
-    if(ID == i[1]):
-       ID = i[0]
-       return ID
-
 
 #Devuelve doble lista Key-Value de propiedades de un servicio
 def getServiceProperties(serviceID):
@@ -346,75 +256,11 @@ def getServiceProperties(serviceID):
   propertylist = [key,value]
   return propertylist
 
-
-
-
-#Menu para aplicacion en Consola
-def menu():
-  clear = lambda: os.system('clear')
-  clear()
-  
-  x = 0
-  while (x == 0):
-   clear = lambda: os.system('clear')
-   clear()
-   print("\n Menu \n 1) Listar grupos \n 2) Listar todos los servicios \n 3) Listar todos los roles \n 4) Mostrar todas las relaciones \n 9) Salir")
-   try:
-     n=int(raw_input('Opcion:'))
-   except ValueError:
-     print "Not a number"
-  
-   if (n == 1):
-     clear()
-     print( "\n Seleccione un grupo para ver sus servicios") 
-     showGroups();
-     try:
-       n=int(raw_input('Opcion:'))
-     except ValueError:
-       print "Not a number"
-     clear()
-     getGroupServices(str(GroupArray[n-1][0]))  
-   
-     
-   elif(n == 2):
-     clear()
-     print( "\n Seleccione un servicio para ver a que grupo pertenece")
-     showServices()
-     try:
-       n=int(raw_input('Opcion:'))
-     except ValueError:
-       print "Not a number"
-     clear()
-     getServiceGroup(str(BusinessServiceArray[n-1][0])) 
-
-   
-   elif(n == 3):
-    clear()
-    print( "\n Seleccione un rol para ver que servicios le corresponde")
-    showRoles()
-    try:
-       n=int(raw_input('Opcion:'))
-    except ValueError:
-       print "Not a number"
-    clear()
-    getRoleServices(BusinessRoleArray[n-1][0])
-    
-   elif(n == 4):
-     clear()
-     showRelation()
-   elif(n == 9):
-     x = 1
-     
-   raw_input('\n \n Pulsa cualquier tecla para continuar')
    
 def inicializacion():
  cargaBusinessService()
  cargaBusinessRole()
  cargaAssociationRelationship()
  cargaGroup()
- cargaCriticGroup()
- cargaRoleGroup()
  BusinessServicePorGroup()
-
-
  

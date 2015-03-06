@@ -3,7 +3,7 @@
 
 import funcionesxml
 
-
+# Funcion para eliminar caracteres extraños de strings
 def formatstring(nombreGrupo):
   nombrProc = nombreGrupo
   nombrProc=nombrProc.replace("Á","a")
@@ -16,10 +16,14 @@ def formatstring(nombreGrupo):
   nombrProc=nombrProc.replace("í","i")
   nombrProc=nombrProc.replace("ó","o")
   nombrProc=nombrProc.replace("ú","u")
+  nombrProc=nombrProc.replace("ñ","n")
+  nombrProc=nombrProc.replace("ç","c")
+  nombrProc=nombrProc.replace("-","_")
   nombrProc=nombrProc.replace(" ","_")
   nombrProc=nombrProc.lower()
   return nombrProc
-  
+
+# Generacion de fichero HTML para grupo de servicios, de criticidad o por roles
 def generahtmlgrupo(nombreGrupo):
   formatstring(nombreGrupo)
   fichero = open("servicios_stic/templates/" + formatstring(nombreGrupo) + ".html","w")
@@ -68,6 +72,7 @@ def generahtmlgrupo(nombreGrupo):
   fichero.write(htmlstr)
   fichero.close()
 
+# Generación de fichero html para menú lateral
 def generahtmlmenu():
   fichero = open("servicios_stic/templates/menu.html","w")
   httmlstr = """{% extends "plantilla.html" %}
@@ -132,11 +137,13 @@ def generahtmlmenu():
   httmlstr+= htmlstrii
   fichero.write(httmlstr)
   fichero.close()
-  
+
+
+# Generación del fichero Views.py  
 def generaviews():
   
   fichero = open("servicios_stic/views.py","w")
-   
+
   pystr = """
 from django.shortcuts import render_to_response
 import funcionesxml
@@ -149,6 +156,7 @@ def index(request):
  response = render_to_response('index.html',{'grupo': name })
  return response
   """
+  
   for i in funcionesxml.GroupArray:
 	 viewgrupo = """
 def """ + formatstring(str(i[1])) + """(request):
@@ -194,6 +202,7 @@ def """ + formatstring(str(i[1])) + """(request):
   fichero.write(pystr)
   fichero.close()
 
+# Generacion del fichero urls.py
 def generaurls():
   fichero = open("servicios/urls.py","w")
   pystr = """
@@ -225,7 +234,7 @@ urlpatterns = patterns('',
   fichero.write(pystr)
   fichero.close()
 
-
+# Generacion del fichero index.html
 def generahtmlindex():
   fichero = open("servicios_stic/templates/index.html","w")
   httmlstr = """{% extends "plantilla.html" %}
@@ -253,9 +262,8 @@ def generahtmlindex():
   httmlstr+= htmlstrii
   fichero.write(httmlstr)
   fichero.close()
-  
 
-  
+# Generación de todos los ficheros necesarios
 def generaplantillas():
   for i in funcionesxml.GroupArray:
    generahtmlgrupo(str(i[1]))
