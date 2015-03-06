@@ -1,5 +1,6 @@
 menulabel: Instalacion
 title: Instalación de Carta de Servicios
+save_as: instalacion.html
 sortorder: 2
 
 <div class="container-fluid">
