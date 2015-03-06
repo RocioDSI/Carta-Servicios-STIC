@@ -4,11 +4,7 @@ menulabel: Inicio
 save_as: index.html
 sortorder: 0
 
-    <section id="content" class="body">
-        <h1 class="page-header">Carta de Servicios</h1>
-        
-        <div class="entry-content">
-            <div class="section">
+<div class="section">
     <ul class="nav nav-tabs header">
         <li class="active">En que consiste la Carta de Servicios</li>
     </ul>
@@ -18,7 +14,6 @@ sortorder: 0
         </p>
     </div>
 </div>
-
 <div class="section">
     <ul class="nav nav-tabs header">
         <li class="active">Arquitectura</li>
