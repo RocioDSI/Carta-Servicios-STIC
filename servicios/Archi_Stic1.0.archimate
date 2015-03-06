@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Archi_STIC_1.0" id="8add2b99" version="3.1.1">
   <folder name="Business" id="8f04dd69" type="business">
-    <folder name="Services" id="1355d78e">
+    <folder name="Servicios" id="1355d78e">
       <element xsi:type="archimate:BusinessService" id="3430a7f9" name="Alojamiento de Infraestructuras">
         <property key="Descripcion" value="Esta es mi descripcion"/>
       </element>
@@ -26,6 +26,7 @@
       <element xsi:type="archimate:BusinessRole" id="9ae1bbf0" name="PDI"/>
     </folder>
     <folder name="Metamodelo" id="5c8dbf67">
+      <documentation>Elementos utilizados como ejemplos en la vista Metamodelo</documentation>
       <element xsi:type="archimate:BusinessRole" id="7d31c983" name="Rol"/>
       <element xsi:type="archimate:BusinessService" id="b65f8bb5" name="Servicio"/>
       <element xsi:type="archimate:BusinessService" id="1f312631" name="Servicio 1"/>
@@ -54,6 +55,9 @@
         <bounds x="-96" y="180" width="325" height="169"/>
         <child xsi:type="archimate:DiagramObject" id="f8d26ba5" textAlignment="2" archimateElement="14636a2f">
           <bounds x="12" y="84" width="157" height="37"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="1f78af43" textAlignment="2" archimateElement="5cc18672">
+          <bounds x="19" y="36" width="150" height="37"/>
         </child>
       </child>
       <child xsi:type="archimate:Group" id="68821cb1" name="Soporte TIC a la Gestión">
@@ -88,8 +92,8 @@
         <child xsi:type="archimate:DiagramObject" id="9aef947d" textAlignment="2" archimateElement="185fb28a">
           <bounds x="36" y="72" width="205" height="37"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="49e627c1" textAlignment="2" archimateElement="14636a2f">
-          <bounds x="36" y="120" width="205" height="37"/>
+        <child xsi:type="archimate:DiagramObject" id="d8c46ae3" textAlignment="2" archimateElement="14636a2f">
+          <bounds x="48" y="120" width="205" height="55"/>
         </child>
       </child>
       <child xsi:type="archimate:Note" id="25b4a6c6" font="1|DejaVu Sans|24.0|1|GTK|1|" textAlignment="1" borderType="2">

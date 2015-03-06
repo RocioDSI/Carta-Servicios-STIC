@@ -71,7 +71,8 @@ def cargaBusinessService():
         if (i[0] == id_servicio or i[1] == nombre_servicio):
          print("ERROR: Nombre de SERVICIO o ID repetido en el modelo")
          return
-    BusinessServiceArray.append([id_servicio,nombre_servicio, clave, valor, criticidad])
+    if(nombre_servicio not in ["Servicio","Servicio 1","Servicio 2","Servicio 3"]):
+     BusinessServiceArray.append([id_servicio,nombre_servicio, clave, valor, criticidad])
     #print("Servicio: " + nombre_servicio + " Id: " + id_servicio)
     
 #Almacenamiento de roles
@@ -128,7 +129,7 @@ def BusinessServicePorGroup():
         for i in BusinessServiceArray:
           if( i[0] == nieto.attributes.get("archimateElement").value):
            id_nieto = nieto.attributes.get("archimateElement").value
-           ServicesPerGroupArray.append([id_grupo,id_nieto])
+           ServicesPerGroupArray.append([str(id_grupo),str(id_nieto)])
                    
 #Almacenamiento de Criticidad de Servicio para un servicio concreto
 def ServiceCritic(serviceID):
@@ -263,4 +264,61 @@ def inicializacion():
  cargaAssociationRelationship()
  cargaGroup()
  BusinessServicePorGroup()
+ runtest()
  
+############### TEST ###############
+ 
+def runtest():
+  service_nogroup_test()
+  service_nocriticgroup_test()
+  service_multiplegroup_test()
+  service_multiplecriticgroup_test()
+  
+def service_nogroup_test():
+ for i in BusinessServiceArray:
+  k = 0
+  for j in GroupArray:
+   if([j[0],i[0]] in ServicesPerGroupArray):
+    k=1
+    break
+  if (k == 0):
+   print " \n [!] WARNING [!] El Servicio "+ i[1] + " no pertenece a ningún Grupo de Servicios \n"
+   raise SystemExit(0)
+def service_nocriticgroup_test():
+ for i in BusinessServiceArray:
+  k = 0
+  for j in GroupCriticArray:
+   if([j[0],i[0]] in ServicesPerGroupArray):
+    k=1
+    break
+  if (k == 0):
+   print " \n [!] WARNING [!] El Servicio "+ i[1] + " no pertenece a ningún Grupo de Criticidad \n"
+   raise SystemExit(0)
+
+def service_multiplegroup_test():
+ for i in BusinessServiceArray:
+  k = 0
+  for j in GroupArray:
+   if(([j[0],i[0]] in ServicesPerGroupArray) and (k == 0)):
+    k=1
+   elif(([j[0],i[0]] in ServicesPerGroupArray) and (k == 1)):
+    k=2
+    break
+  if (k == 2):
+   print " \n [!] WARNING [!] El Servicio "+ i[1] + " pertenece a varios Grupos de Servicios \n"
+   raise SystemExit(0)
+
+def service_multiplecriticgroup_test():
+ for i in BusinessServiceArray:
+  k = 0
+  for j in GroupCriticArray:
+   if(([j[0],i[0]] in ServicesPerGroupArray) and (k == 0)):
+    k=1
+   elif(([j[0],i[0]] in ServicesPerGroupArray) and (k == 1)):
+    k=2
+    break
+  if (k == 2):
+   print " \n [!] WARNING [!] El Servicio "+ i[1] + " pertenece a varios Grupos de Criticidad \n"
+   raise SystemExit(0)
+	
+
