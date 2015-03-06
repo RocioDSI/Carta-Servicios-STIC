@@ -1,7 +1,7 @@
 Title: Carta de Servicios STIC
 menulabel: Inicio
 save_as: index.html
-URL: Carta-Servicios-STIC/carta-de-servicios-stic.html
+URL: Carta-Servicios-STIC/
 sortorder: 0
 
 <div class="section">
