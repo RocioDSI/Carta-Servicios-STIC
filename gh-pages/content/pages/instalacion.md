@@ -1,4 +1,4 @@
-menulabel: Instalacion
+menulabel: Instalación
 title: Instalación de Carta de Servicios
 save_as: instalacion.html
 URL: Carta-Servicios-STIC/instalacion.html

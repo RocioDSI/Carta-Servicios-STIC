@@ -2,7 +2,7 @@ menulabel: Desarrolladores
 title: Desarrolladores del proyecto
 save_as: desarrolladores.html
 URL: Carta-Servicios-STIC/desarrolladores.html
-sortorder: 3
+sortorder: 99
 
 <div class="section">
     <ul class="nav nav-tabs header">
