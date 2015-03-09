@@ -149,23 +149,14 @@ from django.shortcuts import render_to_response
 import funcionesxml
 
 def index(request):
- funcionesxml.inicializacion()
- name = []
- for i in funcionesxml.GroupArray:
-  name.append(str(i[1]))
- response = render_to_response('index.html',{'grupo': name })
+ response = render_to_response('index.html')
  return response
   """
   
   for i in funcionesxml.GroupArray:
 	 viewgrupo = """
 def """ + formatstring(str(i[1])) + """(request):
- funcionesxml.inicializacion()
- name = []
- servicios = funcionesxml.getGroupServices(\""""+ str(i[0])+"""\")
- for i in servicios:
-  name.append(funcionesxml.getBusinessServiceName(i))
- response = render_to_response('""" + formatstring(str(i[1]))+ """.html',{'servicio': name })
+ response = render_to_response('""" + formatstring(str(i[1]))+ """.html')
  return response
 	   
 	   """
@@ -174,12 +165,7 @@ def """ + formatstring(str(i[1])) + """(request):
   for i in funcionesxml.GroupCriticArray:
      viewgrupo = """
 def """ + formatstring(str(i[1])) + """(request):
- funcionesxml.inicializacion()
- name = []
- servicios = funcionesxml.getGroupServices(\""""+ str(i[0])+"""\")
- for i in servicios:
-  name.append(funcionesxml.getBusinessServiceName(i))
- response = render_to_response('""" + formatstring(str(i[1]))+ """.html',{'servicio': name })
+ response = render_to_response('""" + formatstring(str(i[1]))+ """.html')
  return response
 	   
 	   """
@@ -188,12 +174,7 @@ def """ + formatstring(str(i[1])) + """(request):
   for i in funcionesxml.GroupRoleArray:
      viewgrupo = """
 def """ + formatstring(str(i[1])) + """(request):
- funcionesxml.inicializacion()
- name = []
- servicios = funcionesxml.getGroupServices(\""""+ str(i[0])+"""\")
- for i in servicios:
-  name.append(funcionesxml.getBusinessServiceName(i))
- response = render_to_response('""" + formatstring(str(i[1]))+ """.html',{'servicio': name })
+ response = render_to_response('""" + formatstring(str(i[1]))+ """.html')
  return response
 	   
 	   """

@@ -14,7 +14,7 @@ xml_analizador = xml.sax.make_parser() # Objeto parse que va a analizar el fiche
 
 xml_analizador.setContentHandler(ContentHandler()) # Manejador de contenido
 
-nombre_fichero = "Archi_Stic1.0.archimate"
+nombre_fichero = "Archi_Stic2.0.archimate"
 
 # Controla que la sintaxis del fichero xml sea correcta
 try:
@@ -67,10 +67,6 @@ def cargaBusinessService():
       else:
        valor.append("Campo Vacío")
     criticidad = ServiceCritic(id_servicio)
-    for i in BusinessServiceArray:
-        if (i[0] == id_servicio or i[1] == nombre_servicio):
-         print("ERROR: Nombre de SERVICIO o ID repetido en el modelo")
-         return
     if(nombre_servicio not in ["Servicio","Servicio 1","Servicio 2","Servicio 3"]):
      BusinessServiceArray.append([id_servicio,nombre_servicio, clave, valor, criticidad])
     #print("Servicio: " + nombre_servicio + " Id: " + id_servicio)
@@ -84,7 +80,6 @@ def cargaBusinessRole():
     for i in BusinessRoleArray:
       if (i[0] == id_roles or i[1] == nombre_rol):
          print("ERROR: Nombre de ROL o ID repetido en el modelo")
-         return
     BusinessRoleArray.append([id_roles,nombre_rol])
     #print("Rol: " + nombre_rol + " Id: " + id_roles)
     
@@ -270,9 +265,9 @@ def inicializacion():
  
 def runtest():
   service_nogroup_test()
-  service_nocriticgroup_test()
+  #service_nocriticgroup_test()
   service_multiplegroup_test()
-  service_multiplecriticgroup_test()
+  #service_multiplecriticgroup_test()
   
 def service_nogroup_test():
  for i in BusinessServiceArray:
