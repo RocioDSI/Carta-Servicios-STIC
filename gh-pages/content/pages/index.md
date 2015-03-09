@@ -72,15 +72,18 @@ sortorder: 0
 
 		<p align = justify style='text-indent: 2em'>
 			Además, cada elemento puede contener propiedades que serán también procesadas para mostrarlas en la web.
-		</p>
+		</p><br> <br>
+				
 		<p align="center">
 			<img border="1" width='60%' height="60%" src="images/propiedades.png"></img>
-		</p>
+		</p><br> <br>
+			
 		<p align = justify style='text-indent: 2em'>
 			El resultado de ejecutar el proyecto carta de servicios es una página en la se listan, según alguno de los criterios específicados en las vistas, los servicios con las propiedades que tienen asociadas.
-		</p>
+		</p><br> <br>
+			
 		<p align="center">
 			<img border="1" width='60%' height="60%" src="images/html.png"></img>
-		</p>
+		</p><br> <br>	
     </div>
 </div>
