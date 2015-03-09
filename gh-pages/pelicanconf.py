@@ -106,7 +106,7 @@ FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 
-GITHUB_REPO = 'https://example.com/tic-ull/sample-site'
+GITHUB_REPO = 'https://github.com/RocioDSI/Carta-Servicios-STIC.git'
 
 PLUGIN_PATHS = ["plugins", THEME + "/plugins", ]
 PLUGINS = ['toc', ]
