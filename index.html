@@ -93,6 +93,7 @@
             <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="/Carta-Servicios-STIC/index.html">Inicio</a></li>
                         <li><a href="/Carta-Servicios-STIC/instalacion.html">Instalacion</a></li>
+                        <li><a href="/Carta-Servicios-STIC/desarrolladores.html">Desarrolladores</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -111,7 +112,7 @@
         <li class="active">En que consiste la Carta de Servicios</li>
     </ul>
     <div class="content">
-        <p>
+        <p align = justify style='text-indent: 2em'>
             La Carta de Servicios es un proyecto promovido por el Servicio de Tecnologías de la Información y la Comunicación (STIC) de la Universidad de La Laguna (ULL) que tiene como finalidad el modelado de Carta de Servicios usando técnicas de Arquitectura Empresarial, permitiendo la automatización de tareas a través dicho modelo.
         </p>
     </div>
@@ -122,10 +123,10 @@
         <li class="active">Arquitectura</li>
     </ul>
     <div class="content">
-        <p>
+        <p align = justify style='text-indent: 2em'>
             El modelado de la Carta de Servicios ha sido diseñado de manera que la utilización del proyecto sea independiente de la carta de servicios de la institución, es decir, con sólo exportar el archivo del modelo el proyecto es capaz de interpretarlo y generar toda la estructura web del mismo. Esto permite que el usuario pueda exportar este proyecto de manera fácil y cómoda.
         </p>
-        <p> 
+        <p align = justify style='text-indent: 2em'>
             La arquitectura Modelo-Vista-Controlador (MVC) que provee el framework <a href="https://www.djangoproject.com/" target="_blank">Django</a> facilita la creación de
             aplicaciones o módulos que agrupan un conjunto de características asociadas al mismo concepto con capacidad de configuración propia.
         </p>
@@ -142,32 +143,59 @@
         <li class="active">Características y Funcionalidades</li>
     </ul>
     <div class="content">
-        <p>
-            El modelado de la Carta de Servicios nos permite realizar modificaciones en un modelo, como el que vemos en la imagen de abajo, y que éstas se vean reflejadas en la web de nuestra institución. En este caso hemos añadido un nuevo grupo de servicios llamado “Soporte TIC a la gestión” que contiene un servicio llamado “Gestión académica”.
-        </p>
+        <p align = justify style='text-indent: 2em'>
+            Este proyecto permite convertir modelos de archimate en html. La versión 2.0 soporta tres tipos de objetos: Los grupos, los servicios y los roles. A continuación se muestra el metamodelo sobre el que está construida la aplicación.
+        </p> <br> <br>
+
         <p align="center">
-            <img border="1" width='60%' height="60%" src="images/modelo_ampliado.png"></img>
-        </p>
-        <p>
-            Además, cada servicio puede contener propiedades que serán también procesadas para mostrarlas en la web. En este caso el servicio "Gestión académica" tiene las siguientes propiedades:
+            <img border="1" width='60%' height="60%" src="images/metamodelo.jpg"></img>
+        </p> <br> <br>
+
+        <p align = justify style='text-indent: 2em'>
+            A continuación podemos ver cómo los servicios de una organización se pueden asignar al grupo de servicios al que pertenecen en la vista con nombre <b>Carta de servicios</b>:
+        </p> <br> <br>      
+
+        <p align="center">
+            <img border="1" width='60%' height="60%" src="images/Cartadeservicios.jpg"></img>
+        </p> <br> <br>      
+
+        <p align = justify style='text-indent: 2em'>
+            Es frecuente que en una organización clasificar los servicios ofertados según el nivel de criticidad de los mismos. Para ello definimos la vista con nombre <b>Criticidad</b> de la siguiente manera:
+        </p> <br> <br>  
+
+        <p align="center">
+            <img border="1" width='60%' height="60%" src="images/Criticidad.jpg"></img>
+        </p> <br> <br>
+
+        <p align = justify style='text-indent: 2em'>
+            Es importante restringir el acceso a ciertos servicios por la información que éstos manejan, esto se realiza en la vista con nombre <b>Roles</b>.
+        </p> <br> <br>  
+
+        <p align="center">
+            <img border="1" width='60%' height="60%" src="images/serviciosroles.jpg"></img>
+        </p> <br> <br>  
+
+        <p align = justify style='text-indent: 2em'>
+            Además, cada elemento puede contener propiedades que serán también procesadas para mostrarlas en la web. En este caso el servicio "Gestión académica" tiene las siguientes propiedades:
         </p>
         <p align="center">
             <img border="1" width='60%' height="60%" src="images/propiedades.png"></img>
         </p>
-        <p>
+        <p align = justify style='text-indent: 2em'>
             El resultado de ejecutar el proyecto carta de servicios es una página en la que se recoge el nuevo grupo de servicios, el nuevo servicio y sus propiedades:
         </p>
         <p align="center">
             <img border="1" width='60%' height="60%" src="images/modelo_ampliado_html.png"></img>
         </p>
     </div>
+
 </div>
         </div>
     </section>
         </div>
         <div class="col-md-3 sidebar" id="sidebar">
     <div class="well" style="text-align:center">
-        <a href="https://example.com/tic-ull/sample-site" target="_blank"><img src="images/forkme.png" border="0" alt="Fork me on GitHub" title="Fork me on GitHub"/></a>
+        <a href="https://github.com/RocioDSI/Carta-Servicios-STIC.git" target="_blank"><img src="images/forkme.png" border="0" alt="Fork me on GitHub" title="Fork me on GitHub"/></a>
     </div>
 
 
