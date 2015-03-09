@@ -1,4 +1,4 @@
-Title: Carta de Servicios STIC
+Title: Módulos adicionales de la aplicación
 menulabel: Módulos
 save_as: modulo.html
 URL: Carta-Servicios-STIC/modulo.html
@@ -35,7 +35,7 @@ sortorder: 3
 		</p> <br> <br>	
 		
 		<p align="center">
-			<img border="1" width='60%' height="60%" src="images/groups.png"></img>
+			<img border="1" width='60%' height="60%" src="images/group.png"></img>
 		</p> <br> <br>	
        <p align="center">
 			<img border="1" width='60%' height="60%" src="images/services.png"></img>
