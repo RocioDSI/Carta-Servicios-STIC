@@ -11,7 +11,7 @@ PATH = 'content'
 
 TIMEZONE = 'Atlantic/Canary'
 
-DEFAULT_LANG = u'en'
+#DEFAULT_LANG = u'en'
 
 # Disable link generation
 FEED_ALL_ATOM = None

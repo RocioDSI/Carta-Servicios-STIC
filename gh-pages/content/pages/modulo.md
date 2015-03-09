@@ -10,15 +10,7 @@ sortorder: 3
     </ul>
     <div class="content">
 		<p align = justify style='text-indent: 2em'>
-			Hemos desarrollado un módulo capaz de generar código de Archimate, lo que permite la introducción de grandes volúmenes de datos de una forma eficiente.
-		</p> <br> <br>
-
-		<p align="center">
-			<img border="1" width='60%' height="60%" src="images/metamodelo.jpg"></img>
-		</p> <br> <br>
-		
-		<p align = justify style='text-indent: 2em'>
-			Para ello, debemos contar con un documento de Excel que siga la siguiente distribución:
+			Hemos desarrollado un módulo capaz de generar código de Archimate a partir de una hoja de cálculo, lo que permite la introducción de grandes volúmenes de datos de una forma eficiente. Para ello, debemos contar con un documento de Excel que siga la siguiente distribución:
 		</p> <br> <br>		
 		
 		<p align="center">
@@ -30,7 +22,7 @@ sortorder: 3
 		</p> <br> <br>	
 
 		<p align="center">
-			<img border="1" width='60%' height="60%" src="images/saveasxml.jpg"></img>
+			<img border="1" width='60%' height="60%" src="images/saveasxml.png"></img>
 		</p> <br> <br>
 		<p>
 			<div class="alert alert-danger">
@@ -43,10 +35,10 @@ sortorder: 3
 		</p> <br> <br>	
 		
 		<p align="center">
-			<img border="1" width='60%' height="60%" src="images/groups.jpg"></img>
+			<img border="1" width='60%' height="60%" src="images/groups.png"></img>
 		</p> <br> <br>	
        <p align="center">
-			<img border="1" width='60%' height="60%" src="images/services.jpg"></img>
+			<img border="1" width='60%' height="60%" src="images/services.png"></img>
 		</p> <br> <br>
 		<p>
 			<div class="alert alert-danger">
