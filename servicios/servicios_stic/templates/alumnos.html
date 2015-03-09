@@ -1,0 +1,34 @@
+ 
+{% extends "menu.html" %}
+
+{% block contenido %}
+{% block titulo %}
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - Alumnos</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title">Docencia Virtual</h1> 
+					<p> ID: 5cc18672 </p>
+					<p> Criticidad: Servicios Críticos</p>
+					<p> Roles: Alumnos, PDI. </p>
+   <p> Descripcion: Esta es mi descripcion3 </p>
+       
+					<h1 class="main-title">Soporte a Aulas multimedia</h1> 
+					<p> ID: 14636a2f </p>
+					<p> Criticidad: Servicios Poco Críticos</p>
+					<p> Roles: Alumnos, PDI. </p>
+   <p> Descripcion: Esta es mi descripcion4 </p>
+       
+					<h1 class="main-title">Alojamiento de Infraestructuras</h1> 
+					<p> ID: 3430a7f9 </p>
+					<p> Criticidad: Servicios Críticos</p>
+					<p> Roles: Alumnos. </p>
+   <p> Descripcion: Esta es mi descripcion </p>
+       		</div>
+{% endblock %}
+{% endblock %}  
+  

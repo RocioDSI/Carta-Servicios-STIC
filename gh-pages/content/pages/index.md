@@ -71,16 +71,16 @@ sortorder: 0
 		</p> <br> <br>	
 
 		<p align = justify style='text-indent: 2em'>
-			Además, cada elemento puede contener propiedades que serán también procesadas para mostrarlas en la web. En este caso el servicio "Gestión académica" tiene las siguientes propiedades:
+			Además, cada elemento puede contener propiedades que serán también procesadas para mostrarlas en la web.
 		</p>
 		<p align="center">
 			<img border="1" width='60%' height="60%" src="images/propiedades.png"></img>
 		</p>
 		<p align = justify style='text-indent: 2em'>
-			El resultado de ejecutar el proyecto carta de servicios es una página en la que se recoge el nuevo grupo de servicios, el nuevo servicio y sus propiedades:
+			El resultado de ejecutar el proyecto carta de servicios es una página en la se listan, según alguno de los criterios específicados en las vistas, los servicios con las propiedades que tienen asociadas.
 		</p>
 		<p align="center">
-			<img border="1" width='60%' height="60%" src="images/modelo_ampliado_html.png"></img>
+			<img border="1" width='60%' height="60%" src="images/html.png"></img>
 		</p>
     </div>
 </div>
