@@ -11,7 +11,7 @@ sortorder: 2
     <section id="content" class="body">
         
         <div class="entry-content">
-			<p>
+			<p align = justify style='text-indent: 2em'>
 				La presente guía de instalación proporciona el paso a paso de la instalación y configuración del proyecto bajo un entorno con sistema operativo GNU/Linux, concretamente Ubuntu.
 			</p>
 		</div>
@@ -28,7 +28,7 @@ sortorder: 2
 		<div class="alert alert-danger">
 			Debido a problemas de compatibilidad entre Django y el intérprete de Python 3.0, es importante instalar la version 2.7.X para evitar posibles errores.
 		</div>
-    <p>
+	<p align = justify style='text-indent: 2em'>
     Django es un framework de python y, por tanto, necesitamos tenerlo instalado antes de empezar. 
     Para la instalación de dependencias de módulos Python se emplea <i>pip</i>. 
             Se recomienda el uso de <i>virtualenv</i> junto con esta herramienta,
@@ -71,7 +71,7 @@ sortorder: 2
         <li class="active">5. Añadir la plantilla.</li>
     </ul>
     <div class="content">
-        <p>Colocar la plantilla con el nombre "plantilla.html" dentro del directorio "servicios/servicios_stic/templates"</p>
+        <p align = justify style='text-indent: 2em'>Colocar la plantilla con el nombre "plantilla.html" dentro del directorio "servicios/servicios_stic/templates"</p>
     </div>
 </div>
 
@@ -80,7 +80,7 @@ sortorder: 2
         <li class="active">6. Procesar el modelo.</li>
     </ul>
     <div class="content">
-        <p>Desde el directorio "servicios" que está situado a nivel superior del proyecto ejecutar el siguiente comando:</p>
+        <p align = justify style='text-indent: 2em'>Desde el directorio "servicios" que está situado a nivel superior del proyecto ejecutar el siguiente comando:</p>
         <pre>python main.py</pre>
     </div>
 </div>
@@ -90,7 +90,7 @@ sortorder: 2
         <li class="active">7. Procesar el modelo.</li>
     </ul>
     <div class="content">
-        <p>Desde el directorio "servicios" que está situado a nivel superior del proyecto ejecutar el siguiente comando:</p>
+        <p align = justify style='text-indent: 2em'>Desde el directorio "servicios" que está situado a nivel superior del proyecto ejecutar el siguiente comando:</p>
         <pre>python manage.py runserver</pre>
     </div>
 </div>
@@ -100,7 +100,7 @@ sortorder: 2
         <li class="active">8. Acceder al contenido.</li>
     </ul>
     <div class="content">
-        <p>Visitar el sitio web en la dirección:</p>
+        <p align = justify style='text-indent: 2em'>Visitar el sitio web en la dirección:</p>
         <pre>http://127.0.0.1:8000/</pre>
     </div>
 </div>
