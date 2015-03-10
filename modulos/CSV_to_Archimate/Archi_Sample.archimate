@@ -37,36 +37,18 @@
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="de88d321" name="Criticidad">
-      <child xsi:type="archimate:Group" id="2810a262" name="Servicios Críticos" fillColor="#ef2929">
-        <bounds x="744" y="132" width="337" height="229"/>
-      </child>
-      <child xsi:type="archimate:Group" id="94f5f712" name="Servicios Normales" fillColor="#fce94f">
-        <bounds x="420" y="133" width="317" height="228"/>
-      </child>
-      <child xsi:type="archimate:Group" id="23956b5a" name="Servicios Poco Críticos" fillColor="#8ae234">
-        <bounds x="96" y="133" width="316" height="228"/>
-      </child>
+   
+     ---- INTRODZUCA EL CONTENIDO DEL FICHERO criticidad.xml AQUI ----
+   
       <child xsi:type="archimate:Note" id="25b4a6c6" font="1|DejaVu Sans|24.0|1|GTK|1|" textAlignment="1" borderType="2">
         <bounds x="372" y="72" width="445" height="44"/>
         <content>GRUPOS DE CRITICIDAD</content>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="0c773fcd" name="Roles">
-      <child xsi:type="archimate:Group" id="8e132732" name="Alumnos" fillColor="#e9b96e">
-        <bounds x="252" y="144" width="217" height="325"/>
-      </child>
-      <child xsi:type="archimate:Group" id="ab9ab0df" name="PAS" fillColor="#e9b96e">
-        <bounds x="480" y="144" width="193" height="325"/>
-      </child>
-      <child xsi:type="archimate:Group" id="0159aabe" name="PDI" fillColor="#e9b96e">
-        <bounds x="36" y="144" width="205" height="325"/>
-      </child>
-      <child xsi:type="archimate:Group" id="15e890fb" name="ExAlumnos" fillColor="#e9b96e">
-        <bounds x="864" y="144" width="205" height="325"/>
-      </child>
-      <child xsi:type="archimate:Group" id="ad712805" name="AAAAULL" fillColor="#e9b96e">
-        <bounds x="684" y="144" width="169" height="325"/>
-      </child>
+      
+      ---- INTRODZUCA EL CONTENIDO DEL FICHERO roles.xml AQUI ----
+      
       <child xsi:type="archimate:Note" id="18c35600" font="1|DejaVu Sans|24.0|1|GTK|1|" textAlignment="1" borderType="2">
         <bounds x="228" y="60" width="927" height="44"/>
         <content>SERVICIOS OFERTADOS A CADA ROL</content>
