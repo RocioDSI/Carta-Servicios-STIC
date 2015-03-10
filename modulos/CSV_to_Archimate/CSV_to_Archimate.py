@@ -37,74 +37,179 @@ lista = nodos[0].getElementsByTagName("Row")
 
 outservices = open("servicios.xml","w")
 outgroups = open("groups.xml","w")
+outcriticgroups = open("criticidad.xml","w")
+outrolegroups = open("roles.xml","w")
 
 id_array=[]
 service_group=[]
+service_critic_group=[]
+service_role_group=[]
 groupArray=[]
-xmlfinal= ""
-xmlstr=""
+groupCriticArray=[]
+groupRoleArray=[]
 
-for nodo in lista:
-  listahijos = nodo.getElementsByTagName("Data")
-  field = 0
+
+xmlstrii=""
+xmlstriii=""
+attr = []
+
+# Funcion que realiza la carga inicial de servicios y genera el contenido del fichero servicios.xml
+def carga():
+ xmlfinal= ""
+ for nodo in lista:
+  if(nodo == lista[0]):
+   listahijos = nodo.getElementsByTagName("Data")
+   for hijo in listahijos:
+     attr.append(hijo.firstChild.nodeValue)
+  else:
+   listahijos = nodo.getElementsByTagName("Data")
+   field = 0
   
-  for hijo in listahijos:
-    if(field == 0):
-     codigoCrue = hijo.firstChild.nodeValue
-     print ("El codigo CRUE es: " + codigoCrue)
-    elif(field == 1):
-     grupoServicio = hijo.firstChild.nodeValue
-     print ("El Grupo de Servicio es: " + grupoServicio)
-    elif(field == 2):
-     nombreServicio = hijo.firstChild.nodeValue
-     print ("El Servicio es: " + nombreServicio)
-    elif(field == 3):
-     descripcion = hijo.firstChild.nodeValue
-     print ("La descripcion es: " + descripcion)
-     identi = binascii.b2a_hex(os.urandom(4))
-     while identi in id_array:
+   for hijo in listahijos:
+     if(field == 0):
+      codigoCrue = hijo.firstChild.nodeValue
+      print ("El codigo CRUE es: " + codigoCrue)
+     elif(field == 1):
+      grupoServicio = hijo.firstChild.nodeValue
+      print ("El Grupo de Servicio es: " + grupoServicio)
+     elif(field == 2):
+      nombreServicio = hijo.firstChild.nodeValue
+      print ("El Servicio es: " + nombreServicio)
+     elif(field == 3):
+      descripcion = hijo.firstChild.nodeValue
+      print ("La descripcion es: " + descripcion)
       identi = binascii.b2a_hex(os.urandom(4))
-     id_array.append(identi)
-     print ("El ID es : " + identi + "\n")
-    field += 1
-    
-  if (field != 0):
-   service_group.append([identi,grupoServicio])
-   if grupoServicio not in groupArray:
-    groupArray.append(grupoServicio)
- 
+      while identi in id_array:
+       identi = binascii.b2a_hex(os.urandom(4))
+      id_array.append(identi)
+      print ("El ID es : " + identi)
+     elif(field == 4):
+      grupoCritico = hijo.firstChild.nodeValue
+      print ("El Servicio pertenece al grupo de criticidad: " + grupoCritico)
+     elif(field in ([5,6,7,8,9])):
+      acceso = hijo.firstChild.nodeValue
+      if(acceso in ["SÍ","Sí","sí","SI","Si","si","YES","Yes","yes","y"]):
+       service_role_group.append([identi,attr[field]])
+      print ("Acceso a "+ attr[field] + ": "  + acceso)
+      
+     field += 1
+
+      
+   if (field != 0):
+    service_critic_group.append([identi,grupoCritico])
+    service_group.append([identi,grupoServicio])
+   
+    if grupoServicio not in groupArray:
+     groupArray.append(grupoServicio)
+   
+    if grupoCritico not in groupCriticArray:
+     groupCriticArray.append(grupoCritico)
+
    xmlstring =  """
        <element xsi:type="archimate:BusinessService" id=\""""+ str(identi) +"""\" name=\" """+ str(nombreServicio) +"""\">
          <property key="Código CRUE" value=\""""+ str(codigoCrue) + """\"/>
          <property key="Descripción" value=\""""+ str(descripcion) + """\"/>
        </element>"""	
   
-   xmlfinal += xmlstring
-  
-outservices.write(xmlfinal)
+   xmlfinal += xmlstring 
+ outservices.write(xmlfinal)
 
-for i in groupArray:
-  while identi in id_array:
+# Generacion del fichero groups.xml
+def generateGroupsXML():
+ xmlstr=""
+ for i in groupArray:
    identi = binascii.b2a_hex(os.urandom(4))
-  id_array.append(identi) 
-  identi2 = binascii.b2a_hex(os.urandom(4))
+   while identi in id_array:
+    identi = binascii.b2a_hex(os.urandom(4))
+   id_array.append(identi) 
+   identi2 = binascii.b2a_hex(os.urandom(4))
  
-  xmlstr +="""
+   xmlstr +="""
       <child xsi:type="archimate:Group" id=\""""+ identi +"""\" name=\""""+ i +"""\">
         <bounds x="-96" y="180" width="325" height="169"/>"""
         
-  for j in service_group:
-   if(i == j[1]):
-    while identi2 in id_array:
-     identi2 = binascii.b2a_hex(os.urandom(4))
-    id_array.append(identi2)
+   for j in service_group:
+    if(i == j[1]):
+     while identi2 in id_array:
+      identi2 = binascii.b2a_hex(os.urandom(4))
+     id_array.append(identi2)
     
-    xmlstr += """
+     xmlstr += """
         <child xsi:type="archimate:DiagramObject" id=\"""" + identi2 + """\" textAlignment="2" archimateElement=\""""+ j[0] +"""\">
           <bounds x="12" y="84" width="157" height="37"/>
         </child>"""
-  xmlstr +="""
+   xmlstr +="""
       </child>"""
       
-outgroups.write(xmlstr)
+ outgroups.write(xmlstr)
+
+
+# Generacion del fichero criticidad.xml
+def generateCriticidadXML():
+ xmlstrii=""
+ for i in groupCriticArray:
+   identi = binascii.b2a_hex(os.urandom(4))
+   while identi in id_array:
+    identi = binascii.b2a_hex(os.urandom(4))
+   id_array.append(identi) 
+   identi2 = binascii.b2a_hex(os.urandom(4))
+ 
+   xmlstrii +="""
+      <child xsi:type="archimate:Group" id=\""""+ identi +"""\" name=\""""+ i +"""\">
+        <bounds x="-96" y="180" width="325" height="169"/>"""
+        
+   for j in service_critic_group:
+    if(i == j[1]):
+     while identi2 in id_array:
+      identi2 = binascii.b2a_hex(os.urandom(4))
+     id_array.append(identi2)
+    
+     xmlstrii += """
+        <child xsi:type="archimate:DiagramObject" id=\"""" + identi2 + """\" textAlignment="2" archimateElement=\""""+ j[0] +"""\">
+          <bounds x="12" y="84" width="157" height="37"/>
+        </child>"""
+   xmlstrii +="""
+      </child>"""
+      
+ outcriticgroups.write(xmlstrii)
+
+# Generacion del fichero roles.xml
+def generateRolesXML():
+ xmlstriii=""	
+ for j in service_role_group:
+   if j[1] not in groupRoleArray:
+    groupRoleArray.append(j[1])
+
+
+ for i in groupRoleArray:
+   identi = binascii.b2a_hex(os.urandom(4))
+   while identi in id_array:
+    identi = binascii.b2a_hex(os.urandom(4))
+   id_array.append(identi) 
+   identi2 = binascii.b2a_hex(os.urandom(4))
+ 
+   xmlstriii +="""
+      <child xsi:type="archimate:Group" id=\""""+ identi +"""\" name=\""""+ i +"""\">
+        <bounds x="-96" y="180" width="325" height="169"/>"""
+        
+   for j in service_role_group:
+    if(i == j[1]):
+     while identi2 in id_array:
+      identi2 = binascii.b2a_hex(os.urandom(4))
+     id_array.append(identi2)
+    
+     xmlstriii += """
+        <child xsi:type="archimate:DiagramObject" id=\"""" + identi2 + """\" textAlignment="2" archimateElement=\""""+ j[0] +"""\">
+          <bounds x="12" y="84" width="157" height="37"/>
+        </child>"""
+   xmlstriii +="""
+      </child>"""
+      
+ outrolegroups.write(xmlstriii)
+ 
+ 
+carga()
+generateGroupsXML()
+generateCriticidadXML()
+generateRolesXML()
 
