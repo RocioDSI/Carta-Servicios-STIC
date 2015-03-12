@@ -2,9 +2,9 @@
 <archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Archi_STIC_1.0" id="8add2b99" version="3.1.1">
   <folder name="Business" id="8f04dd69" type="business">
     <folder name="Servicios" id="1355d78e">
+		
+servicios.xml
     
-		---- INTRODUZCA EL CONTENIDO DEL FICHERO servicios.xml AQUI ----
-        
     </folder>
     <folder name="Roles" id="3ac14d2d">
       <element xsi:type="archimate:BusinessRole" id="6c2f82dd" name="AAAAULL"/>
@@ -82,7 +82,7 @@
     </folder>
     <element xsi:type="archimate:ArchimateDiagramModel" id="1ee75722" name="Carta de servicios">
 		
-		---- INTRODUZCA EL CONTENIDO DEL FICHERO groups.xml AQUI ----
+groups.xml
 		
       <child xsi:type="archimate:Note" id="20d6523d" font="1|DejaVu Sans|24.0|1|GTK|1|" textAlignment="1" borderType="2">
         <bounds x="216" y="96" width="421" height="44"/>
@@ -91,7 +91,7 @@
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="de88d321" name="Criticidad">
 		
-		---- INTRODUZCA EL CONTENIDO DEL FICHERO criticidad.xml AQUI ----
+criticidad.xml
 		
       <child xsi:type="archimate:Note" id="25b4a6c6" font="1|DejaVu Sans|24.0|1|GTK|1|" textAlignment="1" borderType="2">
         <bounds x="372" y="72" width="445" height="44"/>
@@ -100,7 +100,7 @@
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="0c773fcd" name="Roles">
 		
-		---- INTRODUZCA EL CONTENIDO DEL FICHERO roles.xml AQUI ----     
+roles.xml   
 		
         <child xsi:type="archimate:Note" id="18c35600" font="1|DejaVu Sans|24.0|1|GTK|1|" textAlignment="1" borderType="2">
         <bounds x="228" y="60" width="927" height="44"/>
