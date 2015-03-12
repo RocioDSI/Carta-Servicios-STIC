@@ -140,7 +140,7 @@ def ServiceCritic(serviceID):
          return hijo.attributes.get("name").value
              
 # Obtener el grupo de un servicio a partir del identificador de servicio
-def getServiceGroup(serviceID):
+def getServiceAllGroups(serviceID):
   groups=[]
   for i in ServicesPerGroupArray:
     if(i[1] == serviceID):
@@ -175,6 +175,14 @@ def getServiceRoles(serviceID):
        roles.append(i[0])
   return roles
 
+
+# Obtener el grupo de servicios para un  servicio (ID)
+def getServiceGroup(serviceID):
+  for i in ServicesPerGroupArray:
+   if (i[1] == serviceID):
+    for k in GroupArray:
+     if (k[0] == i[0]):
+      return k[1]
 
 # Obtener los servicios de un rol a traves del identificador de rol
 def getRoleServices(roleID):
