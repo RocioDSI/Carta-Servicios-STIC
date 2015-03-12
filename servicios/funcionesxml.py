@@ -42,6 +42,7 @@ AssociationRelationshipArray = []
 GroupArray = []
 GroupCriticArray = []
 GroupRoleArray = []
+GroupAccessArray = []
 ServicesPerGroupArray = []
 ViewsNameArray = []
 
@@ -49,7 +50,7 @@ ViewsNameArray = []
 VistaGruposServicios = "Carta de servicios"
 VistaRoles = "Roles"
 VistaCriticidad = "Criticidad"
-
+VistaAcceso = "Nivel de Acceso"
 
 #Almacenamiento de servicios
 def cargaBusinessService():
@@ -67,10 +68,10 @@ def cargaBusinessService():
       else:
        valor.append("Campo Vacío")
     criticidad = ServiceCritic(id_servicio)
+    acceso = ServiceAccess(id_servicio)
     if(nombre_servicio not in ["Servicio","Servicio 1","Servicio 2","Servicio 3"]):
-     BusinessServiceArray.append([id_servicio,nombre_servicio, clave, valor, criticidad])
-    #print("Servicio: " + nombre_servicio + " Id: " + id_servicio)
-    
+     BusinessServiceArray.append([id_servicio,nombre_servicio, clave, valor, criticidad, acceso])
+         
 #Almacenamiento de roles
 def cargaBusinessRole():
   for nodo in lista:
@@ -81,7 +82,6 @@ def cargaBusinessRole():
       if (i[0] == id_roles or i[1] == nombre_rol):
          print("ERROR: Nombre de ROL o ID repetido en el modelo")
     BusinessRoleArray.append([id_roles,nombre_rol])
-    #print("Rol: " + nombre_rol + " Id: " + id_roles)
     
 #Almacenamiento de las relaciones
 def cargaAssociationRelationship():
@@ -91,7 +91,6 @@ def cargaAssociationRelationship():
     source = nodo.attributes.get("source").value
     target = nodo.attributes.get("target").value
     AssociationRelationshipArray.append([id_relacion_asociacion,source,target])
-    #print("\nLa Id de relacion de asociacion: " + id_relacion_asociacion + " Origen: [" + str(getAnyName(source)) + "] Destino: [" + str(getAnyName(target))+"]")
 
 #Almacenamiento de los grupos de servicio por Criticidad, Rol o Grupo de Servicio
 def cargaGroup():
@@ -102,18 +101,19 @@ def cargaGroup():
       if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
         nombre_grupo = hijo.attributes.get("name").value
         id_grupo = hijo.attributes.get("id").value
-        #print("Grupo: " + nombre_grupo + " Id: " + id_grupo)
         if(nodo.attributes.get("name").value == VistaGruposServicios):
          GroupArray.append([id_grupo,nombre_grupo])
         elif(nodo.attributes.get("name").value == VistaCriticidad):
          GroupCriticArray.append([id_grupo,nombre_grupo])
         elif(nodo.attributes.get("name").value == VistaRoles):
          GroupRoleArray.append([id_grupo,nombre_grupo])
+        elif(nodo.attributes.get("name").value == VistaAcceso):
+         GroupAccessArray.append([id_grupo,nombre_grupo])
          
-#Almacenamiento de todos los servicios por grupo para grupos de Servicio, Criticidad o Roles      
+#Almacenamiento de todos los servicios por grupo para grupos de Servicio, Criticidad, Roles y Nivel de Acceso      
 def BusinessServicePorGroup():
   for nodo in lista:
-   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and ((nodo.attributes.get("name").value) in [VistaCriticidad,VistaGruposServicios,VistaRoles])): 
+   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and ((nodo.attributes.get("name").value) in [VistaCriticidad,VistaGruposServicios,VistaRoles,VistaAcceso])): 
     listahijos = nodo.getElementsByTagName("child")
     for hijo in listahijos:
      if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
@@ -138,7 +138,32 @@ def ServiceCritic(serviceID):
         id_nieto = nieto.attributes.get("archimateElement").value
         if(serviceID == id_nieto):
          return hijo.attributes.get("name").value
-             
+         
+#Almacenamiento de nivel de acceso para un servicio concreto
+def ServiceAccess(serviceID):
+  for nodo in lista:
+   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and (str(nodo.attributes.get("name").value)) == VistaAcceso):
+    listahijos = nodo.getElementsByTagName("child")
+    for hijo in listahijos:
+      if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
+       listanietos = hijo.getElementsByTagName("child")
+       for nieto in listanietos:
+        id_nieto = nieto.attributes.get("archimateElement").value
+        if(serviceID == id_nieto):
+         return hijo.attributes.get("name").value
+         
+#Obtencion del nivel de acceso para un servicio
+def getServiceAccess(serviceID):
+  for i in BusinessServiceArray:
+   if (i[0] == serviceID):
+    return i[5]
+   
+#Obtencion del nivel de criticidad para un servicio
+def getServiceCritic(serviceID):
+  for i in BusinessServiceArray:
+   if (i[0] == serviceID):
+    return i[4]
+                          
 # Obtener el grupo de un servicio a partir del identificador de servicio
 def getServiceAllGroups(serviceID):
   groups=[]
@@ -221,6 +246,10 @@ def getGroupName(GroupID):
     if(GroupID == i[0]):
        name = i[1]
        return name
+  for i in GroupAccessArray:
+    if(GroupID == i[0]):
+       name = i[1]
+       return name
         
 ##Obtener IDs a partir de nombres##
 def getBusinessRoleID(BusinessRoleName):
@@ -273,9 +302,12 @@ def inicializacion():
  
 def runtest():
   service_nogroup_test()
-  #service_nocriticgroup_test()
+  service_nocriticgroup_test()
+  service_noaccessgroup_test()
   service_multiplegroup_test()
-  #service_multiplecriticgroup_test()
+  service_multiplecriticgroup_test()
+  service_multipleaccessgroup_test()
+
   
 def service_nogroup_test():
  for i in BusinessServiceArray:
@@ -298,31 +330,73 @@ def service_nocriticgroup_test():
   if (k == 0):
    print " \n [!] WARNING [!] El Servicio "+ i[1] + " no pertenece a ningún Grupo de Criticidad \n"
 
+def service_noaccessgroup_test():
+ for i in BusinessServiceArray:
+  k = 0
+  for j in GroupAccessArray:
+   if([j[0],i[0]] in ServicesPerGroupArray):
+    k=1
+    break
+  if (k == 0):
+   print " \n [!] WARNING [!] El Servicio "+ i[1] + " no pertenece a ningún Nivel de Acceso \n"
 
 def service_multiplegroup_test():
  for i in BusinessServiceArray:
+  groups = []
   k = 0
   for j in GroupArray:
    if(([j[0],i[0]] in ServicesPerGroupArray) and (k == 0)):
+    groups.append(j[0])
     k=1
    elif(([j[0],i[0]] in ServicesPerGroupArray) and (k == 1)):
+    groups.append(j[0])
     k=2
-    break
-  if (k == 2):
-   print " \n [!] WARNING [!] El Servicio "+ i[1] + " pertenece a varios Grupos de Servicios \n"
+   elif(([j[0],i[0]] in ServicesPerGroupArray)):
+    groups.append(j[0])
+    
+   if (k == 2):
+    errorMessage = " \n [!] WARNING [!] El Servicio "+ i[1] + " pertenece a varios Grupos de Servicios: "
+    for m in groups:
+     errorMessage += "[" + getGroupName(m) + "]  "
+    print errorMessage
 
 
 def service_multiplecriticgroup_test():
  for i in BusinessServiceArray:
+  groups = []
   k = 0
   for j in GroupCriticArray:
    if(([j[0],i[0]] in ServicesPerGroupArray) and (k == 0)):
+    groups.append(j[0])
     k=1
    elif(([j[0],i[0]] in ServicesPerGroupArray) and (k == 1)):
+    groups.append(j[0])
     k=2
-    break
+   elif(([j[0],i[0]] in ServicesPerGroupArray)):
+    groups.append(j[0])
+    
+   if (k == 2):
+    errorMessage = " \n [!] WARNING [!] El Servicio "+ i[1] + " pertenece a varios Niveles de Criticidad: "
+    for m in groups:
+     errorMessage += "[" + getGroupName(m) + "]  "
+    print errorMessage
+
+def service_multipleaccessgroup_test():
+ for i in BusinessServiceArray:
+  groups = []
+  k = 0
+  for j in GroupAccessArray:
+   if(([j[0],i[0]] in ServicesPerGroupArray) and (k == 0)):
+    groups.append(j[0])
+    k=1
+   elif(([j[0],i[0]] in ServicesPerGroupArray) and (k == 1)):
+    groups.append(j[0])
+    k=2
+   elif(([j[0],i[0]] in ServicesPerGroupArray)):
+    groups.append(j[0])
+   
   if (k == 2):
-   print " \n [!] WARNING [!] El Servicio "+ i[1] + " pertenece a varios Grupos de Criticidad \n"
-
-	
-
+   errorMessage = " \n [!] WARNING [!] El Servicio "+ i[1] + " pertenece a varios Niveles de Acceso: "
+   for m in groups:
+    errorMessage += "[" + getGroupName(m) + "]  "
+   print errorMessage

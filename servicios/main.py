@@ -1,6 +1,9 @@
 import funcionesxml
 import generacionpaginas
+import os
 
+os.system("rm -r -f servicios_stic/templates/web/")
+os.system("mkdir servicios_stic/templates/web/")
 funcionesxml.inicializacion()
 generacionpaginas.generahtmlmenu()
 generacionpaginas.generaurls()
