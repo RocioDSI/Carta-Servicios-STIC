@@ -99,7 +99,8 @@ def generahtmlservicio(serviceID):
 					<h1 class="main-title">""" + nombreServicio + """</h1>
 					<p> ID: """ + serviceID + """ </p>
 					<p> Grupo de Servicio: """ + str(funcionesxml.getServiceGroup(serviceID)) + """ </p>
-					<p> Criticidad: """+ str(funcionesxml.ServiceCritic(serviceID)) +"""</p>
+					<p> Criticidad: """+ str(funcionesxml.getServiceCritic(serviceID)) +"""</p>
+					<p> Nivel de Acceso: """+ str(funcionesxml.getServiceAccess(serviceID)) +"""</p>
                     <p> Roles: """  
 		 
   

@@ -44,6 +44,7 @@
       <NumberFormat ss:Format="Fixed" />
     </Style>
     <Style ss:ID="co1" />
+    <Style ss:ID="co2" />
     <Style ss:ID="ta1" />
     <Style ss:ID="ce1" ss:Parent="Excel_20_Built-in_20_Normal">
       <Font ss:Bold="1" ss:Color="#000000" ss:FontName="Calibri" ss:Size="11" />
@@ -52,13 +53,12 @@
       <Borders />
       <Font ss:Bold="1" ss:Color="#000000" ss:FontName="Calibri" ss:Size="11" />
     </Style>
-    <Style ss:ID="T1">
-      <Font ss:Color="#ff0000" ss:FontName="Calibri" ss:Size="11" ss:VerticalAlign="Subscript" />
-    </Style>
   </Styles>
   <ss:Worksheet ss:Name="Sheet1">
     <Table ss:StyleID="ta1">
-      <Column ss:Span="9" ss:Width="64,0063" />
+      <Column ss:Span="1" ss:Width="64,0063" />
+      <Column ss:Index="3" ss:Width="394,4409" />
+      <Column ss:Span="6" ss:Width="64,0063" />
       <Row ss:Height="13,2945">
         <Cell ss:StyleID="ce1">
           <Data ss:Type="String">CRUE</Data>
@@ -1563,7 +1563,7 @@
           <Data ss:Type="String">SÍ</Data>
         </Cell>
       </Row>
-      <Row ss:Height="14,9102">
+      <Row ss:Height="12,1039">
         <Cell>
           <Data ss:Type="String">CRUE_03_36</Data>
         </Cell>
@@ -1574,10 +1574,7 @@
           <Data ss:Type="String">Extensión Universitaria. Actividades Deportivas</Data>
         </Cell>
         <Cell>
-          <ss:Data xmlns="http://www.w3.org/TR/REC-html40" ss:Type="String">
-            Aplicaciones para la gestión de los procesos gestionado por el Servicio de Deportes.
-            <Font html:Face="Calibri" html:Color="#ff0000" html:Size="11" />
-          </ss:Data>
+          <Data ss:Type="String">Aplicaciones para la gestión de los procesos gestionado por el Servicio de Deportes.</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Baja</Data>
@@ -3806,7 +3803,7 @@
           <Data ss:Type="String">SÍ</Data>
         </Cell>
       </Row>
-      <Row ss:Height="14,9102">
+      <Row ss:Height="12,1039">
         <Cell>
           <Data ss:Type="String">CRUE_08_04</Data>
         </Cell>
@@ -3817,10 +3814,7 @@
           <Data ss:Type="String">Autenticación Centralizada</Data>
         </Cell>
         <Cell>
-          <ss:Data xmlns="http://www.w3.org/TR/REC-html40" ss:Type="String">
-            Diseño, administración y gestión de la plataforma que facilita el acceso unificado a los distintos servicios y aplicaciones de la Universidad mediante las credenciales digitales de un usuario.
-            <Font html:Face="Calibri" html:Color="#ff0000" html:Size="11" />
-          </ss:Data>
+          <Data ss:Type="String">Diseño, administración y gestión de la plataforma que facilita el acceso unificado a los distintos servicios y aplicaciones de la Universidad mediante las credenciales digitales de un usuario.</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Alta</Data>

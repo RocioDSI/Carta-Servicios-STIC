@@ -68,29 +68,22 @@ def carga():
    for hijo in listahijos:
      if(field == 0):
       codigoCrue = hijo.firstChild.nodeValue
-      print ("El codigo CRUE es: " + codigoCrue)
      elif(field == 1):
       grupoServicio = hijo.firstChild.nodeValue
-      print ("El Grupo de Servicio es: " + grupoServicio)
      elif(field == 2):
       nombreServicio = hijo.firstChild.nodeValue
-      print ("El Servicio es: " + nombreServicio)
      elif(field == 3):
       descripcion = hijo.firstChild.nodeValue
-      print ("La descripcion es: " + descripcion)
       identi = binascii.b2a_hex(os.urandom(4))
       while identi in id_array:
        identi = binascii.b2a_hex(os.urandom(4))
       id_array.append(identi)
-      print ("El ID es : " + identi)
      elif(field == 4):
       grupoCritico = hijo.firstChild.nodeValue
-      print ("El Servicio pertenece al grupo de criticidad: " + grupoCritico)
      elif(field in ([5,6,7,8,9])):
       acceso = hijo.firstChild.nodeValue
       if(acceso in ["SÍ","Sí","sí","SI","Si","si","YES","Yes","yes","y"]):
        service_role_group.append([identi,attr[field]])
-      print ("Acceso a "+ attr[field] + ": "  + acceso)
       
      field += 1
 
@@ -105,14 +98,15 @@ def carga():
     if grupoCritico not in groupCriticArray:
      groupCriticArray.append(grupoCritico)
 
-   xmlstring =  """
+    xmlstring =  """
        <element xsi:type="archimate:BusinessService" id=\""""+ str(identi) +"""\" name=\" """+ str(nombreServicio) +"""\">
          <property key="Código CRUE" value=\""""+ str(codigoCrue) + """\"/>
          <property key="Descripción" value=\""""+ str(descripcion) + """\"/>
-       </element>"""	
-  
-   xmlfinal += xmlstring 
+       </element> """	
+
+    xmlfinal += xmlstring 
  outservices.write(xmlfinal)
+ outservices.close()
 
 # Generacion del fichero groups.xml
 def generateGroupsXML():
@@ -139,9 +133,10 @@ def generateGroupsXML():
           <bounds x="12" y="84" width="157" height="37"/>
         </child>"""
    xmlstr +="""
-      </child>"""
+      </child> """
       
  outgroups.write(xmlstr)
+ outgroups.close()
 
 
 # Generacion del fichero criticidad.xml
@@ -169,9 +164,10 @@ def generateCriticidadXML():
           <bounds x="12" y="84" width="157" height="37"/>
         </child>"""
    xmlstrii +="""
-      </child>"""
+      </child> """
       
  outcriticgroups.write(xmlstrii)
+ outcriticgroups.close()
 
 # Generacion del fichero roles.xml
 def generateRolesXML():
@@ -203,13 +199,38 @@ def generateRolesXML():
           <bounds x="12" y="84" width="157" height="37"/>
         </child>"""
    xmlstriii +="""
-      </child>"""
+      </child> """
       
  outrolegroups.write(xmlstriii)
+ outrolegroups.close()
  
+ # Generacion del fichero Archi.archimate que ya contiene la informacion de los ficheros .xml
+def generateArchimate():
+
+ sample = open("Archi_Sample.archimate")
+ outstring = str(sample.read())
+ outfile = open("Archi.archimate","w")
  
+ services = open("servicios.xml","r")
+ groups = open("groups.xml","r")
+ roles = open("roles.xml","r")
+ critic = open("criticidad.xml","r")
+ 
+ servicestring = services.read()
+ groupstring = groups.read()
+ rolestring = roles.read()
+ criticstring = critic.read()
+
+ outstring = outstring.replace("servicios.xml",servicestring)
+ outstring = outstring.replace("groups.xml", groupstring)  
+ outstring = outstring.replace("roles.xml", rolestring)
+ outstring = outstring.replace("criticidad.xml", criticstring)
+ 
+ outfile.write(outstring)
+ 
+
 carga()
 generateGroupsXML()
 generateCriticidadXML()
 generateRolesXML()
-
+generateArchimate()
