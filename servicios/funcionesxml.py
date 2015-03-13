@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import os, sys
+import os, sys, getopt
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -24,9 +24,10 @@ try:
   xml_analizador.parse(nombre_fichero) # Analizamos el fichero
   print("\nEl fichero XML " + nombre_fichero + " está bien formado.")
 
-except getopt.GetoptError as err:
-  print ("\nError " + err + ":\n\t " + nombre_fichero + " no es un fichero bien formado")
-
+except:
+  print ("\nError:\n\t " + nombre_fichero + " no es un fichero bien formado")
+  sys.exit()
+  
 #Obtenemos el documento completo
 xml_documento = minidom.parse(nombre_fichero)
 nodos = xml_documento.childNodes

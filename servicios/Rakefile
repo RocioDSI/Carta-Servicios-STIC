@@ -1,0 +1,5 @@
+desc "Iniciar servidor"
+task :server do
+  sh "python main.py Archi_Stic.archimate"
+  sh "python manage.py runserver 8001"
+end

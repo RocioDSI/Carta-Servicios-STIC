@@ -56,16 +56,6 @@ def baja(request):
  return response
 	   
 	   
-def si(request):
- response = render_to_response('si.html')
- return response
-	   
-	   
-def no(request):
- response = render_to_response('no.html')
- return response
-	   
-	   
 def pdi(request):
  response = render_to_response('pdi.html')
  return response
@@ -673,16 +663,6 @@ def _tarjeta_universitaria_inteligente(request):
 	   
 def _autenticacion_centralizada(request):
  response = render_to_response('_autenticacion_centralizada.html')
- return response
-	   
-	   
-def _gestion_de_certificados(request):
- response = render_to_response('_gestion_de_certificados.html')
- return response
-	   
-	   
-def _gestion_de_certificados(request):
- response = render_to_response('_gestion_de_certificados.html')
  return response
 	   
 	   
