@@ -31,28 +31,7 @@ sortorder: 3
         </p>
 				
 		<p align = justify style='text-indent: 2em'>
-			Una vez generado el XML, podemos ejecutar nuestro módulo generamodelo.py. El resultado de esta ejecución serán los ficheros servicios.xml y groups.xml, cuyo contenido debe ser similar al de las siguientes imágenes de ejemplo:
+			Una vez generado el XML, podemos ejecutar nuestro módulo CSV_to_Archimate.py. El resultado de esta ejecución será un fichero Archi.archimate, cuyo contenido será un plantilla de archimate que ahora contendrá toda la información recogida en el archivo excel.
 		</p> <br> <br>	
-		
-		<p align="center">
-			<img border="1" width='60%' height="60%" src="images/group.png"></img>
-		</p> <br> <br>	
-       <p align="center">
-			<img border="1" width='60%' height="60%" src="images/services.png"></img>
-		</p> <br> <br>
-		<p>
-			<div class="alert alert-danger">
-				La generación de los ficheros servicios.xml y groups.xml debe realizarse simultáneamente. Ficheros de ejecuciones distintas no proporcionan los resultados esperados, debido a la generación aleatoria de ID asociado a cada grupo y servicio.  
-			</div>
-        </p>
-		<p align = justify style='text-indent: 2em'>
-			Este código debe de incluirse en el fichero de Archimate. La siguiente imagen muestra en qué lugar del fichero se ha de pegar el contenido de cada fichero:
-		</p>
-		<p align="center">
-			<img border="1" width='60%' height="60%" src="images/archiwhere.png"></img>
-		</p>
-		<p align = justify style='text-indent: 2em'>
-			
-		</p>
     </div>
 </div>
