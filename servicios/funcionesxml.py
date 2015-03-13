@@ -14,11 +14,12 @@ xml_analizador = xml.sax.make_parser() # Objeto parse que va a analizar el fiche
 
 xml_analizador.setContentHandler(ContentHandler()) # Manejador de contenido
 
-if (len(sys.argv) == 2):
+if (len(sys.argv) == 2 and sys.argv[1] != "runserver"):
  nombre_fichero = str(sys.argv[1])
 else:
  nombre_fichero = "Archi_Upload.archimate"
 
+ 
 # Controla que la sintaxis del fichero xml sea correcta
 try:
   xml_analizador.parse(nombre_fichero) # Analizamos el fichero
@@ -26,7 +27,7 @@ try:
 
 except:
   print ("\nError:\n\t " + nombre_fichero + " no es un fichero bien formado")
-  sys.exit()
+  #sys.exit()
   
 #Obtenemos el documento completo
 xml_documento = minidom.parse(nombre_fichero)
@@ -300,7 +301,7 @@ def inicializacion():
  cargaAssociationRelationship()
  cargaGroup()
  BusinessServicePorGroup()
- runtest()
+ #runtest()
  
 ############### TEST ###############
  
