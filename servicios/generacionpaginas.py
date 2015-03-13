@@ -31,7 +31,7 @@ def formatstring(nombreGrupo):
   return nombrProc
 
 # Generacion de fichero HTML para grupo de servicios, de criticidad o por roles
-def generahtmlgrupo(nombreGrupo):
+def generahtmlgrupo(nombreGrupo,newstr=""):
   formatstring(nombreGrupo)
   fichero = open("servicios_stic/templates/" + formatstring(nombreGrupo) + ".html","w")
   htmlstr = """ 
@@ -39,7 +39,7 @@ def generahtmlgrupo(nombreGrupo):
 
 {% block contenido %}
 {% block titulo %}
-	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - """ + nombreGrupo + """</li>
+	<li class="active">""" + newstr + """ - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - """ + nombreGrupo + """</li>
 {% endblock %}
 
 {% block content %}
@@ -79,7 +79,7 @@ def generahtmlgrupo(nombreGrupo):
   fichero.close()
 
 # Generacion de fichero HTML para cada Servicio
-def generahtmlservicio(serviceID):
+def generahtmlservicio(serviceID,newstr=""):
   nombreServicio = funcionesxml.getBusinessServiceName(serviceID)
   fichero = open("servicios_stic/templates/" + formatstring(nombreServicio) + ".html","w")
   htmlstr = """ 
@@ -88,7 +88,7 @@ def generahtmlservicio(serviceID):
 {% block contenido %}
 {% block titulo %}
 																																    
-	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views."""+ formatstring(funcionesxml.getServiceGroup(serviceID)) + """" %}"> """ + str(funcionesxml.getServiceGroup(serviceID)) + """</a> - """+ nombreServicio + """</li>
+	<li class="active">""" + newstr + """ - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views."""+ formatstring(funcionesxml.getServiceGroup(serviceID)) + """" %}"> """ + str(funcionesxml.getServiceGroup(serviceID)) + """</a> - """+ nombreServicio + """</li>
 {% endblock %}
 
 {% block content %}
@@ -203,8 +203,30 @@ def generaviews():
 
   pystr = """
 from django.shortcuts import render_to_response
-import funcionesxml
+from servicios_stic.forms import UploadForm
+from servicios_stic.models import Document
+from django.shortcuts import render, redirect
+import main
+import os 
 
+def upload_file(request):
+    if request.method == 'POST':
+        form = UploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            newdoc = Document(filename = request.POST['filename'],docfile = request.FILES['docfile'])
+            newdoc.save(form)
+            newimg = Document(filename = request.POST['filename'],imagefile = request.FILES['imagefile'])
+            newimg.save(form)
+            newstr = request.POST.get('filename')
+            main.main(newstr)
+            response = render_to_response('index.html')
+            return response
+    else:
+        form = UploadForm()
+    #tambien se puede utilizar render_to_response
+    #return render_to_response('upload.html', {'form': form}, context_instance = RequestContext(request))
+    return render(request, 'upload.html', {'form': form}) 
+    
 def index(request):
  response = render_to_response('index.html')
  return response
@@ -278,6 +300,7 @@ urlpatterns = patterns('',
    pystr+= urlservice
 
   pystrii = """
+ url(r'^uploads/', 'servicios_stic.views.upload_file', name="uploads"), 
  url(r'^admin/', include(admin.site.urls)),
 
 )
@@ -287,13 +310,13 @@ urlpatterns = patterns('',
   fichero.close()
 
 # Generacion del fichero index.html
-def generahtmlindex():
+def generahtmlindex(newstr=""):
   fichero = open("servicios_stic/templates/index.html","w")
   httmlstr = """{% extends "plantilla.html" %}
 
 {% block contenido %}
 {% block titulo %}
-	<li class="active">Universidad de La Laguna - Carta de Servicios del STIC</li>
+	<li class="active">""" + newstr + """ - Carta de Servicios del STIC</li>
 {% endblock %}
 
 {% block content %}
@@ -316,15 +339,15 @@ def generahtmlindex():
   fichero.close()
 
 # Generación de todos los ficheros necesarios
-def generaplantillas():
+def generaplantillas(newstr=""):
   for i in funcionesxml.GroupArray:
-   generahtmlgrupo(str(i[1]))
+   generahtmlgrupo(str(i[1]),newstr)
   for j in funcionesxml.GroupCriticArray:		 
-   generahtmlgrupo(str(j[1]))
+   generahtmlgrupo(str(j[1]),newstr)
   for k in funcionesxml.GroupRoleArray:		 
-   generahtmlgrupo(str(k[1]))
+   generahtmlgrupo(str(k[1]),newstr)
   for l in funcionesxml.BusinessServiceArray:
-   generahtmlservicio(str(l[0]))
+   generahtmlservicio(str(l[0]),newstr)
 
 
 
