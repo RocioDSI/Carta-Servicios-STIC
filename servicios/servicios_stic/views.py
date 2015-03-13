@@ -1,3 +1,6 @@
+from django.shortcuts import render, redirect #puedes importar render_to_response
+from servicios_stic.forms import UploadForm
+from servicios_stic.models import Document
 
 from django.shortcuts import render_to_response
 import funcionesxml
@@ -55,6 +58,14 @@ def baja(request):
  response = render_to_response('baja.html')
  return response
 	   
+def si(request):
+ response = render_to_response('si.html')
+ return response
+	   
+	   
+def no(request):
+ response = render_to_response('no.html')
+ return response
 	   
 def pdi(request):
  response = render_to_response('pdi.html')
@@ -521,8 +532,9 @@ def _videoconferencia_inmersion(request):
  return response
 	   
 	   
-def web_institucional(request):
- response = render_to_response('web_institucional.html')
+def _web_institucional(request):
+ response = render_to_response('_web_institucional.html')
+>>>>>>> django_upload
  return response
 	   
 	   
@@ -670,4 +682,26 @@ def _gestion_de_certificados(request):
  response = render_to_response('_gestion_de_certificados.html')
  return response
 	   
+def _gestion_de_certificados(request):
+ response = render_to_response('_gestion_de_certificados.html')
+ return response
 	   
+	   
+def _gestion_de_certificados(request):
+ response = render_to_response('_gestion_de_certificados.html')
+ return response
+	   
+def upload_file(request):
+    if request.method == 'POST':
+        form = UploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            newdoc = Document(filename = request.POST['filename'],docfile = request.FILES['docfile'])
+            newdoc.save(form)
+            newimg = Document(filename = request.POST['filename'],imagefile = request.FILES['imagefile'])
+            newimg.save(form)
+            return redirect("uploads")
+    else:
+        form = UploadForm()
+    #tambien se puede utilizar render_to_response
+    #return render_to_response('upload.html', {'form': form}, context_instance = RequestContext(request))
+    return render(request, 'upload.html', {'form': form}) 

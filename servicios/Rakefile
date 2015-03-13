@@ -1,5 +1,11 @@
-desc "Iniciar servidor"
-task :server do
-  sh "python main.py Archi_Stic.archimate"
+desc "Generar paginas e Iniciar servidor"
+task :runapp do
+  sh "python main.py Archi_Upload.archimate"
   sh "python manage.py runserver 8001"
 end
+
+desc "Iniciar servidor"
+task :server do
+  sh "python manage.py runserver"
+end
+
