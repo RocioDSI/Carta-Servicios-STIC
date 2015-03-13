@@ -354,7 +354,7 @@
         <property key="Código CRUE" value="CRUE_04_13"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de basadas en el uso de salas especialmente equipadas para integrar presencia y contenidos."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="012c46d8">
+      <element xsi:type="archimate:BusinessService" id="012c46d8" name="Web institucional">
         <property key="Código CRUE" value="CRUE_05_01"/>
         <property key="Descripción" value="Publicación de información académica, de investigación y servicios universitarios en el sitio web institucional de la Universidad"/>
       </element>

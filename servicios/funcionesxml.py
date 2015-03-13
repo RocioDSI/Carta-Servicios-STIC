@@ -14,7 +14,10 @@ xml_analizador = xml.sax.make_parser() # Objeto parse que va a analizar el fiche
 
 xml_analizador.setContentHandler(ContentHandler()) # Manejador de contenido
 
-nombre_fichero = "Archi_Stic2.0.archimate"
+if (len(sys.argv) == 2):
+ nombre_fichero = str(sys.argv[1])
+else:
+ nombre_fichero = "Archi_Upload.archimate"
 
 # Controla que la sintaxis del fichero xml sea correcta
 try:
