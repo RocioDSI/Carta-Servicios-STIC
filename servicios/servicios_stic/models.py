@@ -7,8 +7,8 @@ def content_file_name(instance, filename):
     return '/'.join(["Archi_Upload.archimate"])
 
 def content_image_name(instance, filename):
-    os.remove('/'.join(['servicios_stic','css','Logo']))
-    return '/'.join(['servicios_stic','css','Logo'])
+    os.remove('/'.join(['servicios_stic','css',"Logo.jpg"]))
+    return '/'.join(['servicios_stic','css',"Logo.jpg"])
 
 class Document(models.Model):
   filename = models.CharField(max_length=100)

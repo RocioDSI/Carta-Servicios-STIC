@@ -1,6 +1,7 @@
 desc "Generar paginas e Iniciar servidor"
 task :runapp do
-  sh "python main.py Archi_Upload.archimate"
+
+  sh "python ejecutable.py Archi_Stic2.0.archimate"
   sh "python manage.py runserver 8001"
 end
 
