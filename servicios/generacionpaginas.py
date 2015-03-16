@@ -3,7 +3,6 @@
 
 import funcionesxml
 import os 
-from django.template.loader import render_to_string
 
 # Funcion para eliminar caracteres extraños de strings
 def formatstring(nombreGrupo):
@@ -81,6 +80,7 @@ def generahtmlgrupo(nombreGrupo,nombreuni="",nombrecorto=""):
   fichero.write(htmlstr)
   fichero.close()
   if(nombrecorto != ""):
+   from django.template.loader import render_to_string  
    rendered = render_to_string(""+ nombrecorto + formatstring(nombreGrupo) + ".html")
    fichero = open("servicios_stic/templates/" + nombrecorto + formatstring(nombreGrupo) + ".html","w") 
    fichero.write(rendered)
@@ -139,6 +139,7 @@ def generahtmlservicio(serviceID,nombreuni="",nombrecorto=""):
   fichero.write(htmlstr)
   fichero.close()
   if(nombrecorto != ""):
+   from django.template.loader import render_to_string  	  
    rendered = render_to_string(""+ nombrecorto + formatstring(nombreServicio) + ".html")
    fichero = open("servicios_stic/templates/" + nombrecorto + formatstring(nombreServicio) + ".html","w") 
    fichero.write(rendered)
@@ -212,6 +213,7 @@ def generahtmlmenu(nombrecorto=""):
   fichero.write(httmlstr)
   fichero.close()
   if(nombrecorto != ""):
+    from django.template.loader import render_to_string  
     rendered = render_to_string(""+ nombrecorto +"menu.html")
     fichero = open("servicios_stic/templates/" + nombrecorto + "menu.html","w")  
     fichero.write(rendered)
@@ -227,8 +229,11 @@ from django.shortcuts import render_to_response
 from servicios_stic.forms import UploadForm
 from servicios_stic.models import Document
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
+
 import main
 import os 
+import zipfile
 
 def upload_file(request):
     if request.method == 'POST':
@@ -241,6 +246,16 @@ def upload_file(request):
             nombreuni = request.POST.get('Nombre_Universidad')
             nombrecorto = request.POST.get('Nombre_Universidad_Corto')
             main.main(nombreuni,nombrecorto)
+            zf = zipfile.ZipFile((""+ str(nombrecorto) + ".zip"), "w")
+            for dirname, subdirs, files in os.walk("servicios_stic/templates/"+ nombrecorto):
+              zf.write(dirname)
+              for filename in files:
+               zf.write(os.path.join(dirname, filename))
+            zf.close()
+
+            response = HttpResponse(open(""+nombrecorto+".zip").read(),content_type="application/zip")  
+            response["Content-Disposition"] = "attachment; filename="+ nombrecorto +".zip"  
+            return response
     else:
         form = UploadForm()
     #tambien se puede utilizar render_to_response
@@ -360,6 +375,7 @@ def generahtmlindex(nombreuni="",nombrecorto=""):
   fichero.write(httmlstr)
   fichero.close()
   if(nombrecorto != ""):
+   from django.template.loader import render_to_string  
    rendered = render_to_string(""+ nombrecorto +"index.html")
    fichero = open("servicios_stic/templates/" + nombrecorto + "index.html","w") 
    fichero.write(rendered)
