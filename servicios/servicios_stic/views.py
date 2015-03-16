@@ -10,14 +10,13 @@ def upload_file(request):
     if request.method == 'POST':
         form = UploadForm(request.POST, request.FILES)
         if form.is_valid():
-            newdoc = Document(filename = request.POST['filename'],docfile = request.FILES['docfile'])
+            newdoc = Document(docfile = request.FILES['docfile'])
             newdoc.save(form)
-            newimg = Document(filename = request.POST['filename'],imagefile = request.FILES['imagefile'])
+            newimg = Document(imagefile = request.FILES['imagefile'])
             newimg.save(form)
-            newstr = request.POST.get('filename')
-            main.main(newstr)
-            response = render_to_response('index.html')
-            return response
+            nombreuni = request.POST.get('Nombre_Universidad')
+            nombrecorto = request.POST.get('Nombre_Universidad_Corto')
+            main.main(nombreuni,nombrecorto)
     else:
         form = UploadForm()
     #tambien se puede utilizar render_to_response
@@ -68,18 +67,13 @@ def gestion_de_identidades(request):
  return response
 	   
 	   
-def servicios_poco_criticos(request):
- response = render_to_response('servicios_poco_criticos.html')
+def alta(request):
+ response = render_to_response('alta.html')
  return response
 	   
 	   
-def servicios_normales(request):
- response = render_to_response('servicios_normales.html')
- return response
-	   
-	   
-def servicios_criticos(request):
- response = render_to_response('servicios_criticos.html')
+def baja(request):
+ response = render_to_response('baja.html')
  return response
 	   
 	   
@@ -548,8 +542,8 @@ def _videoconferencia_inmersion(request):
  return response
 	   
 	   
-def _web_institucional(request):
- response = render_to_response('_web_institucional.html')
+def web_institucional(request):
+ response = render_to_response('web_institucional.html')
  return response
 	   
 	   
