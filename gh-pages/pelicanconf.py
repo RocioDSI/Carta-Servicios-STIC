@@ -4,7 +4,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Universidad de La Laguna'
-# SITENAME = u'Carta de Servicios'
+SITENAME = u'Carta de Servicios'
 # SITEURL = '<site_url>'
 
 PATH = 'content'
