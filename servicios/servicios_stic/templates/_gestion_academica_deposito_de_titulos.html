@@ -1,0 +1,26 @@
+ 
+{% extends "menu.html" %}
+
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.soporte_tic_a_la_gestion" %}"> Soporte TIC a la Gestión</a> -  Gestión Académica. Depósito de Títulos</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title"> Gestión Académica. Depósito de Títulos</h1>
+					<p> ID: 139e2554 </p>
+					<p> Grupo de Servicio: Soporte TIC a la Gestión </p>
+					<p> Criticidad: Servicios Críticos</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Código CRUE: CRUE_03_07 </p>
+      <p> Descripción: Aplicaciones para la gestión de los procedimientos asociados a la consecución de un título universitario. </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

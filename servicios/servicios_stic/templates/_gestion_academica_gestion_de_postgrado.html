@@ -1,0 +1,26 @@
+ 
+{% extends "menu.html" %}
+
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.soporte_tic_a_la_gestion" %}"> Soporte TIC a la Gestión</a> -  Gestión Académica. Gestión de Postgrado</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title"> Gestión Académica. Gestión de Postgrado</h1>
+					<p> ID: 4322ef19 </p>
+					<p> Grupo de Servicio: Soporte TIC a la Gestión </p>
+					<p> Criticidad: Servicios Críticos</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Código CRUE: CRUE_03_10 </p>
+      <p> Descripción: Aplicaciones para la gestión de los procedimientos académicos de las enseñanzas de postgrado universitario. </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

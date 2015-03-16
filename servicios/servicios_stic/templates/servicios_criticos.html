@@ -1,0 +1,180 @@
+ 
+{% extends "menu.html" %}
+
+{% block contenido %}
+{% block titulo %}
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - Servicios Críticos</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+                    <li class="active"><a href="{% url "servicios_stic.views._soporte_a_aulas_de_informatica_de_uso_docente" %}"><h1 class="main-title"> Soporte a aulas de Informática de uso docente</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Instalación y configuración de equipos y software, en aulas de uso docente. Incluye laboratorios y aulas virtualizadas. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._soporte_a_realizacion_y_correccion__de_examenes" %}"><h1 class="main-title"> Soporte a realización y corrección  de exámenes</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Soporte a la automatización de la generación y/o corrección de examenes. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._alojamiento_de_infraestructuras" %}"><h1 class="main-title"> Alojamiento de Infraestructuras</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Alojamiento y conectividad en el CPD para el despliegue de aplicaciones y servicios de investigación. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_academica" %}"><h1 class="main-title"> Gestión Académica</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Aplicaciones para la gestión de la actividad académica de los estudiantes universitarios </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_academica_actas" %}"><h1 class="main-title"> Gestión Académica. Actas</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Aplicaciones para la gestión de los procedimientos necesarios para la elaboración de las actas de calificación </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_academica_deposito_de_titulos" %}"><h1 class="main-title"> Gestión Académica. Depósito de Títulos</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Aplicaciones para la gestión de los procedimientos asociados a la consecución de un título universitario. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_academica_gestion_de_postgrado" %}"><h1 class="main-title"> Gestión Académica. Gestión de Postgrado</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Aplicaciones para la gestión de los procedimientos académicos de las enseñanzas de postgrado universitario. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_academica_necesidades_educativas_especiales" %}"><h1 class="main-title"> Gestión Académica. Necesidades educativas especiales</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Aplicaciones para la gestión de las necesidades educativas especíales </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_academica_tesis" %}"><h1 class="main-title"> Gestión Académica. Tésis</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Aplicaciones para la gestión de los procedimientos asociados a la consecución de una tesis doctoral. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_economica_contratacion" %}"><h1 class="main-title"> Gestión Económica. Contratación</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Aplicaciones para la gestión de los contratos que establece la Universidad con terceros. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_economica_presupuestos" %}"><h1 class="main-title"> Gestión Económica. Presupuestos</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Aplicaciones para la gestión del presupeusto de la Universidad. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_rrhh_control_horario" %}"><h1 class="main-title"> Gestión RR.HH. Control Horario</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Aplicaciones para la gestión de entradas y salidas del puesto del trabajo del personal universitario. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_rrhh_prevencion" %}"><h1 class="main-title"> Gestión RR.HH. Prevención</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Aplicaciones para la gestión de los procesos de prevención, incluyendo porcesos de revisión médica de los recursos humanos de la Universidad </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._extension_universitaria_ensenanza_no_reglada" %}"><h1 class="main-title"> Extensión Universitaria. Enseñanza no reglada</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Aplicaciones para la gestión de los procedimientos académicos de las enseñanzas no regladas, incluyendo cursos de verano. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._secretaria_general_archivo_universitario" %}"><h1 class="main-title"> Secretaría General. Archivo Universitario</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Aplicaciones para la gestión y mantenimiento del Archivo universitario en todo diferntes soportes como documentos, fichas, dvd, negativos y positivos fotográficos, cuadernos, películas o impresos. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._secretaria_general_gestor_documental" %}"><h1 class="main-title"> Secretaría General. Gestor Documental</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Aplicaciones para la gestión documental institucional. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._secretaria_general_elecciones_universitarias" %}"><h1 class="main-title"> Secretaría General. Elecciones Universitarias</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Aplicaciones para la gestión de procesos electorales universitarios. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_infraestructuras_prevencion_de_riesgos_laborales" %}"><h1 class="main-title"> Gestión Infraestructuras. Prevención de Riesgos Laborales.</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Aplicaciones para la gestión de los proceos de evaluación de riesgos laborales en infraestructuras universitarias </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._biblioteca_universitaria_repositorio_institucional" %}"><h1 class="main-title"> Biblioteca Universitaria. Repositorio institucional</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Aplicaciones para la gestión del repositorio digital institucional de la Universidad. universitaria. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._comunicacion_prensa_universitaira" %}"><h1 class="main-title"> Comunicación. Prensa universitaira</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Aplicaciones para la gestión de los diferentes medios soporte de la prensa universitaria </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_calidad_evaluacion_de_la_actividad_docente_del_profesorado" %}"><h1 class="main-title"> Gestión Calidad. Evaluación de la actividad docente del profesorado</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Aplicaciones para la gestión de la evaluacción de la actividad docente del profesorado universitario. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._correo_electronico_pdi_y_pas" %}"><h1 class="main-title"> Correo electrónico. PDI y PAS</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado al PAS y PDI. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._notificaciones_sms" %}"><h1 class="main-title"> Notificaciones. SMS</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en el uso de plataformas de envío de mensajes cortos (SMS) </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._intercambio_de_ficheros_ftp" %}"><h1 class="main-title"> Intercambio de ficheros. FTP</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en el intercambio de ficheros a través del protocolo de transferencia FTP </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._videoconferencia_sala" %}"><h1 class="main-title"> Videoconferencia. Sala</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de basadas en el uso de equipos de videoconferencia de sala y equipamiento MCU. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._sede_electronica" %}"><h1 class="main-title"> Sede electrónica</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Publicación de información en la Sede electrónica según lo establecido en la Ley 11/2007, de 22 de junio, de acceso electrónico de los ciudadanos a los Servicios Públicos </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._intranet_portal_del_empleado" %}"><h1 class="main-title"> Intranet. Portal del empleado</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Publicación de recursos y servicios dirigidos a los empleados de la universidad sobre un sitio web de acceso restringido a este colectivo. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._intranet_portal_del_estudiante_o_secretaria_virtual" %}"><h1 class="main-title"> Intranet. Portal del estudiante o Secretaria Virtual</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Publicación de recursos y servicios dirigidos a los estudiantes de la universidad sobre un sitio web de acceso restringido a este colectivo. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._contenidos_digitales_contenidos_docentes" %}"><h1 class="main-title"> Contenidos Digitales. Contenidos Docentes</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Soporte a la generación, almacenamiento y difusión de contenidos docentes en formato digital </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._contenidos_digitales_contenidos_docentes_de_acceso_abierto" %}"><h1 class="main-title"> Contenidos Digitales. Contenidos Docentes de acceso abierto</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Soporte a la generación, almacenamiento y difusión de contenidos docentes de acceso abierto </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._grabacion_y_difusion_de_eventos" %}"><h1 class="main-title"> Grabación y Difusión de eventos</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Grabación audiovisual de eventos, incluyendo la posibilidad de difusión a través de internet </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._mantenimiento_de_software_corporativo" %}"><h1 class="main-title"> Mantenimiento de software corporativo.</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Instalación, actualización y configuración de software corporativo en el puesto de trabajo. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._impresion_corporativa" %}"><h1 class="main-title"> Impresión Corporativa</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: instalación y configuración de equipamiento para servicios de impresión. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._soporte_a_eventos_especiales" %}"><h1 class="main-title"> Soporte a eventos especiales.</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Soporte técnico en la realización de eventos (jornadas, congresos, presentaciones, formación on-line) </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._telefonia_fija" %}"><h1 class="main-title"> Telefonía fija</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones de voz basadas en el uso de terminales fijos. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._consulta_tarificacion_telefonica" %}"><h1 class="main-title"> Consulta Tarificación Telefónica</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Soporte a la aplicación que facilita el acceso a la información de consumo telefónico personal. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._conexion_a_red_cableada" %}"><h1 class="main-title"> Conexión a red Cableada</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones soportadas sobre la red de cableado estructurado de la universidad </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._conexion_externo_a_red_de_comunicaciones" %}"><h1 class="main-title"> Conexión Externo a Red de Comunicaciones</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones desde una red externa a la institucional utilizando mecanisos de cifrado </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._directorio" %}"><h1 class="main-title"> Directorio</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Diseño, administración y gestión de la plataforma que almacena, organiza y publica información de contacto sobre los usuarios de la Universidad. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_de_credenciales" %}"><h1 class="main-title"> Gestión de credenciales</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Diseño, administración y gestión de la plataforma que almacena gestiona los datos y mecanismos de acceso a los servicios y aplicaciones de la Universidad </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._gestion_de_certificados" %}"><h1 class="main-title"> Gestión de Certificados</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Diseño, administración y gestión de la infraestructura de clave pública (PKI) de la universidad  para la emisión de certificados digitales a sus usuarios. </p>
+       		</div>
+{% endblock %}
+{% endblock %}  
+  

@@ -1,0 +1,26 @@
+ 
+{% extends "menu.html" %}
+
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.soporte_tic_a_la_gestion" %}"> Soporte TIC a la Gestión</a> -  Comunicación. Cartelería Digital</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title"> Comunicación. Cartelería Digital</h1>
+					<p> ID: 7f35ed1f </p>
+					<p> Grupo de Servicio: Soporte TIC a la Gestión </p>
+					<p> Criticidad: Servicios Poco Críticos</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Código CRUE: CRUE_03_55 </p>
+      <p> Descripción: Aplicaciones para la gestión de la cartelería digital universitaria, incluyendo la televisión universitaria. </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

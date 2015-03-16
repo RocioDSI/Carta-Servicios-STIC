@@ -1,0 +1,44 @@
+ 
+{% extends "menu.html" %}
+
+{% block contenido %}
+{% block titulo %}
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - Soporte a Equipamiento Puesto de Trabajo</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+                    <li class="active"><a href="{% url "servicios_stic.views._servicio_de_provision_y_renovacion_del_puesto_de_trabajo" %}"><h1 class="main-title"> Servicio de provisión y renovación del puesto de trabajo</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: instalación y configuración del equipamiento informático (hardware y software) adecuado al puesto de trabajo. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._mantenimiento_de_equipamiento_informatico_corporativo" %}"><h1 class="main-title"> Mantenimiento de equipamiento informático corporativo.</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Resolución y atención a los problemas e incidencias del puesto de trabajo </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._mantenimiento_de_software_corporativo" %}"><h1 class="main-title"> Mantenimiento de software corporativo.</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Instalación, actualización y configuración de software corporativo en el puesto de trabajo. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._impresion_corporativa" %}"><h1 class="main-title"> Impresión Corporativa</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: instalación y configuración de equipamiento para servicios de impresión. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._seguridad_integral_en_el_puesto_de_trabajo" %}"><h1 class="main-title"> Seguridad Integral en el Puesto de Trabajo</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Configuración y adminsitración centralizada de la seguridad en los equipos de usuario, incluyeno la administración de software de protección como antivirus. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._asesoramiento_para_adquisicion_de_equipamiento_informatico_y_software" %}"><h1 class="main-title"> Asesoramiento para adquisición de equipamiento informático y software.</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Asesoramiento técnico para el equipamiento y software más adecuado a las necesidades del usuario </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._soporte_a_eventos_especiales" %}"><h1 class="main-title"> Soporte a eventos especiales.</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Soporte técnico en la realización de eventos (jornadas, congresos, presentaciones, formación on-line) </p>
+       		</div>
+{% endblock %}
+{% endblock %}  
+  

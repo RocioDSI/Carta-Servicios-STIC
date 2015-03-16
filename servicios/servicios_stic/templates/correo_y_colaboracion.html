@@ -1,0 +1,68 @@
+ 
+{% extends "menu.html" %}
+
+{% block contenido %}
+{% block titulo %}
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - Correo y colaboración</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+                    <li class="active"><a href="{% url "servicios_stic.views._correo_electronico_pdi_y_pas" %}"><h1 class="main-title"> Correo electrónico. PDI y PAS</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado al PAS y PDI. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._correo_electronico_estudiantes" %}"><h1 class="main-title"> Correo electrónico. Estudiantes</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado a los estudiantes universitarios. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._correo_electronico_preuniversitarios" %}"><h1 class="main-title"> Correo electrónico. Preuniversitarios</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado a los estudiantes presuniversitarios del distrito correspondiente. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._correo_electronico_egresados" %}"><h1 class="main-title"> Correo electrónico. Egresados</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado a los estudiantes egresados. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._notificaciones_listas_de_distribucion" %}"><h1 class="main-title"> Notificaciones. Listas de Distribución</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en listas de correo electrónico, en defernetes modalidades como moderada y no moderada </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._notificaciones_sms" %}"><h1 class="main-title"> Notificaciones. SMS</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en el uso de plataformas de envío de mensajes cortos (SMS) </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._notificaciones_redes_sociales" %}"><h1 class="main-title"> Notificaciones. Redes Sociales</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en redes sociales </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._espacios_web_colaborativos" %}"><h1 class="main-title"> Espacios web colaborativos</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en espacios web compartidos con capacidad de colaboración en documentos electrónicos </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._intercambio_de_ficheros_ftp" %}"><h1 class="main-title"> Intercambio de ficheros. FTP</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en el intercambio de ficheros a través del protocolo de transferencia FTP </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._intercambio_de_ficheros_ficheros_gran_volumen" %}"><h1 class="main-title"> Intercambio de ficheros. Ficheros gran volumen</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en el intercambio de ficheros de gran volumen </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._videoconferencia_web" %}"><h1 class="main-title"> Videoconferencia. Web</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de videoconferencia web </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._videoconferencia_sala" %}"><h1 class="main-title"> Videoconferencia. Sala</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de basadas en el uso de equipos de videoconferencia de sala y equipamiento MCU. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views._videoconferencia_inmersion" %}"><h1 class="main-title"> Videoconferencia. Inmersión</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de basadas en el uso de salas especialmente equipadas para integrar presencia y contenidos. </p>
+       		</div>
+{% endblock %}
+{% endblock %}  
+  

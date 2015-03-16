@@ -1,0 +1,16 @@
+desc "Generar paginas e Iniciar servidor"
+task :runapp do
+  sh "python ejecutable.py"
+  sh "python manage.py runserver 8001"
+  sh "firefox index.html &"
+end
+
+desc "Iniciar servidor"
+task :server do
+  sh "python manage.py runserver"
+end
+
+desc "Vuelve a generar las paginas"
+task :recargar do
+  sh "python ejecutable.py Archi_Stic2.0.archimate"
+end

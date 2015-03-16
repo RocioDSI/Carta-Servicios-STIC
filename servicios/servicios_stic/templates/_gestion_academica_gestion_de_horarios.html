@@ -1,0 +1,26 @@
+ 
+{% extends "menu.html" %}
+
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.soporte_tic_a_la_gestion" %}"> Soporte TIC a la Gestión</a> -  Gestión Académica. Gestión de Horarios</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title"> Gestión Académica. Gestión de Horarios</h1>
+					<p> ID: 7b371ba8 </p>
+					<p> Grupo de Servicio: Soporte TIC a la Gestión </p>
+					<p> Criticidad: Servicios Normales</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PDI. </p>
+   <p> Código CRUE: CRUE_03_09 </p>
+      <p> Descripción: Aplicaciones para la gestión de los cuadros horarios de docencia. </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  
