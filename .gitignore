@@ -3,7 +3,10 @@
 *.html
 *.bak
 *.swp
-!*/plantilla.html
 */views.py
 */urls.py
 !*/upload.html
+*.zip
+*/servicios_stic/templates/*
+!*/servicios_stic/templates/plantilla.html
+
