@@ -3,7 +3,6 @@
 
 import funcionesxml
 import os 
-from django.template.loader import render_to_string
 
 # Funcion para eliminar caracteres extraños de strings
 def formatstring(nombreGrupo):
@@ -30,6 +29,21 @@ def formatstring(nombreGrupo):
   nombrProc=nombrProc.replace(".","")
   nombrProc=nombrProc.lower()
   return nombrProc
+ 
+# Funcion para generar URLs locales
+def localURLS(htmlstring):
+ for i in funcionesxml.GroupArray:
+  htmlstring = htmlstring.replace("\"/"+ formatstring(i[1]) + "/\"", "\"./"+ formatstring(i[1]) + ".html\"") 
+ for i in funcionesxml.BusinessRoleArray:
+  htmlstring = htmlstring.replace("\"/"+ formatstring(i[1]) + "/\"", "\"./"+ formatstring(i[1]) + ".html\"") 
+ for i in funcionesxml.BusinessServiceArray:
+  htmlstring = htmlstring.replace("\"/"+ formatstring(i[1]) + "/\"", "\"./"+ formatstring(i[1]) + ".html\"") 
+ for i in funcionesxml.GroupCriticArray:
+  htmlstring = htmlstring.replace("\"/"+ formatstring(i[1]) + "/\"", "\"./"+ formatstring(i[1]) + ".html\"") 
+ for i in funcionesxml.BusinessServiceArray:
+  htmlstring = htmlstring.replace("\"/"+ formatstring(i[1]) + "/\"", "\"./"+ formatstring(i[1]) + ".html\"") 
+ return htmlstring
+
 
 # Generacion de fichero HTML para grupo de servicios, de criticidad o por roles
 def generahtmlgrupo(nombreGrupo,nombreuni="",nombrecorto=""):
@@ -37,8 +51,13 @@ def generahtmlgrupo(nombreGrupo,nombreuni="",nombrecorto=""):
   if (nombrecorto != ""):
    nombrecorto+="/templates/"
   fichero = open("servicios_stic/templates/" + nombrecorto + formatstring(nombreGrupo) + ".html","w")
-  htmlstr = """ 
-{% extends "menu.html" %}
+  if(nombrecorto == ""):
+   htmlstr = """ 
+{% extends "menu.html" %}"""
+  else:
+   htmlstr = """ 
+{% extends "menu2.html" %}"""
+  htmlstr+= """
 
 {% block contenido %}
 {% block titulo %}
@@ -81,7 +100,9 @@ def generahtmlgrupo(nombreGrupo,nombreuni="",nombrecorto=""):
   fichero.write(htmlstr)
   fichero.close()
   if(nombrecorto != ""):
+   from django.template.loader import render_to_string  
    rendered = render_to_string(""+ nombrecorto + formatstring(nombreGrupo) + ".html")
+   rendered = localURLS(rendered)
    fichero = open("servicios_stic/templates/" + nombrecorto + formatstring(nombreGrupo) + ".html","w") 
    fichero.write(rendered)
    fichero.close()
@@ -92,9 +113,13 @@ def generahtmlservicio(serviceID,nombreuni="",nombrecorto=""):
   if (nombrecorto != ""):
    nombrecorto+="/templates/"
   fichero = open("servicios_stic/templates/" + nombrecorto + formatstring(nombreServicio) + ".html","w")
-  htmlstr = """ 
-{% extends "menu.html" %}
-
+  if (nombrecorto == ""):
+   htmlstr = """ 
+{% extends "menu.html" %}"""
+  else:
+   htmlstr = """ 
+{% extends "menu2.html" %}"""
+  htmlstr+= """	  
 {% block contenido %}
 {% block titulo %}
 																																    
@@ -139,7 +164,9 @@ def generahtmlservicio(serviceID,nombreuni="",nombrecorto=""):
   fichero.write(htmlstr)
   fichero.close()
   if(nombrecorto != ""):
+   from django.template.loader import render_to_string  	  
    rendered = render_to_string(""+ nombrecorto + formatstring(nombreServicio) + ".html")
+   rendered = localURLS(rendered)
    fichero = open("servicios_stic/templates/" + nombrecorto + formatstring(nombreServicio) + ".html","w") 
    fichero.write(rendered)
    fichero.close()
@@ -212,9 +239,8 @@ def generahtmlmenu(nombrecorto=""):
   fichero.write(httmlstr)
   fichero.close()
   if(nombrecorto != ""):
-    rendered = render_to_string(""+ nombrecorto +"menu.html")
-    fichero = open("servicios_stic/templates/" + nombrecorto + "menu.html","w")  
-    fichero.write(rendered)
+    fichero = open("servicios_stic/templates/menu2.html","w")  
+    fichero.write(httmlstr)
     fichero.close()
 
 # Generación del fichero Views.py  
@@ -227,8 +253,11 @@ from django.shortcuts import render_to_response
 from servicios_stic.forms import UploadForm
 from servicios_stic.models import Document
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
+
 import main
 import os 
+import zipfile
 
 def upload_file(request):
     if request.method == 'POST':
@@ -241,6 +270,16 @@ def upload_file(request):
             nombreuni = request.POST.get('Nombre_Universidad')
             nombrecorto = request.POST.get('Nombre_Universidad_Corto')
             main.main(nombreuni,nombrecorto)
+            zf = zipfile.ZipFile((""+ str(nombrecorto) + ".zip"), "w")
+            for dirname, subdirs, files in os.walk("servicios_stic/templates/"+ nombrecorto):
+              zf.write(dirname)
+              for filename in files:
+               zf.write(os.path.join(dirname, filename))
+            zf.close()
+
+            response = HttpResponse(open(""+nombrecorto+".zip").read(),content_type="application/zip")  
+            response["Content-Disposition"] = "attachment; filename="+ nombrecorto +".zip"  
+            return response
     else:
         form = UploadForm()
     #tambien se puede utilizar render_to_response
@@ -360,7 +399,9 @@ def generahtmlindex(nombreuni="",nombrecorto=""):
   fichero.write(httmlstr)
   fichero.close()
   if(nombrecorto != ""):
+   from django.template.loader import render_to_string  
    rendered = render_to_string(""+ nombrecorto +"index.html")
+   rendered = localURLS(rendered)
    fichero = open("servicios_stic/templates/" + nombrecorto + "index.html","w") 
    fichero.write(rendered)
    fichero.close()
@@ -372,7 +413,7 @@ def generaplantillas(nombreuni="",nombrecorto=""):
   for j in funcionesxml.GroupCriticArray:		 
    generahtmlgrupo(str(j[1]),nombreuni,nombrecorto)
   for k in funcionesxml.GroupRoleArray:		 
-   generahtmlgrupo(str(k[1]),nombreuni)
+   generahtmlgrupo(str(k[1]),nombreuni,nombrecorto)
   for l in funcionesxml.BusinessServiceArray:
    generahtmlservicio(str(l[0]),nombreuni,nombrecorto)
 

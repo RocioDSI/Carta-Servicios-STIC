@@ -6,7 +6,7 @@ import shutil
 def main(nombreuni="", nombrecorto=""):
 	
  if(nombreuni==""): 
-  newstr = "Universidad de La Laguna"
+  nombreuni = "Universidad de La Laguna"
  
  if (nombrecorto != ""):
   print "Creando directorios"
