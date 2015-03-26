@@ -1,4 +1,4 @@
-desc "Generar paginas e Iniciar servidor"
+desc "Ejecutar la aplicacion en Firefox"
 task :runapp do
   sh "python ejecutable.py"
   sh "python manage.py runserver &"
@@ -10,12 +10,19 @@ task :server do
   sh "python manage.py runserver"
 end
 
-desc "Vuelve a generar las paginas"
+desc "Volver a generar las paginas"
 task :recargar do
   sh "python ejecutable.py"
 end
 
-desc "Para el servidor"
+desc "Parar el servidor"
 task :stopserver do
   sh "killall python"
+end
+
+desc "Ejecutar el modulo upload"
+task :upload do
+  sh "python ejecutable.py"
+  sh "python manage.py runserver &"
+  sh "firefox localhost:8000/uploads &"
 end
