@@ -85,11 +85,14 @@ sortorder: 2
 		</div>
         <p align = justify>Si aún no tiene instalado rake ejecute: </p>		
 		<pre>sudo apt-get install rake</pre>
+		<p align = justify>Puede ver un listado de las tareas definidas en este fichero usando: </p>		
+		<pre>rake -T</pre>
         <p align = justify>En el Rakefile están definidas 3 tareas:</p>
         <ol>
 			<li><b>runapp:</b> Esta tarea permite crear las páginas html, correr el servidor y abrir el navegador con la URL del index.</li>
 			<li><b>server:</b> Esta tarea lanza el servidor local en el puerto 8000.</li>
 			<li><b>recargar:</b> Esta tarea actualiza los ficheros html, volviendolos a crear de manera automática.</li>
+			<li><b>upload:</b> Esta tarea ejecuta el proyecto junto con el módulo upload y abre el navegador con la URL del módulo.</li>
         </ol>
         <p align = justify style='text-indent: 2em'>Para utilizar este fichero simplemente escriba en la consola el siguiente comando:</p>       
         <pre>rake nombre_de_tarea</pre>
@@ -123,5 +126,5 @@ sortorder: 2
     <div class="content">
         <p align = justify style='text-indent: 2em'>Visitar el sitio web en la dirección:</p>
         <pre>http://127.0.0.1:8000/</pre>
-    </div>
+    </div> <br>
 </div>

@@ -70,7 +70,7 @@ sortorder: 4
 		
 		<p align="center">
 			<img border="1" width='60%' height="60%" src="images/html.png"></img>
-		</p> <br> <br>
+		</p> <br>
     </div>
 </div>
 
