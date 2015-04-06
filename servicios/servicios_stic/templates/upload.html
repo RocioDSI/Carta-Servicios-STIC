@@ -1,16 +1,22 @@
 	{% extends "plantilla.html" %}
 	{% block titulo %}
-	<li class="active">Universidad de La Laguna - Uploads</li>
+		<li class="active">Universidad de La Laguna - Uploads</li>
 	{% endblock %}
 	{% block content %}
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-9 col-md-push-3" role="main"> 
-				<br><br>
-    <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
-            {{ form.as_p }}
-        <input type="submit" value="Enviar" class="btn btn-primary">
-        
-    </form>
-    </div>
+			<div class="content">
+				<form class="form-horizontal">
+					<h1 class="main-title" align="center">Descarga las webs de tu carta de servicios</h1>
+					<div class="container-fluid">
+						<div class="col-sm-4">
+							<div class="col-md-9 col-md-push-3" role="main"> 
+								<br><br>
+								<form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+									{{ form.as_p }}						
+								</form> <br>
+								<input align="right" type="submit" value="Enviar" class="btn btn-primary">
+                            </div>
+						</div>
+					</div>
+				</form>
+			</div>
     {%endblock%}
