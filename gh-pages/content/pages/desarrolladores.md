@@ -42,3 +42,16 @@ sortorder: 99
         </div>
     </div>
 </div>
+
+<div class="section">
+    <ul class="nav nav-tabs header">
+        <li class="active"><i class="fa fa-user"></i> Alexander Delgado Hernández - Desarrollador</li>
+    </ul>
+    <div class="content">
+        <div class="row-fluid">
+            <div class="vcard">
+                <i class="fa fa-envelope"></i><span class="email"> alu0100596403@ull.edu.es</a></span><br>
+            </div>
+        </div>
+    </div>
+</div>
