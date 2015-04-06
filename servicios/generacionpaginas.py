@@ -181,7 +181,7 @@ def generahtmlmenu(nombrecorto=""):
 {% block menu %}
                        <div class="panel panel-default panel-ull color-336699">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-file"></i> Servicios</h3>
+                                <h3 class="panel-title"><i class="fa fa-cube"></i> Servicios</h3>
                             </div>
                             <div class="panel-body">
                                 <ul class="nav nav-pills nav-stacked">
@@ -199,7 +199,7 @@ def generahtmlmenu(nombrecorto=""):
 {% block menucritic %}
                        <div class="panel panel-default panel-ull color-336699">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-file"></i> Grupos de Criticidad</h3>
+                                <h3 class="panel-title"><i class="fa fa-exclamation-triangle"></i> Grupos de Criticidad</h3>
                             </div>
                             <div class="panel-body">
                                 <ul class="nav nav-pills nav-stacked">
@@ -217,7 +217,7 @@ def generahtmlmenu(nombrecorto=""):
 {% block menurole %}
                        <div class="panel panel-default panel-ull color-336699">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-file"></i> Roles</h3>
+                                <h3 class="panel-title"><i class="fa fa-users"></i> Roles</h3>
                             </div>
                             <div class="panel-body">
                                 <ul class="nav nav-pills nav-stacked">
