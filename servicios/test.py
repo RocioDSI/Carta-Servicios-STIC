@@ -54,7 +54,7 @@ class Pruebas(unittest.TestCase):
       assert 'STIC - Universidad de la Laguna' in self.browser.title
       header_text = self.browser.find_element_by_tag_name('h1').text
       print i[1]
-      self.assertEqual(str(funcionesxml.getBusinessServiceName(i[0])), ' ' + str(header_text))
+      self.assertEqual(str(funcionesxml.getBusinessServiceName(i[0])), str(header_text))
 
 suite = unittest.TestLoader().loadTestsFromTestCase(Pruebas)
 unittest.TextTestRunner(verbosity=2).run(suite)
