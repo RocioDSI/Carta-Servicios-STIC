@@ -22,7 +22,7 @@
         <property key="Código CRUE" value="CRUE_01_05"/>
         <property key="Descripción" value="Asesoramiento en el uso de herramientas para la generaciónd econtenidos docentes."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="b817c7d3" name=" Soporte a realización y corrección  de exámenes">
+      <element xsi:type="archimate:BusinessService" id="b817c7d3" name=" Soporte a realización y corrección de exámenes">
         <property key="Código CRUE" value="CRUE_01_06"/>
         <property key="Descripción" value="Soporte a la automatización de la generación y/o corrección de examenes."/>
       </element>

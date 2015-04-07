@@ -1,24 +1,3 @@
-#
-#    Copyright 2014-2015
-#
-#      STIC - Universidad de La Laguna (ULL) <gesinv@ull.edu.es>
-#
-#    This file is part of Modelado de Servicios TIC.
-#
-#    Modelado de Servicios TIC is free software: you can redistribute it and/or modify it under
-#    the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-#
-#    Modelado de Servicios TIC is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with Modelado de Servicios TIC.  If not, see
-#    <http://www.gnu.org/licenses/>.
-#
 
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
@@ -47,7 +26,7 @@ urlpatterns = patterns('',
  url(r'^_soporte_a_aulas_de_informatica_de_uso_docente/$', 'servicios_stic.views._soporte_a_aulas_de_informatica_de_uso_docente', name='_soporte_a_aulas_de_informatica_de_uso_docente'),	
  url(r'^_soporte_a_aulas_multimedia/$', 'servicios_stic.views._soporte_a_aulas_multimedia', name='_soporte_a_aulas_multimedia'),	
  url(r'^_soporte_a_la_elaboracion_de_contenidos_docentes/$', 'servicios_stic.views._soporte_a_la_elaboracion_de_contenidos_docentes', name='_soporte_a_la_elaboracion_de_contenidos_docentes'),	
- url(r'^_soporte_a_realizacion_y_correccion__de_examenes/$', 'servicios_stic.views._soporte_a_realizacion_y_correccion__de_examenes', name='_soporte_a_realizacion_y_correccion__de_examenes'),	
+ url(r'^_soporte_a_realizacion_y_correccion_de_examenes/$', 'servicios_stic.views._soporte_a_realizacion_y_correccion_de_examenes', name='_soporte_a_realizacion_y_correccion_de_examenes'),	
  url(r'^_gestion_de_licencias_software_para_docencia/$', 'servicios_stic.views._gestion_de_licencias_software_para_docencia', name='_gestion_de_licencias_software_para_docencia'),	
  url(r'^_supercomputacion/$', 'servicios_stic.views._supercomputacion', name='_supercomputacion'),	
  url(r'^_alojamiento_de_infraestructuras/$', 'servicios_stic.views._alojamiento_de_infraestructuras', name='_alojamiento_de_infraestructuras'),	
