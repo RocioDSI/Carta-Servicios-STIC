@@ -48,3 +48,8 @@ task :upload do
   sh "python manage.py runserver &"
   sh "firefox localhost:8000/uploads &"
 end
+
+desc "Ejecutar los test"
+task :test do
+  sh "python test.py"
+end
