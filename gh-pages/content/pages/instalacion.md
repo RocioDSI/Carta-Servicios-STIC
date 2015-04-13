@@ -1,7 +1,7 @@
 menulabel: Instalación
 title: Instalación de Carta de Servicios
 save_as: instalacion.html
-URL: instalacion.html
+URL: Carta-Servicios-STIC/instalacion.html
 sortorder: 2
 
 <div class="container-fluid">

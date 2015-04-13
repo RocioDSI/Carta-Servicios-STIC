@@ -1,7 +1,7 @@
 Title: Módulos adicionales de la aplicación
 menulabel: Módulos
 save_as: modulo.html
-URL: modulo.html
+URL: Carta-Servicios-STIC/modulo.html
 sortorder: 3
 
 <div class="section">
