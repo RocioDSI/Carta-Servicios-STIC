@@ -1,0 +1,64 @@
+ 
+{% extends "menu.html" %}
+
+{% block contenido %}
+{% block titulo %}
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - Alta</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+                    <li class="active"><a href="{% url "servicios_stic.views.docencia_virtual" %}"><h1 class="main-title">Docencia Virtual</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Aplicaciones para la docencia virtual (LMS) </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views.correo_electronico_pdi_y_pas" %}"><h1 class="main-title">Correo electrónico. PDI y PAS</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado al PAS y PDI. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views.correo_electronico_estudiantes" %}"><h1 class="main-title">Correo electrónico. Estudiantes</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado a los estudiantes universitarios. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views.correo_electronico_preuniversitarios" %}"><h1 class="main-title">Correo electrónico. Preuniversitarios</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado a los estudiantes presuniversitarios del distrito correspondiente. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views.correo_electronico_egresados" %}"><h1 class="main-title">Correo electrónico. Egresados</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado a los estudiantes egresados. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views.web_institucional" %}"><h1 class="main-title">Web institucional</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Publicación de información académica, de investigación y servicios universitarios en el sitio web institucional de la Universidad </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views.sede_electronica" %}"><h1 class="main-title">Sede electrónica</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Publicación de información en la Sede electrónica según lo establecido en la Ley 11/2007, de 22 de junio, de acceso electrónico de los ciudadanos a los Servicios Públicos </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views.intranet" %}"><h1 class="main-title">Intranet</h1></a></li>
+                    <p> Roles: PDI. </p>
+   <p> Descripción: Publicación de información académica, de investigación y servicios universitarios en un sitio web de acceso restringido a la comunidad universitaria. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views.intranet_portal_del_investigador" %}"><h1 class="main-title">Intranet. Portal del investigador</h1></a></li>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Descripción: Publicación de recursos y servicios dirigidos a los investigadores sobre un sitio web de acceso restringido a este colectivo. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views.intranet_portal_del_empleado" %}"><h1 class="main-title">Intranet. Portal del empleado</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Publicación de recursos y servicios dirigidos a los empleados de la universidad sobre un sitio web de acceso restringido a este colectivo. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views.intranet_portal_del_estudiante_o_secretaria_virtual" %}"><h1 class="main-title">Intranet. Portal del estudiante o Secretaria Virtual</h1></a></li>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Descripción: Publicación de recursos y servicios dirigidos a los estudiantes de la universidad sobre un sitio web de acceso restringido a este colectivo. </p>
+       
+                    <li class="active"><a href="{% url "servicios_stic.views.autenticacion_centralizada" %}"><h1 class="main-title">Autenticación Centralizada</h1></a></li>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Descripción: Diseño, administración y gestión de la plataforma que facilita el acceso unificado a los distintos servicios y aplicaciones de la Universidad mediante las credenciales digitales de un usuario. </p>
+       		</div>
+{% endblock %}
+{% endblock %}  
+  

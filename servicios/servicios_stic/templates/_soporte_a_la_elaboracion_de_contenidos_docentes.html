@@ -1,0 +1,25 @@
+ 
+{% extends "menu.html" %}	  
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.soporte_tic_a_la_docencia" %}"> Soporte TIC a la Docencia</a> -  Soporte a la elaboración de contenidos docentes</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title"> Soporte a la elaboración de contenidos docentes</h1>
+					<p> ID: cf28c11e </p>
+					<p> Grupo de Servicio: Soporte TIC a la Docencia </p>
+					<p> Criticidad: Baja</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Código CRUE: CRUE_01_05 </p>
+      <p> Descripción: Asesoramiento en el uso de herramientas para la generaciónd econtenidos docentes. </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

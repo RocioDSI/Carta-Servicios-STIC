@@ -1,0 +1,25 @@
+ 
+{% extends "menu.html" %}	  
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.comunicaciones" %}"> Comunicaciones</a> -  Telefonía Móvil</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title"> Telefonía Móvil</h1>
+					<p> ID: fbd6bf9f </p>
+					<p> Grupo de Servicio: Comunicaciones </p>
+					<p> Criticidad: Baja</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Código CRUE: CRUE_07_02 </p>
+      <p> Descripción: Diseño, administración y gestión de las comunicaciones de voz basadas en el uso de terminales móviles. </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

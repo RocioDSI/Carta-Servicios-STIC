@@ -1,0 +1,25 @@
+ 
+{% extends "menu.html" %}	  
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.soporte_tic_a_la_docencia" %}"> Soporte TIC a la Docencia</a> -  Docencia Virtual</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title"> Docencia Virtual</h1>
+					<p> ID: f7290be7 </p>
+					<p> Grupo de Servicio: Soporte TIC a la Docencia </p>
+					<p> Criticidad: Alta</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Código CRUE: CRUE_01_01 </p>
+      <p> Descripción: Aplicaciones para la docencia virtual (LMS) </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

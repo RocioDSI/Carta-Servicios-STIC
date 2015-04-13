@@ -1,0 +1,25 @@
+ 
+{% extends "menu.html" %}	  
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.soporte_tic_a_la_gestion" %}"> Soporte TIC a la Gestión</a> -  Extensión Universitaria. Actividades Deportivas</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title"> Extensión Universitaria. Actividades Deportivas</h1>
+					<p> ID: f2b4cebe </p>
+					<p> Grupo de Servicio: Soporte TIC a la Gestión </p>
+					<p> Criticidad: Baja</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PDI, Alumnos, AAAAULL. </p>
+   <p> Código CRUE: CRUE_03_36 </p>
+      <p> Descripción: Aplicaciones para la gestión de los procesos gestionado por el Servicio de Deportes. </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

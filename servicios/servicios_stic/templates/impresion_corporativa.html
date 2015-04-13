@@ -1,0 +1,25 @@
+ 
+{% extends "menu.html" %}	  
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.soporte_a_equipamiento_puesto_de_trabajo" %}"> Soporte a Equipamiento Puesto de Trabajo</a> - Impresión Corporativa</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title">Impresión Corporativa</h1>
+					<p> ID: cb74824d </p>
+					<p> Grupo de Servicio: Soporte a Equipamiento Puesto de Trabajo </p>
+					<p> Criticidad: Baja</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PDI. </p>
+   <p> Código CRUE: CRUE_06_04 </p>
+      <p> Descripción: instalación y configuración de equipamiento para servicios de impresión. </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

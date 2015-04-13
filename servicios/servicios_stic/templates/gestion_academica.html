@@ -1,0 +1,25 @@
+ 
+{% extends "menu.html" %}	  
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.soporte_tic_a_la_gestion" %}"> Soporte TIC a la Gestión</a> - Gestión Académica</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title">Gestión Académica</h1>
+					<p> ID: f498b51f </p>
+					<p> Grupo de Servicio: Soporte TIC a la Gestión </p>
+					<p> Criticidad: Baja</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PDI. </p>
+   <p> Código CRUE: CRUE_03_01 </p>
+      <p> Descripción: Aplicaciones para la gestión de la actividad académica de los estudiantes universitarios </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

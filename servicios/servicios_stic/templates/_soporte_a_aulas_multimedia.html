@@ -1,0 +1,25 @@
+ 
+{% extends "menu.html" %}	  
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.soporte_tic_a_la_docencia" %}"> Soporte TIC a la Docencia</a> -  Soporte a Aulas multimedia</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title"> Soporte a Aulas multimedia</h1>
+					<p> ID: eb94a3ee </p>
+					<p> Grupo de Servicio: Soporte TIC a la Docencia </p>
+					<p> Criticidad: Baja</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PDI. </p>
+   <p> Código CRUE: CRUE_01_04 </p>
+      <p> Descripción: Instalación y configuración de equipos y software, en aulas con equipamiento audiovisual y no solo ordenadores. </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

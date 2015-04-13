@@ -1,0 +1,25 @@
+ 
+{% extends "menu.html" %}	  
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.soporte_tic_a_la_investigacion" %}"> Soporte TIC a la Investigación</a> - Gestión de Licencias software para investigación</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title">Gestión de Licencias software para investigación</h1>
+					<p> ID: 914b3643 </p>
+					<p> Grupo de Servicio: Soporte TIC a la Investigación </p>
+					<p> Criticidad: Baja</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Código CRUE: CRUE_02_03 </p>
+      <p> Descripción: Adquisición, gestión y validación centralizada de licencias de aplicaciones orientadas hacia la investigación. </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

@@ -1,0 +1,25 @@
+ 
+{% extends "menu.html" %}	  
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.correo_y_colaboracion" %}"> Correo y colaboración</a> - Notificaciones. SMS</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title">Notificaciones. SMS</h1>
+					<p> ID: cf9a6d80 </p>
+					<p> Grupo de Servicio: Correo y colaboración </p>
+					<p> Criticidad: Baja</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Código CRUE: CRUE_04_06 </p>
+      <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en el uso de plataformas de envío de mensajes cortos (SMS) </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

@@ -1,0 +1,25 @@
+ 
+{% extends "menu.html" %}	  
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.correo_y_colaboracion" %}"> Correo y colaboración</a> -  Intercambio de ficheros. FTP</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title"> Intercambio de ficheros. FTP</h1>
+					<p> ID: 5f194d42 </p>
+					<p> Grupo de Servicio: Correo y colaboración </p>
+					<p> Criticidad: Baja</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Código CRUE: CRUE_04_09 </p>
+      <p> Descripción: Diseño, administración y gestión de las comunicaciones basadas en el intercambio de ficheros a través del protocolo de transferencia FTP </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

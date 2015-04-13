@@ -1,0 +1,25 @@
+ 
+{% extends "menu.html" %}	  
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.soporte_tic_a_la_investigacion" %}"> Soporte TIC a la Investigación</a> -  Alojamiento de Infraestructuras</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title"> Alojamiento de Infraestructuras</h1>
+					<p> ID: 398e34bd </p>
+					<p> Grupo de Servicio: Soporte TIC a la Investigación </p>
+					<p> Criticidad: Baja</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PDI, PAS, ExAlumnos. </p>
+   <p> Código CRUE: CRUE_02_02 </p>
+      <p> Descripción: Alojamiento y conectividad en el CPD para el despliegue de aplicaciones y servicios de investigación. </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  

@@ -1,0 +1,25 @@
+ 
+{% extends "menu.html" %}	  
+{% block contenido %}
+{% block titulo %}
+																																    
+	<li class="active">Universidad de La Laguna - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views.publicacion_web" %}"> Publicación web</a> - Web institucional</li>
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-md-push-3" role="main"> 
+				<br><br>
+					<h1 class="main-title">Web institucional</h1>
+					<p> ID: 55768270 </p>
+					<p> Grupo de Servicio: Publicación web </p>
+					<p> Criticidad: Alta</p>
+					<p> Nivel de Acceso: None</p>
+                    <p> Roles: PAS, ExAlumnos, Alumnos. </p>
+   <p> Código CRUE: CRUE_05_01 </p>
+      <p> Descripción: Publicación de información académica, de investigación y servicios universitarios en el sitio web institucional de la Universidad </p>
+      		</div>
+{% endblock %}
+{% endblock %}  
+  
