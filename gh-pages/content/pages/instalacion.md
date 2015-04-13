@@ -1,7 +1,7 @@
 menulabel: Instalación
 title: Instalación de Carta de Servicios
 save_as: instalacion.html
-URL: Carta-Servicios-STIC/instalacion.html
+URL: instalacion.html
 sortorder: 2
 
 <div class="container-fluid">
@@ -93,6 +93,7 @@ sortorder: 2
 			<li><b>server:</b> Esta tarea lanza el servidor local en el puerto 8000.</li>
 			<li><b>recargar:</b> Esta tarea actualiza los ficheros html, volviendolos a crear de manera automática.</li>
 			<li><b>upload:</b> Esta tarea ejecuta el proyecto junto con el módulo upload y abre el navegador con la URL del módulo.</li>
+			<li><b>test:</b> Ejecuta los test de selenium y los de UniTest.</li>
         </ol>
         <p align = justify style='text-indent: 2em'>Para utilizar este fichero simplemente escriba en la consola el siguiente comando:</p>       
         <pre>rake nombre_de_tarea</pre>

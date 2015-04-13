@@ -1,7 +1,7 @@
 Title: Módulos adicionales de la aplicación
 menulabel: Módulos
 save_as: modulo.html
-URL: Carta-Servicios-STIC/modulo.html
+URL: modulo.html
 sortorder: 3
 
 <div class="section">
@@ -14,7 +14,7 @@ sortorder: 3
 		</p> <br> <br>		
 		
 		<p align="center">
-			<img border="1" width='60%' height="60%" src="images/uploads.png"></img>
+			<img border="1" width='60%' height="60%" src="images/uploadsV2.png"></img>
 		</p> <br>
 			
 		<p align = justify>
