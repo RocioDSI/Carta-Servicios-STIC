@@ -603,7 +603,6 @@
     <element xsi:type="archimate:SystemSoftware" id="485b5dc8" name="SQUID"/>
     <element xsi:type="archimate:SystemSoftware" id="085684f5" name="NGINX"/>
     <element xsi:type="archimate:SystemSoftware" id="a109be87" name="PROFTPD-BASIC"/>
-    <element xsi:type="archimate:SystemSoftware" id="c8e19f52" name="Apache2"/>
     <element xsi:type="archimate:SystemSoftware" id="fcc014fa" name="PostgreSQL"/>
     <element xsi:type="archimate:SystemSoftware" id="5d2d1c2b"/>
     <element xsi:type="archimate:InfrastructureService" id="eaaa2c25" name="SQUID 1">
@@ -617,6 +616,10 @@
     <element xsi:type="archimate:InfrastructureService" id="3db5b2dc" name="SQUID 2">
       <property key="Puerto" value="80"/>
       <property key="Version" value="3.1.6-1.2"/>
+    </element>
+    <element xsi:type="archimate:InfrastructureService" id="62583bfd" name="Apache2 3">
+      <property key="Puerto" value="80"/>
+      <property key="Version" value="2.2.16"/>
     </element>
   </folder>
   <folder name="Motivation" id="4538e2e6" type="motivation"/>
@@ -682,6 +685,8 @@
     <element xsi:type="archimate:UsedByRelationship" id="3dcc4e4e" source="eaaa2c25" target="aa3981ae"/>
     <element xsi:type="archimate:UsedByRelationship" id="b14b04f5" source="9818db4d" target="aa3981ae"/>
     <element xsi:type="archimate:UsedByRelationship" id="97598015" source="3db5b2dc" target="aa3981ae"/>
+    <element xsi:type="archimate:UsedByRelationship" id="2f34d2fa" source="62583bfd" target="ce333fda"/>
+    <element xsi:type="archimate:UsedByRelationship" id="2496b340" source="62583bfd" target="37380ec2"/>
   </folder>
   <folder name="Views" id="082fba3d" type="diagrams">
     <folder name="Servicios Aplicacion" id="905bbe45">
@@ -993,16 +998,21 @@
         <child xsi:type="archimate:DiagramObject" id="b2a6c807" textAlignment="2" targetConnections="b6102817" archimateElement="4a67fd88">
           <bounds x="963" y="360" width="120" height="55"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="34ec5dc1" textAlignment="2" targetConnections="ee4f75f5" archimateElement="37380ec2">
-          <bounds x="432" y="108" width="120" height="55"/>
+        <child xsi:type="archimate:DiagramObject" id="34ec5dc1" textAlignment="2" targetConnections="ee4f75f5 03f9cda7" archimateElement="37380ec2">
+          <bounds x="444" y="144" width="120" height="55"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="bf8c95b4" textAlignment="2" targetConnections="6857a9d7" archimateElement="ce333fda">
-          <bounds x="108" y="108" width="120" height="55"/>
+        <child xsi:type="archimate:DiagramObject" id="bf8c95b4" textAlignment="2" targetConnections="6857a9d7 fe1a2049" archimateElement="ce333fda">
+          <bounds x="96" y="144" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="0c781e8b" textAlignment="2" archimateElement="92f16e7f">
           <bounds x="265" y="108" width="120" height="55"/>
           <sourceConnection xsi:type="archimate:Connection" id="6857a9d7" source="0c781e8b" target="bf8c95b4" relationship="6f73ef1b"/>
           <sourceConnection xsi:type="archimate:Connection" id="ee4f75f5" source="0c781e8b" target="34ec5dc1" relationship="504f1dce"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="080b9ad3" textAlignment="2" archimateElement="62583bfd">
+          <bounds x="265" y="180" width="120" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="fe1a2049" source="080b9ad3" target="bf8c95b4" relationship="2f34d2fa"/>
+          <sourceConnection xsi:type="archimate:Connection" id="03f9cda7" source="080b9ad3" target="34ec5dc1" relationship="2496b340"/>
         </child>
       </element>
     </folder>
