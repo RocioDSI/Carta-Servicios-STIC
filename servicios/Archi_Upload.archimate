@@ -2,355 +2,355 @@
 <archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Archi_STIC_1.0" id="8add2b99" version="3.1.1">
   <folder name="Business" id="8f04dd69" type="business">
     <folder name="Servicios" id="1355d78e">
-      <element xsi:type="archimate:BusinessService" id="f7290be7" name="Docencia Virtual">
+      <element xsi:type="archimate:BusinessService" id="f7290be7" name=" Docencia Virtual">
         <property key="Código CRUE" value="CRUE_01_01"/>
         <property key="Descripción" value="Aplicaciones para la docencia virtual (LMS)"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="5c4964c6" name="Soporte a aulas de informática de libre acceso">
+      <element xsi:type="archimate:BusinessService" id="5c4964c6" name=" Soporte a aulas de informática de libre acceso">
         <property key="Código CRUE" value="CRUE_01_02"/>
         <property key="Descripción" value="Instalación y configuración de equipos y software en aulas y ubicaciones de acceso libre"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="84e0fc84" name="Soporte a aulas de Informática de uso docente">
+      <element xsi:type="archimate:BusinessService" id="84e0fc84" name=" Soporte a aulas de Informática de uso docente">
         <property key="Código CRUE" value="CRUE_01_03"/>
         <property key="Descripción" value="Instalación y configuración de equipos y software, en aulas de uso docente. Incluye laboratorios y aulas virtualizadas."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="eb94a3ee" name="Soporte a Aulas multimedia">
+      <element xsi:type="archimate:BusinessService" id="eb94a3ee" name=" Soporte a Aulas multimedia">
         <property key="Código CRUE" value="CRUE_01_04"/>
         <property key="Descripción" value="Instalación y configuración de equipos y software, en aulas con equipamiento audiovisual y no solo ordenadores."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="cf28c11e" name="Soporte a la elaboración de contenidos docentes">
+      <element xsi:type="archimate:BusinessService" id="cf28c11e" name=" Soporte a la elaboración de contenidos docentes">
         <property key="Código CRUE" value="CRUE_01_05"/>
         <property key="Descripción" value="Asesoramiento en el uso de herramientas para la generaciónd econtenidos docentes."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="b817c7d3" name="Soporte a realización y corrección de exámenes">
+      <element xsi:type="archimate:BusinessService" id="b817c7d3" name=" Soporte a realización y corrección  de exámenes">
         <property key="Código CRUE" value="CRUE_01_06"/>
         <property key="Descripción" value="Soporte a la automatización de la generación y/o corrección de examenes."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="750b5b93" name="Gestión de licencias software para docencia">
+      <element xsi:type="archimate:BusinessService" id="750b5b93" name=" Gestión de licencias software para docencia">
         <property key="Código CRUE" value="CRUE_01_07"/>
         <property key="Descripción" value="Adquisición, gestión y validación centralizada de licencias de software de uso docente"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="1aab7824" name="Supercomputación">
+      <element xsi:type="archimate:BusinessService" id="1aab7824" name=" Supercomputación">
         <property key="Código CRUE" value="CRUE_02_01"/>
         <property key="Descripción" value="Gestión de los recursos TIC  de computación de altas prestaciones orientados al cálculo o al procesamiento de datos científicos."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="398e34bd" name="Alojamiento de Infraestructuras">
+      <element xsi:type="archimate:BusinessService" id="398e34bd" name=" Alojamiento de Infraestructuras">
         <property key="Código CRUE" value="CRUE_02_02"/>
         <property key="Descripción" value="Alojamiento y conectividad en el CPD para el despliegue de aplicaciones y servicios de investigación."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="914b3643" name="Gestión de Licencias software para investigación">
+      <element xsi:type="archimate:BusinessService" id="914b3643" name=" Gestión de Licencias software para investigación">
         <property key="Código CRUE" value="CRUE_02_03"/>
         <property key="Descripción" value="Adquisición, gestión y validación centralizada de licencias de aplicaciones orientadas hacia la investigación."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="a4aebd27" name="Asesoramiento adquisición infraestructuras y servicios TIC para investigación">
+      <element xsi:type="archimate:BusinessService" id="a4aebd27" name=" Asesoramiento adquisición infraestructuras y servicios TIC para investigación">
         <property key="Código CRUE" value="CRUE_02_04"/>
         <property key="Descripción" value="Consultoría técnica para la implantación de servicios TIC orientados a la investigación."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="f498b51f" name="Gestión Académica">
+      <element xsi:type="archimate:BusinessService" id="f498b51f" name=" Gestión Académica">
         <property key="Código CRUE" value="CRUE_03_01"/>
         <property key="Descripción" value="Aplicaciones para la gestión de la actividad académica de los estudiantes universitarios"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="b0ec009c" name="Gestión Académica. Acceso a Grado">
+      <element xsi:type="archimate:BusinessService" id="b0ec009c" name=" Gestión Académica. Acceso a Grado">
         <property key="Código CRUE" value="CRUE_03_02"/>
         <property key="Descripción" value="Aplicaciones para la gestión del acceso a los grados universitarios."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="8ad6800e" name="Gestión Académica. Acceso a Postgrado">
+      <element xsi:type="archimate:BusinessService" id="8ad6800e" name=" Gestión Académica. Acceso a Postgrado">
         <property key="Código CRUE" value="CRUE_03_03"/>
         <property key="Descripción" value="Aplicaciones para la gestión del acceso a los cursos de postgrado y máster universitarios."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="b8f351c1" name="Gestión Académica. Actas">
+      <element xsi:type="archimate:BusinessService" id="b8f351c1" name=" Gestión Académica. Actas">
         <property key="Código CRUE" value="CRUE_03_04"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procedimientos necesarios para la elaboración de las actas de calificación"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="c5a78aa6" name="Gestión Académica. Automatrícula">
+      <element xsi:type="archimate:BusinessService" id="c5a78aa6" name=" Gestión Académica. Automatrícula">
         <property key="Código CRUE" value="CRUE_03_05"/>
         <property key="Descripción" value="Aplicaciones para la realización la matrícula universitaria vía telemática."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="e04538d8" name="Gestión Académica. Becas">
+      <element xsi:type="archimate:BusinessService" id="e04538d8" name=" Gestión Académica. Becas">
         <property key="Código CRUE" value="CRUE_03_06"/>
         <property key="Descripción" value="Aplicaciones para la gestión de las solicitudes de becas de los alumnos."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="eacdde9b" name="Gestión Académica. Depósito de Títulos">
+      <element xsi:type="archimate:BusinessService" id="eacdde9b" name=" Gestión Académica. Depósito de Títulos">
         <property key="Código CRUE" value="CRUE_03_07"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procedimientos asociados a la consecución de un título universitario."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="3e259ca0" name="Gestión Académica. Enseñanzas propias">
+      <element xsi:type="archimate:BusinessService" id="3e259ca0" name=" Gestión Académica. Enseñanzas propias">
         <property key="Código CRUE" value="CRUE_03_08"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procedimientos académicos de las enseñanzas propias universitarias."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="8a08322b" name="Gestión Académica. Gestión de Horarios">
+      <element xsi:type="archimate:BusinessService" id="8a08322b" name=" Gestión Académica. Gestión de Horarios">
         <property key="Código CRUE" value="CRUE_03_09"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los cuadros horarios de docencia."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="1c753b76" name="Gestión Académica. Gestión de Postgrado">
+      <element xsi:type="archimate:BusinessService" id="1c753b76" name=" Gestión Académica. Gestión de Postgrado">
         <property key="Código CRUE" value="CRUE_03_10"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procedimientos académicos de las enseñanzas de postgrado universitario."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="69b92aef" name="Gestión Académica. Guías Docentes">
+      <element xsi:type="archimate:BusinessService" id="69b92aef" name=" Gestión Académica. Guías Docentes">
         <property key="Código CRUE" value="CRUE_03_11"/>
         <property key="Descripción" value="Aplicaciones para la gestión de de los contenidos de las asignaturas impartidas en las diferntes titulaciones académicas."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="8f7c028c" name="Gestión Académica. Movilidad internacional">
+      <element xsi:type="archimate:BusinessService" id="8f7c028c" name=" Gestión Académica. Movilidad internacional">
         <property key="Código CRUE" value="CRUE_03_12"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los programas de movilidad de los estudiantes."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="e1dfe964" name="Gestión Académica. Necesidades educativas especiales">
+      <element xsi:type="archimate:BusinessService" id="e1dfe964" name=" Gestión Académica. Necesidades educativas especiales">
         <property key="Código CRUE" value="CRUE_03_13"/>
         <property key="Descripción" value="Aplicaciones para la gestión de las necesidades educativas especíales"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="55e98109" name="Gestión Académica. Plan Docente">
+      <element xsi:type="archimate:BusinessService" id="55e98109" name=" Gestión Académica. Plan Docente">
         <property key="Código CRUE" value="CRUE_03_14"/>
         <property key="Descripción" value="Aplicaciones para la gestión de de la carga docente asociada a cada profesor."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="3390e310" name="Gestión Académica. Secretaría Virtual">
+      <element xsi:type="archimate:BusinessService" id="3390e310" name=" Gestión Académica. Secretaría Virtual">
         <property key="Código CRUE" value="CRUE_03_15"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procedimeintos asocuados a expedientes académicos de los alumnos"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="fbe6fedb" name="Gestión Académica. Tésis">
+      <element xsi:type="archimate:BusinessService" id="fbe6fedb" name=" Gestión Académica. Tésis">
         <property key="Código CRUE" value="CRUE_03_16"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procedimientos asociados a la consecución de una tesis doctoral."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="00fae1db" name="Gestión Académica. Prácticas de empresa">
+      <element xsi:type="archimate:BusinessService" id="00fae1db" name=" Gestión Académica. Prácticas de empresa">
         <property key="Código CRUE" value="CRUE_03_17"/>
         <property key="Descripción" value="Aplicaciones para la gestión de las prácticas en empresas de estudiantes universitarios"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="371a9fce" name="Gestión de la Investigación">
+      <element xsi:type="archimate:BusinessService" id="371a9fce" name=" Gestión de la Investigación">
         <property key="Código CRUE" value="CRUE_03_18"/>
         <property key="Descripción" value="Aplicaciones para la gestión de la Investigación."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="2d516ba9" name="Gestión Económica">
+      <element xsi:type="archimate:BusinessService" id="2d516ba9" name=" Gestión Económica">
         <property key="Código CRUE" value="CRUE_03_19"/>
         <property key="Descripción" value="Aplicaciones para la gestión económica de la Universidad."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="192ca219" name="Gestión Económica. Contabilidad Analítica">
+      <element xsi:type="archimate:BusinessService" id="192ca219" name=" Gestión Económica. Contabilidad Analítica">
         <property key="Código CRUE" value="CRUE_03_20"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procesos asociados a la contabilidad analítica."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="a7be3512" name="Gestión Económica. Contratación">
+      <element xsi:type="archimate:BusinessService" id="a7be3512" name=" Gestión Económica. Contratación">
         <property key="Código CRUE" value="CRUE_03_21"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los contratos que establece la Universidad con terceros."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="e52e8bd2" name="Gestión Económica. Tesorería">
+      <element xsi:type="archimate:BusinessService" id="e52e8bd2" name=" Gestión Económica. Tesorería">
         <property key="Código CRUE" value="CRUE_03_22"/>
         <property key="Descripción" value="Aplicaciones para la gestión de la tesorería económica de la Universidad"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="e1e20c28" name="Gestión Económica. Gestión de Fondos FEDER">
+      <element xsi:type="archimate:BusinessService" id="e1e20c28" name=" Gestión Económica. Gestión de Fondos FEDER">
         <property key="Código CRUE" value="CRUE_03_23"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los porcesos asociados a la gestión económica de las ayudas de financiación europeas."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="e50de780" name="Gestión Económica. Patrimonio e Inventario">
+      <element xsi:type="archimate:BusinessService" id="e50de780" name=" Gestión Económica. Patrimonio e Inventario">
         <property key="Código CRUE" value="CRUE_03_24"/>
         <property key="Descripción" value="Aplicaciones para la gestión del patrimonio de bienes muebles e inmuebles de la Universidad e inventario de los mismos."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="6aa2a03f" name="Gestión Económica. Ingresos">
+      <element xsi:type="archimate:BusinessService" id="6aa2a03f" name=" Gestión Económica. Ingresos">
         <property key="Código CRUE" value="CRUE_03_25"/>
         <property key="Descripción" value="Aplicaciones para la gestión de todos los ingresos, incluyendo las tasas universitarias."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="a983495f" name="Gestión Económica. Presupuestos">
+      <element xsi:type="archimate:BusinessService" id="a983495f" name=" Gestión Económica. Presupuestos">
         <property key="Código CRUE" value="CRUE_03_26"/>
         <property key="Descripción" value="Aplicaciones para la gestión del presupeusto de la Universidad."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="150651d0" name="Gestión RR.HH.">
+      <element xsi:type="archimate:BusinessService" id="150651d0" name=" Gestión RR.HH.">
         <property key="Código CRUE" value="CRUE_03_27"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procedimientos relacionados con los Recursos Humanos en la Universidad."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="bd3f676e" name="Gestión RR.HH. Convocartorias de Acceso">
+      <element xsi:type="archimate:BusinessService" id="bd3f676e" name=" Gestión RR.HH. Convocartorias de Acceso">
         <property key="Código CRUE" value="CRUE_03_28"/>
         <property key="Descripción" value="Aplicaciones para la gestión de las covocatorias de provisión de puestos en la Unoiversidad"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="56e79df0" name="Gestión RR.HH. Diseño de plantilla">
+      <element xsi:type="archimate:BusinessService" id="56e79df0" name=" Gestión RR.HH. Diseño de plantilla">
         <property key="Código CRUE" value="CRUE_03_29"/>
         <property key="Descripción" value="Aplicaciones para la gestión y el diseño de la Relación de Puestos de Trabajo de la Universidad"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="8a14ad70" name="Gestión RR.HH. Control Horario">
+      <element xsi:type="archimate:BusinessService" id="8a14ad70" name=" Gestión RR.HH. Control Horario">
         <property key="Código CRUE" value="CRUE_03_30"/>
         <property key="Descripción" value="Aplicaciones para la gestión de entradas y salidas del puesto del trabajo del personal universitario."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="cb7adbed" name="Gestión RR.HH. Valoración del Desempeño">
+      <element xsi:type="archimate:BusinessService" id="cb7adbed" name=" Gestión RR.HH. Valoración del Desempeño">
         <property key="Código CRUE" value="CRUE_03_31"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procesos de valoración de resultados profesionales de los recursos humanos de la Universidad"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="38637dcb" name="Gestión RR.HH. Formación">
+      <element xsi:type="archimate:BusinessService" id="38637dcb" name=" Gestión RR.HH. Formación">
         <property key="Código CRUE" value="CRUE_03_32"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procesos de formación interna destinados a personal de la Universidad"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="94cd4824" name="Gestión RR.HH. Prevención">
+      <element xsi:type="archimate:BusinessService" id="94cd4824" name=" Gestión RR.HH. Prevención">
         <property key="Código CRUE" value="CRUE_03_33"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procesos de prevención, incluyendo porcesos de revisión médica de los recursos humanos de la Universidad"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="c6f0f007" name="Gestión RR.HH. Retribuciones">
+      <element xsi:type="archimate:BusinessService" id="c6f0f007" name=" Gestión RR.HH. Retribuciones">
         <property key="Código CRUE" value="CRUE_03_34"/>
         <property key="Descripción" value="Aplicaciones para la gestión de las reribuciones a personal de la Universidad, incluyendo  comisión de servicio y nóminas"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="a1a88947" name="Extensión Universitaria">
+      <element xsi:type="archimate:BusinessService" id="a1a88947" name=" Extensión Universitaria">
         <property key="Código CRUE" value="CRUE_03_35"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procesos relacionados con la Extensión Universitaria."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="f2b4cebe" name="Extensión Universitaria. Actividades Deportivas">
+      <element xsi:type="archimate:BusinessService" id="f2b4cebe" name=" Extensión Universitaria. Actividades Deportivas">
         <property key="Código CRUE" value="CRUE_03_36"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procesos gestionado por el Servicio de Deportes."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="9046e7ee" name="Extensión Universitaria. Bolsa de alojamiento">
+      <element xsi:type="archimate:BusinessService" id="9046e7ee" name=" Extensión Universitaria. Bolsa de alojamiento">
         <property key="Código CRUE" value="CRUE_03_37"/>
         <property key="Descripción" value="Aplicaciones para la gestión de la oferta de alquiler de viviendas para estudiantes"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="5152ccbc" name="Extensión Universitaria. Enseñanza no reglada">
+      <element xsi:type="archimate:BusinessService" id="5152ccbc" name=" Extensión Universitaria. Enseñanza no reglada">
         <property key="Código CRUE" value="CRUE_03_38"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procedimientos académicos de las enseñanzas no regladas, incluyendo cursos de verano."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="064cbd15" name="Extensión Universitaria. Préstamo de Bicicletas">
+      <element xsi:type="archimate:BusinessService" id="064cbd15" name=" Extensión Universitaria. Préstamo de Bicicletas">
         <property key="Código CRUE" value="CRUE_03_39"/>
         <property key="Descripción" value="Aplicaciones para la gestión del préstamo de bicicletas de la Universidad."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="a09b0c87" name="Secretaría General.">
+      <element xsi:type="archimate:BusinessService" id="a09b0c87" name=" Secretaría General.">
         <property key="Código CRUE" value="CRUE_03_40"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los porcesos relacionados con laSecretaría General"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="0c4a0f5b" name="Secretaría General. Archivo Universitario">
+      <element xsi:type="archimate:BusinessService" id="0c4a0f5b" name=" Secretaría General. Archivo Universitario">
         <property key="Código CRUE" value="CRUE_03_41"/>
         <property key="Descripción" value="Aplicaciones para la gestión y mantenimiento del Archivo universitario en todo diferntes soportes como documentos, fichas, dvd, negativos y positivos fotográficos, cuadernos, películas o impresos."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="28bf1f2c" name="Secretaría General. Protocolo">
+      <element xsi:type="archimate:BusinessService" id="28bf1f2c" name=" Secretaría General. Protocolo">
         <property key="Código CRUE" value="CRUE_03_42"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procesos de protocolo exigidos en los actos académicos."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="742107a7" name="Secretaría General. Registro">
+      <element xsi:type="archimate:BusinessService" id="742107a7" name=" Secretaría General. Registro">
         <property key="Código CRUE" value="CRUE_03_43"/>
         <property key="Descripción" value="Aplicaciones para la gestión del  Registro universitario, incluyendo procesos de entrada/salida, en modalidad presencial y telemática"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="cb1dc9d9" name="Secretaría General. Gestor Documental">
+      <element xsi:type="archimate:BusinessService" id="cb1dc9d9" name=" Secretaría General. Gestor Documental">
         <property key="Código CRUE" value="CRUE_03_44"/>
         <property key="Descripción" value="Aplicaciones para la gestión documental institucional."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="5dcd8d31" name="Secretaría General. Convenios">
+      <element xsi:type="archimate:BusinessService" id="5dcd8d31" name=" Secretaría General. Convenios">
         <property key="Código CRUE" value="CRUE_03_45"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los convenios firmados por la universidad"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="1ce09477" name="Secretaría General. Normativa">
+      <element xsi:type="archimate:BusinessService" id="1ce09477" name=" Secretaría General. Normativa">
         <property key="Código CRUE" value="CRUE_03_46"/>
         <property key="Descripción" value="Aplicaciones para la gestión de la normativa universitaria."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="cd39c3a1" name="Secretaría General. Elecciones Universitarias">
+      <element xsi:type="archimate:BusinessService" id="cd39c3a1" name=" Secretaría General. Elecciones Universitarias">
         <property key="Código CRUE" value="CRUE_03_47"/>
         <property key="Descripción" value="Aplicaciones para la gestión de procesos electorales universitarios."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="f7fc6ff5" name="Gestión Infraestructuras.">
+      <element xsi:type="archimate:BusinessService" id="f7fc6ff5" name=" Gestión Infraestructuras.">
         <property key="Código CRUE" value="CRUE_03_48"/>
         <property key="Descripción" value="Aplicaciones para la gestión de las infraestructuras universitarias."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="29edcf9b" name="Gestión Infraestructuras. Control de acceso">
+      <element xsi:type="archimate:BusinessService" id="29edcf9b" name=" Gestión Infraestructuras. Control de acceso">
         <property key="Código CRUE" value="CRUE_03_49"/>
         <property key="Descripción" value="Aplicaciones para la gestión de de las plataformas que controlan el acceso a los edificios y aparcamientos de la Universidad."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="11943485" name="Gestión Infraestructuras. Gestión de almacén">
+      <element xsi:type="archimate:BusinessService" id="11943485" name=" Gestión Infraestructuras. Gestión de almacén">
         <property key="Código CRUE" value="CRUE_03_50"/>
         <property key="Descripción" value="Aplicaciones para la gestión de de almacenes universitarios, incluyendo gestión de pedidos, entradas y salidas de material."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="13f338f1" name="Gestión Infraestructuras. Prevención de Riesgos Laborales.">
+      <element xsi:type="archimate:BusinessService" id="13f338f1" name=" Gestión Infraestructuras. Prevención de Riesgos Laborales.">
         <property key="Código CRUE" value="CRUE_03_51"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los proceos de evaluación de riesgos laborales en infraestructuras universitarias"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="565c006a" name="Gestión Infraestructuras. Gestión de espacios">
+      <element xsi:type="archimate:BusinessService" id="565c006a" name=" Gestión Infraestructuras. Gestión de espacios">
         <property key="Código CRUE" value="CRUE_03_52"/>
         <property key="Descripción" value="Aplicaciones para la gestión de de los espacios universitarios, incluyendo procesos de reserva de los mismos."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="2d34ebf7" name="Biblioteca Universitaria">
+      <element xsi:type="archimate:BusinessService" id="2d34ebf7" name=" Biblioteca Universitaria">
         <property key="Código CRUE" value="CRUE_03_53"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procesos soportados por la Biblioteca universitaria."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="714a8c32" name="Biblioteca Universitaria. Repositorio institucional">
+      <element xsi:type="archimate:BusinessService" id="714a8c32" name=" Biblioteca Universitaria. Repositorio institucional">
         <property key="Código CRUE" value="CRUE_03_54"/>
         <property key="Descripción" value="Aplicaciones para la gestión del repositorio digital institucional de la Universidad. universitaria."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="eda1046a" name="Comunicación. Cartelería Digital">
+      <element xsi:type="archimate:BusinessService" id="eda1046a" name=" Comunicación. Cartelería Digital">
         <property key="Código CRUE" value="CRUE_03_55"/>
         <property key="Descripción" value="Aplicaciones para la gestión de la cartelería digital universitaria, incluyendo la televisión universitaria."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="5b14e98d" name="Comunicación. Eventos">
+      <element xsi:type="archimate:BusinessService" id="5b14e98d" name=" Comunicación. Eventos">
         <property key="Código CRUE" value="CRUE_03_56"/>
         <property key="Descripción" value="Aplicaciones para la gestión de eventos, incluyendo congresos y otras actividades universitarias."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="1a34da1e" name="Comunicación. Prensa universitaira">
+      <element xsi:type="archimate:BusinessService" id="1a34da1e" name=" Comunicación. Prensa universitaira">
         <property key="Código CRUE" value="CRUE_03_57"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los diferentes medios soporte de la prensa universitaria"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="49f3b9af" name="Gestión Calidad.">
+      <element xsi:type="archimate:BusinessService" id="49f3b9af" name=" Gestión Calidad.">
         <property key="Código CRUE" value="CRUE_03_58"/>
         <property key="Descripción" value="Aplicaciones para la gestión de la calidad en la Universidad."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="3d185322" name="Gestión Calidad. Encuestas">
+      <element xsi:type="archimate:BusinessService" id="3d185322" name=" Gestión Calidad. Encuestas">
         <property key="Código CRUE" value="CRUE_03_59"/>
         <property key="Descripción" value="Aplicaciones para la gestión de procesos de generación, difusión y evaluación de encuestas destinadas a la comunidad universitaria"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="a20c259a" name="Gestión Calidad. Evaluación de la actividad docente del profesorado">
+      <element xsi:type="archimate:BusinessService" id="a20c259a" name=" Gestión Calidad. Evaluación de la actividad docente del profesorado">
         <property key="Código CRUE" value="CRUE_03_60"/>
         <property key="Descripción" value="Aplicaciones para la gestión de la evaluacción de la actividad docente del profesorado universitario."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="3e133f87" name="Gestión Calidad. Herramienta para evaluación EFQM">
+      <element xsi:type="archimate:BusinessService" id="3e133f87" name=" Gestión Calidad. Herramienta para evaluación EFQM">
         <property key="Código CRUE" value="CRUE_03_61"/>
         <property key="Descripción" value="Aplicaciones para la gestión de la evaluación y autoevaluación de la calidad según el modelo EFAM"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="b2996c34" name="Análisis de datos">
+      <element xsi:type="archimate:BusinessService" id="b2996c34" name=" Análisis de datos">
         <property key="Código CRUE" value="CRUE_03_62"/>
         <property key="Descripción" value="Aplicaciones para el análisis de datos, e infomración insitucional, como el datawarehouse"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="af4e6107" name="Atención al Usuario (CAU)">
+      <element xsi:type="archimate:BusinessService" id="af4e6107" name=" Atención al Usuario (CAU)">
         <property key="Código CRUE" value="CRUE_03_63"/>
         <property key="Descripción" value="Aplicaciones para la gestión de peticiones e incidencias relacionadas con los servicios unviersitarios"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="192fa46a" name="Gestión de Publicaciones">
+      <element xsi:type="archimate:BusinessService" id="192fa46a" name=" Gestión de Publicaciones">
         <property key="Código CRUE" value="CRUE_03_64"/>
         <property key="Descripción" value="Aplicaciones para la gestión de los procesos de publicaciones de la universidad"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="3422297b" name="Correo electrónico. PDI y PAS">
+      <element xsi:type="archimate:BusinessService" id="3422297b" name=" Correo electrónico. PDI y PAS">
         <property key="Código CRUE" value="CRUE_04_01"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado al PAS y PDI."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="3207f2d3" name="Correo electrónico. Estudiantes">
+      <element xsi:type="archimate:BusinessService" id="3207f2d3" name=" Correo electrónico. Estudiantes">
         <property key="Código CRUE" value="CRUE_04_02"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado a los estudiantes universitarios."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="bd69ea86" name="Correo electrónico. Preuniversitarios">
+      <element xsi:type="archimate:BusinessService" id="bd69ea86" name=" Correo electrónico. Preuniversitarios">
         <property key="Código CRUE" value="CRUE_04_03"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado a los estudiantes presuniversitarios del distrito correspondiente."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="e17bdc71" name="Correo electrónico. Egresados">
+      <element xsi:type="archimate:BusinessService" id="e17bdc71" name=" Correo electrónico. Egresados">
         <property key="Código CRUE" value="CRUE_04_04"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones basadas en correo electrónico, destinado a los estudiantes egresados."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="7478026e" name="Notificaciones. Listas de Distribución">
+      <element xsi:type="archimate:BusinessService" id="7478026e" name=" Notificaciones. Listas de Distribución">
         <property key="Código CRUE" value="CRUE_04_05"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones basadas en listas de correo electrónico, en defernetes modalidades como moderada y no moderada"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="cf9a6d80" name="Notificaciones. SMS">
+      <element xsi:type="archimate:BusinessService" id="cf9a6d80" name=" Notificaciones. SMS">
         <property key="Código CRUE" value="CRUE_04_06"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones basadas en el uso de plataformas de envío de mensajes cortos (SMS)"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="1fa4b512" name="Notificaciones. Redes Sociales">
+      <element xsi:type="archimate:BusinessService" id="1fa4b512" name=" Notificaciones. Redes Sociales">
         <property key="Código CRUE" value="CRUE_04_07"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones basadas en redes sociales"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="86df0ec6" name="Espacios web colaborativos">
+      <element xsi:type="archimate:BusinessService" id="86df0ec6" name=" Espacios web colaborativos">
         <property key="Código CRUE" value="CRUE_04_08"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones basadas en espacios web compartidos con capacidad de colaboración en documentos electrónicos"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="5f194d42" name="Intercambio de ficheros. FTP">
+      <element xsi:type="archimate:BusinessService" id="5f194d42" name=" Intercambio de ficheros. FTP">
         <property key="Código CRUE" value="CRUE_04_09"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones basadas en el intercambio de ficheros a través del protocolo de transferencia FTP"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="e8a440b7" name="Intercambio de ficheros. Ficheros gran volumen">
+      <element xsi:type="archimate:BusinessService" id="e8a440b7" name=" Intercambio de ficheros. Ficheros gran volumen">
         <property key="Código CRUE" value="CRUE_04_10"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones basadas en el intercambio de ficheros de gran volumen"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="460b7b5a" name="Videoconferencia. Web">
+      <element xsi:type="archimate:BusinessService" id="460b7b5a" name=" Videoconferencia. Web">
         <property key="Código CRUE" value="CRUE_04_11"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de videoconferencia web"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="7728cd10" name="Videoconferencia. Sala">
+      <element xsi:type="archimate:BusinessService" id="7728cd10" name=" Videoconferencia. Sala">
         <property key="Código CRUE" value="CRUE_04_12"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de basadas en el uso de equipos de videoconferencia de sala y equipamiento MCU."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="a35131f5" name="Videoconferencia. Inmersión">
+      <element xsi:type="archimate:BusinessService" id="a35131f5" name=" Videoconferencia. Inmersión">
         <property key="Código CRUE" value="CRUE_04_13"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones audiovisuales basadas en sistemas de basadas en el uso de salas especialmente equipadas para integrar presencia y contenidos."/>
       </element>
@@ -358,119 +358,119 @@
         <property key="Código CRUE" value="CRUE_05_01"/>
         <property key="Descripción" value="Publicación de información académica, de investigación y servicios universitarios en el sitio web institucional de la Universidad"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="ef332f00" name="Sede electrónica">
+      <element xsi:type="archimate:BusinessService" id="ef332f00" name=" Sede electrónica">
         <property key="Código CRUE" value="CRUE_05_02"/>
         <property key="Descripción" value="Publicación de información en la Sede electrónica según lo establecido en la Ley 11/2007, de 22 de junio, de acceso electrónico de los ciudadanos a los Servicios Públicos"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="bc0ae104" name="Intranet">
+      <element xsi:type="archimate:BusinessService" id="bc0ae104" name=" Intranet">
         <property key="Código CRUE" value="CRUE_05_03"/>
         <property key="Descripción" value="Publicación de información académica, de investigación y servicios universitarios en un sitio web de acceso restringido a la comunidad universitaria."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="a8ccaf38" name="Intranet. Portal del investigador">
+      <element xsi:type="archimate:BusinessService" id="a8ccaf38" name=" Intranet. Portal del investigador">
         <property key="Código CRUE" value="CRUE_05_04"/>
         <property key="Descripción" value="Publicación de recursos y servicios dirigidos a los investigadores sobre un sitio web de acceso restringido a este colectivo."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="69bab634" name="Intranet. Portal del empleado">
+      <element xsi:type="archimate:BusinessService" id="69bab634" name=" Intranet. Portal del empleado">
         <property key="Código CRUE" value="CRUE_05_05"/>
         <property key="Descripción" value="Publicación de recursos y servicios dirigidos a los empleados de la universidad sobre un sitio web de acceso restringido a este colectivo."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="cfedd6c0" name="Intranet. Portal del estudiante o Secretaria Virtual">
+      <element xsi:type="archimate:BusinessService" id="cfedd6c0" name=" Intranet. Portal del estudiante o Secretaria Virtual">
         <property key="Código CRUE" value="CRUE_05_06"/>
         <property key="Descripción" value="Publicación de recursos y servicios dirigidos a los estudiantes de la universidad sobre un sitio web de acceso restringido a este colectivo."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="9e378030" name="Contenidos Digitales. Material audiovisual">
+      <element xsi:type="archimate:BusinessService" id="9e378030" name=" Contenidos Digitales. Material audiovisual">
         <property key="Código CRUE" value="CRUE_05_07"/>
         <property key="Descripción" value="Soporte a la generación, almacenamiento y difusión de material audiovisual"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="c53d13cc" name="Contenidos Digitales. Material fotográfico">
+      <element xsi:type="archimate:BusinessService" id="c53d13cc" name=" Contenidos Digitales. Material fotográfico">
         <property key="Código CRUE" value="CRUE_05_08"/>
         <property key="Descripción" value="Soporte a la generación, almacenamiento y difusión de material fotográfico"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="9c459ba0" name="Contenidos Digitales. Contenidos Docentes">
+      <element xsi:type="archimate:BusinessService" id="9c459ba0" name=" Contenidos Digitales. Contenidos Docentes">
         <property key="Código CRUE" value="CRUE_05_09"/>
         <property key="Descripción" value="Soporte a la generación, almacenamiento y difusión de contenidos docentes en formato digital"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="2763b916" name="Contenidos Digitales. Contenidos Docentes de acceso abierto">
+      <element xsi:type="archimate:BusinessService" id="2763b916" name=" Contenidos Digitales. Contenidos Docentes de acceso abierto">
         <property key="Código CRUE" value="CRUE_05_10"/>
         <property key="Descripción" value="Soporte a la generación, almacenamiento y difusión de contenidos docentes de acceso abierto"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="a2721fb2" name="Grabación y Difusión de eventos">
+      <element xsi:type="archimate:BusinessService" id="a2721fb2" name=" Grabación y Difusión de eventos">
         <property key="Código CRUE" value="CRUE_05_12"/>
         <property key="Descripción" value="Grabación audiovisual de eventos, incluyendo la posibilidad de difusión a través de internet"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="fdb2ee02" name="Servicio de provisión y renovación del puesto de trabajo">
+      <element xsi:type="archimate:BusinessService" id="fdb2ee02" name=" Servicio de provisión y renovación del puesto de trabajo">
         <property key="Código CRUE" value="CRUE_06_01"/>
         <property key="Descripción" value="instalación y configuración del equipamiento informático (hardware y software) adecuado al puesto de trabajo."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="e68000e0" name="Mantenimiento de equipamiento informático corporativo.">
+      <element xsi:type="archimate:BusinessService" id="e68000e0" name=" Mantenimiento de equipamiento informático corporativo.">
         <property key="Código CRUE" value="CRUE_06_02"/>
         <property key="Descripción" value="Resolución y atención a los problemas e incidencias del puesto de trabajo"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="371627b6" name="Mantenimiento de software corporativo.">
+      <element xsi:type="archimate:BusinessService" id="371627b6" name=" Mantenimiento de software corporativo.">
         <property key="Código CRUE" value="CRUE_06_03"/>
         <property key="Descripción" value="Instalación, actualización y configuración de software corporativo en el puesto de trabajo."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="cb74824d" name="Impresión Corporativa">
+      <element xsi:type="archimate:BusinessService" id="cb74824d" name=" Impresión Corporativa">
         <property key="Código CRUE" value="CRUE_06_04"/>
         <property key="Descripción" value="instalación y configuración de equipamiento para servicios de impresión."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="473fbf71" name="Seguridad Integral en el Puesto de Trabajo">
+      <element xsi:type="archimate:BusinessService" id="473fbf71" name=" Seguridad Integral en el Puesto de Trabajo">
         <property key="Código CRUE" value="CRUE_06_05"/>
         <property key="Descripción" value="Configuración y adminsitración centralizada de la seguridad en los equipos de usuario, incluyeno la administración de software de protección como antivirus."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="5dd9e47d" name="Asesoramiento para adquisición de equipamiento informático y software.">
+      <element xsi:type="archimate:BusinessService" id="5dd9e47d" name=" Asesoramiento para adquisición de equipamiento informático y software.">
         <property key="Código CRUE" value="CRUE_06_06"/>
         <property key="Descripción" value="Asesoramiento técnico para el equipamiento y software más adecuado a las necesidades del usuario"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="b718c683" name="Soporte a eventos especiales.">
+      <element xsi:type="archimate:BusinessService" id="b718c683" name=" Soporte a eventos especiales.">
         <property key="Código CRUE" value="CRUE_06_07"/>
         <property key="Descripción" value="Soporte técnico en la realización de eventos (jornadas, congresos, presentaciones, formación on-line)"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="e20b2541" name="Telefonía fija">
+      <element xsi:type="archimate:BusinessService" id="e20b2541" name=" Telefonía fija">
         <property key="Código CRUE" value="CRUE_07_01"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones de voz basadas en el uso de terminales fijos."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="fbd6bf9f" name="Telefonía Móvil">
+      <element xsi:type="archimate:BusinessService" id="fbd6bf9f" name=" Telefonía Móvil">
         <property key="Código CRUE" value="CRUE_07_02"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones de voz basadas en el uso de terminales móviles."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="214854be" name="Fax">
+      <element xsi:type="archimate:BusinessService" id="214854be" name=" Fax">
         <property key="Código CRUE" value="CRUE_07_03"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones de intercambio de fax."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="21ec8dcc" name="Consulta Tarificación Telefónica">
+      <element xsi:type="archimate:BusinessService" id="21ec8dcc" name=" Consulta Tarificación Telefónica">
         <property key="Código CRUE" value="CRUE_07_04"/>
         <property key="Descripción" value="Soporte a la aplicación que facilita el acceso a la información de consumo telefónico personal."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="593b5598" name="Conexión a red Cableada">
+      <element xsi:type="archimate:BusinessService" id="593b5598" name=" Conexión a red Cableada">
         <property key="Código CRUE" value="CRUE_07_05"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones soportadas sobre la red de cableado estructurado de la universidad"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="2773d2a0" name="Conexión a red Inalámbrica">
+      <element xsi:type="archimate:BusinessService" id="2773d2a0" name=" Conexión a red Inalámbrica">
         <property key="Código CRUE" value="CRUE_07_06"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones soportadas sobre la red inalámbrica de la universidad"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="a6e976d8" name="Conexión Externo a Red de Comunicaciones">
+      <element xsi:type="archimate:BusinessService" id="a6e976d8" name=" Conexión Externo a Red de Comunicaciones">
         <property key="Código CRUE" value="CRUE_07_07"/>
         <property key="Descripción" value="Diseño, administración y gestión de las comunicaciones desde una red externa a la institucional utilizando mecanisos de cifrado"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="4cc234be" name="Directorio">
+      <element xsi:type="archimate:BusinessService" id="4cc234be" name=" Directorio">
         <property key="Código CRUE" value="CRUE_08_01"/>
         <property key="Descripción" value="Diseño, administración y gestión de la plataforma que almacena, organiza y publica información de contacto sobre los usuarios de la Universidad."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="f1637298" name="Gestión de credenciales">
+      <element xsi:type="archimate:BusinessService" id="f1637298" name=" Gestión de credenciales">
         <property key="Código CRUE" value="CRUE_08_02"/>
         <property key="Descripción" value="Diseño, administración y gestión de la plataforma que almacena gestiona los datos y mecanismos de acceso a los servicios y aplicaciones de la Universidad"/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="05ff9664" name="Tarjeta Universitaria Inteligente">
+      <element xsi:type="archimate:BusinessService" id="05ff9664" name=" Tarjeta Universitaria Inteligente">
         <property key="Código CRUE" value="CRUE_08_03"/>
         <property key="Descripción" value="Facilita la obtención, gestión y utilización de la tarjeta universitaria para acceder y beneficiarse de diferentes servicios."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="85d09a01" name="Autenticación Centralizada">
+      <element xsi:type="archimate:BusinessService" id="85d09a01" name=" Autenticación Centralizada">
         <property key="Código CRUE" value="CRUE_08_04"/>
         <property key="Descripción" value="Diseño, administración y gestión de la plataforma que facilita el acceso unificado a los distintos servicios y aplicaciones de la Universidad mediante las credenciales digitales de un usuario."/>
       </element>
-      <element xsi:type="archimate:BusinessService" id="127a2394" name="Gestión de Certificados">
+      <element xsi:type="archimate:BusinessService" id="127a2394" name=" Gestión de Certificados">
         <property key="Código CRUE" value="CRUE_08_05"/>
         <property key="Descripción" value="Diseño, administración y gestión de la infraestructura de clave pública (PKI) de la universidad  para la emisión de certificados digitales a sus usuarios."/>
       </element>
@@ -496,6 +496,33 @@
     <element xsi:type="archimate:ApplicationComponent" id="3ea367ad" name="Servidor Web Seguro"/>
     <element xsi:type="archimate:ApplicationInterface" id="4809670b" name="http"/>
     <element xsi:type="archimate:ApplicationInterface" id="9b891862" name="https"/>
+    <element xsi:type="archimate:ApplicationService" id="5c34ef26" name="Web Institucional"/>
+    <element xsi:type="archimate:ApplicationService" id="2c1ef40d" name="DNS"/>
+    <element xsi:type="archimate:ApplicationService" id="56cd5681" name="Base de Datos"/>
+    <element xsi:type="archimate:ApplicationService" id="ebb9f54b" name="Web"/>
+    <element xsi:type="archimate:ApplicationService" id="eac9c369" name="Ficheros"/>
+    <element xsi:type="archimate:ApplicationService" id="0ebb6b21" name="RProxy"/>
+    <element xsi:type="archimate:ApplicationComponent" id="29008eb9" name="Servidor DNS"/>
+    <element xsi:type="archimate:ApplicationComponent" id="e9e878ae" name="Servidor PostgreSQL"/>
+    <element xsi:type="archimate:ApplicationComponent" id="4a67fd88" name="Servidor NFS"/>
+    <element xsi:type="archimate:ApplicationComponent" id="37380ec2" name="Servidor Web"/>
+    <element xsi:type="archimate:ApplicationComponent" id="aa3981ae" name="Servidor Rproxy/Squid"/>
+    <element xsi:type="archimate:ApplicationInterface" id="d18f2c5e" name="http"/>
+    <element xsi:type="archimate:ApplicationInterface" id="57afd01c" name="DNS">
+      <property key="Puerto" value="53"/>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" id="db9e9da5" name="PostgreSQL">
+      <property key="Puerto" value="5432"/>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" id="02d336f9" name="NFS">
+      <property key="Puerto" value="2049"/>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" id="269dcc74" name="http">
+      <property key="Puerto" value="80"/>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" id="5dd6e6aa" name="http">
+      <property key="Puerto" value="80"/>
+    </element>
   </folder>
   <folder name="Technology" id="383ed331" type="technology">
     <element xsi:type="archimate:InfrastructureService" id="cec8b374" name="Infrastructure Service"/>
@@ -511,41 +538,142 @@
   <folder name="Relations" id="d9e82225" type="relations">
     <element xsi:type="archimate:UsedByRelationship" id="91ea7c5c" source="4809670b" target="96553c26"/>
     <element xsi:type="archimate:UsedByRelationship" id="ffa1de67" source="9b891862" target="3ea367ad"/>
+    <element xsi:type="archimate:UsedByRelationship" id="0594becf" source="2c1ef40d" target="5c34ef26"/>
+    <element xsi:type="archimate:UsedByRelationship" id="c247f09f" source="0ebb6b21" target="5c34ef26"/>
+    <element xsi:type="archimate:UsedByRelationship" id="8c961d6e" source="aa3981ae" target="0ebb6b21"/>
+    <element xsi:type="archimate:UsedByRelationship" id="1cd5dc26" source="29008eb9" target="2c1ef40d"/>
+    <element xsi:type="archimate:UsedByRelationship" id="2380ee0d" source="2c1ef40d" target="ebb9f54b"/>
+    <element xsi:type="archimate:UsedByRelationship" id="7e891841" source="2c1ef40d" target="0ebb6b21"/>
+    <element xsi:type="archimate:UsedByRelationship" id="1fdbb4da" source="37380ec2" target="ebb9f54b"/>
+    <element xsi:type="archimate:UsedByRelationship" id="84bf58c3" source="e9e878ae" target="56cd5681"/>
+    <element xsi:type="archimate:UsedByRelationship" id="7973b945" source="4a67fd88" target="eac9c369"/>
+    <element xsi:type="archimate:UsedByRelationship" id="6d6e1441" source="ebb9f54b" target="56cd5681"/>
+    <element xsi:type="archimate:UsedByRelationship" id="af7393b1" source="ebb9f54b" target="eac9c369"/>
+    <element xsi:type="archimate:UsedByRelationship" id="71fe6cb4" source="2c1ef40d" target="56cd5681"/>
+    <element xsi:type="archimate:UsedByRelationship" id="46e6594b" source="2c1ef40d" target="eac9c369"/>
+    <element xsi:type="archimate:UsedByRelationship" id="2415ac80" source="ebb9f54b" target="0ebb6b21"/>
+    <element xsi:type="archimate:UsedByRelationship" id="f20050e0" source="0ebb6b21" target="d18f2c5e"/>
+    <element xsi:type="archimate:UsedByRelationship" id="56c385a8" source="d18f2c5e" target="5c34ef26"/>
+    <element xsi:type="archimate:UsedByRelationship" id="28d1a2c3" source="2c1ef40d" target="57afd01c"/>
+    <element xsi:type="archimate:UsedByRelationship" id="88e56ddc" source="57afd01c" target="5c34ef26"/>
+    <element xsi:type="archimate:UsedByRelationship" id="61feb7c4" source="57afd01c" target="ebb9f54b"/>
+    <element xsi:type="archimate:UsedByRelationship" id="b9f16f80" source="57afd01c" target="0ebb6b21"/>
+    <element xsi:type="archimate:UsedByRelationship" id="5dc27567" source="57afd01c" target="56cd5681"/>
+    <element xsi:type="archimate:UsedByRelationship" id="d2187ba0" source="57afd01c" target="2c1ef40d"/>
+    <element xsi:type="archimate:UsedByRelationship" id="a35ccf1f" source="db9e9da5" target="56cd5681"/>
+    <element xsi:type="archimate:UsedByRelationship" id="3656930b" source="db9e9da5" target="ebb9f54b"/>
+    <element xsi:type="archimate:UsedByRelationship" id="64c1ddf6" source="ebb9f54b" target="db9e9da5"/>
+    <element xsi:type="archimate:UsedByRelationship" id="80f020cb" source="02d336f9" target="eac9c369"/>
+    <element xsi:type="archimate:UsedByRelationship" id="617f8d9f" source="ebb9f54b" target="02d336f9">
+      <property key="Puerto" value="2049"/>
+    </element>
+    <element xsi:type="archimate:UsedByRelationship" id="687beb15" source="269dcc74" target="ebb9f54b"/>
+    <element xsi:type="archimate:UsedByRelationship" id="36248947" source="0ebb6b21" target="269dcc74"/>
+    <element xsi:type="archimate:UsedByRelationship" id="5b116afa" source="0ebb6b21" target="57afd01c"/>
+    <element xsi:type="archimate:UsedByRelationship" id="3e95780f" source="ebb9f54b" target="57afd01c"/>
+    <element xsi:type="archimate:UsedByRelationship" id="4efe07f9" source="56cd5681" target="57afd01c"/>
+    <element xsi:type="archimate:UsedByRelationship" id="ec57e9a3" source="eac9c369" target="57afd01c"/>
+    <element xsi:type="archimate:UsedByRelationship" id="c4b87098" source="5dd6e6aa" target="0ebb6b21"/>
+    <element xsi:type="archimate:UsedByRelationship" id="7828b733" source="5c34ef26" target="5dd6e6aa"/>
+    <element xsi:type="archimate:UsedByRelationship" id="fc46ab09" source="5dd6e6aa" target="5c34ef26"/>
+    <element xsi:type="archimate:UsedByRelationship" id="2bef4918" source="57afd01c" target="0ebb6b21"/>
+    <element xsi:type="archimate:UsedByRelationship" id="df858cfe" source="57afd01c" target="56cd5681"/>
+    <element xsi:type="archimate:UsedByRelationship" id="94acf442" source="57afd01c" target="eac9c369"/>
+    <element xsi:type="archimate:UsedByRelationship" id="d5bae022" source="57afd01c" target="ebb9f54b"/>
+    <element xsi:type="archimate:UsedByRelationship" id="6b226d72" source="db9e9da5" target="ebb9f54b"/>
+    <element xsi:type="archimate:UsedByRelationship" id="755181e3" source="02d336f9" target="ebb9f54b"/>
+    <element xsi:type="archimate:UsedByRelationship" id="a63d1021" source="269dcc74" target="0ebb6b21"/>
   </folder>
   <folder name="Views" id="082fba3d" type="diagrams">
     <folder name="Servicios" id="905bbe45">
       <element xsi:type="archimate:ArchimateDiagramModel" id="366dff42" name="Web institucional">
-        <child xsi:type="archimate:DiagramObject" id="8ae14194" textAlignment="2" targetConnections="f7877460" archimateElement="96553c26">
-          <bounds x="276" y="432" width="120" height="55"/>
+        <child xsi:type="archimate:DiagramObject" id="7d733ff8" textAlignment="2" targetConnections="c5025184 7e188eb2" archimateElement="5c34ef26">
+          <bounds x="563" y="48" width="120" height="55"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="92a0c9d1" textAlignment="2" targetConnections="22c2ec42" archimateElement="3ea367ad">
-          <bounds x="463" y="432" width="120" height="55"/>
+        <child xsi:type="archimate:DiagramObject" id="2f00c04a" textAlignment="2" targetConnections="63f39f35 66a2b506" archimateElement="2c1ef40d">
+          <bounds x="240" y="204" width="120" height="55"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="3ee3122e" textAlignment="2" archimateElement="4809670b">
-          <bounds x="288" y="324" width="120" height="55"/>
-          <sourceConnection xsi:type="archimate:Connection" id="f7877460" source="3ee3122e" target="8ae14194" relationship="91ea7c5c"/>
+        <child xsi:type="archimate:DiagramObject" id="7f86a4f3" textAlignment="2" targetConnections="235a123f cb58784a 10ae8835" archimateElement="56cd5681">
+          <bounds x="240" y="504" width="120" height="55"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="f3ec9d08" textAlignment="2" archimateElement="9b891862">
-          <bounds x="456" y="324" width="120" height="55"/>
-          <sourceConnection xsi:type="archimate:Connection" id="22c2ec42" source="f3ec9d08" target="92a0c9d1" relationship="ffa1de67"/>
+        <child xsi:type="archimate:DiagramObject" id="672e10df" textAlignment="2" targetConnections="5e4206b0 96f8578c ef9933f5 942c61a4 a88f1946" archimateElement="ebb9f54b">
+          <bounds x="552" y="372" width="120" height="55"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="c22641fe" textAlignment="2" archimateElement="cec8b374">
-          <bounds x="108" y="516" width="121" height="49"/>
+        <child xsi:type="archimate:DiagramObject" id="6a217841" textAlignment="2" targetConnections="4dde72be 4c8108a6 2ea9356b" archimateElement="eac9c369">
+          <bounds x="816" y="504" width="120" height="55"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="b6414344" textAlignment="2" archimateElement="5cd237e1">
-          <bounds x="444" y="510" width="97" height="49"/>
+        <child xsi:type="archimate:DiagramObject" id="66d9bcea" textAlignment="2" targetConnections="b935a217 b0bdec0a 506f7be4 1fbfc7de" archimateElement="0ebb6b21">
+          <bounds x="708" y="204" width="120" height="55"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="19e7ddee" textAlignment="2" archimateElement="f5f50ddb">
-          <bounds x="708" y="516" width="98" height="49"/>
+        <child xsi:type="archimate:DiagramObject" id="d62f3341" textAlignment="2" archimateElement="29008eb9">
+          <bounds x="72" y="204" width="120" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="63f39f35" source="d62f3341" target="2f00c04a" relationship="1cd5dc26"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="d1dd862e" textAlignment="2" archimateElement="58073a80">
-          <bounds x="336" y="504" width="97" height="61"/>
+        <child xsi:type="archimate:DiagramObject" id="640ff8cc" textAlignment="2" archimateElement="e9e878ae">
+          <bounds x="48" y="504" width="120" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="235a123f" source="640ff8cc" target="7f86a4f3" relationship="84bf58c3"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="0923cb34" textAlignment="2" archimateElement="19d066f0">
-          <bounds x="552" y="510" width="121" height="61"/>
+        <child xsi:type="archimate:DiagramObject" id="8f18a26e" textAlignment="2" archimateElement="4a67fd88">
+          <bounds x="996" y="504" width="120" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="4dde72be" source="8f18a26e" target="6a217841" relationship="7973b945"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="194ba7e4" textAlignment="2" archimateElement="fbf1edc4">
-          <bounds x="240" y="528" width="97" height="25"/>
+        <child xsi:type="archimate:DiagramObject" id="50dc7770" textAlignment="2" archimateElement="37380ec2">
+          <bounds x="732" y="372" width="120" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="5e4206b0" source="50dc7770" target="672e10df" relationship="1fdbb4da"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="875534bc" textAlignment="2" archimateElement="aa3981ae">
+          <bounds x="888" y="204" width="120" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="b935a217" source="875534bc" target="66d9bcea" relationship="8c961d6e"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="ea1068d4" textAlignment="2" archimateElement="57afd01c">
+          <bounds x="408" y="217" width="127" height="30"/>
+          <sourceConnection xsi:type="archimate:Connection" id="c5025184" source="ea1068d4" target="7d733ff8" relationship="88e56ddc">
+            <bendpoint startX="9" startY="-160" endX="-143" endY="-3"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="archimate:Connection" id="66a2b506" source="ea1068d4" target="2f00c04a" relationship="d2187ba0"/>
+          <sourceConnection xsi:type="archimate:Connection" id="506f7be4" source="ea1068d4" target="66d9bcea" relationship="2bef4918"/>
+          <sourceConnection xsi:type="archimate:Connection" id="10ae8835" source="ea1068d4" target="7f86a4f3" relationship="df858cfe">
+            <bendpoint startX="-15" startY="200" endX="156" endY="-99"/>
+            <bendpoint startX="-171" startY="200" endY="-99"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="archimate:Connection" id="2ea9356b" source="ea1068d4" target="6a217841" relationship="94acf442">
+            <bendpoint startX="-39" startY="152" endX="-444" endY="-147"/>
+            <bendpoint startX="-471" startY="152" endX="-876" endY="-147"/>
+            <bendpoint startX="-471" startY="392" endX="-876" endY="93"/>
+            <bendpoint startX="405" startY="392" endY="93"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="archimate:Connection" id="ef9933f5" source="ea1068d4" target="672e10df" relationship="d5bae022">
+            <bendpoint startX="21" startY="80" endX="-120" endY="-87"/>
+            <bendpoint startX="129" startY="80" endX="-12" endY="-87"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="c0aed1da" textAlignment="2" archimateElement="db9e9da5">
+          <bounds x="396" y="517" width="120" height="30"/>
+          <sourceConnection xsi:type="archimate:Connection" id="cb58784a" source="c0aed1da" target="7f86a4f3" relationship="a35ccf1f"/>
+          <sourceConnection xsi:type="archimate:Connection" id="942c61a4" source="c0aed1da" target="672e10df" relationship="6b226d72">
+            <bendpoint startX="12" startY="-136" endX="-144" endY="-3"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="481b9c80" textAlignment="2" archimateElement="02d336f9">
+          <bounds x="660" y="518" width="121" height="27"/>
+          <sourceConnection xsi:type="archimate:Connection" id="4c8108a6" source="481b9c80" target="6a217841" relationship="80f020cb"/>
+          <sourceConnection xsi:type="archimate:Connection" id="a88f1946" source="481b9c80" target="672e10df" relationship="755181e3">
+            <bendpoint startX="-108" startY="-3" endY="129"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="be4dc50f" textAlignment="2" archimateElement="269dcc74">
+          <bounds x="682" y="300" width="121" height="25"/>
+          <sourceConnection xsi:type="archimate:Connection" id="96f8578c" source="be4dc50f" target="672e10df" relationship="687beb15">
+            <bendpoint startX="-106" endX="24" endY="-87"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="archimate:Connection" id="1fbfc7de" source="be4dc50f" target="66d9bcea" relationship="a63d1021"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="7449e73b" textAlignment="2" archimateElement="5dd6e6aa">
+          <bounds x="708" y="132" width="120" height="23"/>
+          <sourceConnection xsi:type="archimate:Connection" id="b0bdec0a" source="7449e73b" target="66d9bcea" relationship="c4b87098"/>
+          <sourceConnection xsi:type="archimate:Connection" id="7e188eb2" source="7449e73b" target="7d733ff8" relationship="fc46ab09">
+            <bendpoint startY="-71" endX="145" endY="-3"/>
+          </sourceConnection>
         </child>
       </element>
     </folder>
