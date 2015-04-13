@@ -42,9 +42,7 @@ class Pruebas(unittest.TestCase):
     for i in funcionesxml.GroupArray:
       url = 'http://localhost:8000/' + formatstring(i[1])
       self.browser.get(url)
-      assert 'STIC - Universidad de' in self.browser.title
-      header_text = self.browser.find_element_by_tag_name('h1').text
-      self.assertEqual(i[1], header_text)
+      assert 'STIC - Universidad de la Laguna' in self.browser.title
       
   def test_titulos_servicios(self):
     for i in funcionesxml.BusinessServiceArray:

@@ -51,5 +51,6 @@ end
 
 desc "Ejecutar los test"
 task :test do
-  sh "python test.py"
+  sh "python test_unittest.py Archi_Test.archimate"
+  sh "python test_selenium.py"
 end
