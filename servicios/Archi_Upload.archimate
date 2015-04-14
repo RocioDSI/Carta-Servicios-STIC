@@ -532,38 +532,30 @@
   </folder>
   <folder name="Technology" id="383ed331" type="technology">
     <element xsi:type="archimate:Device" id="a7d11a12" name="Web3">
-      <property key="IP" value="10.4.9.49"/>
       <property key="Dominio" value="web3.sis.ccti.ull.es"/>
       <property key="Status" value="Up"/>
     </element>
-    <element xsi:type="archimate:Device" id="762a10dc" name="web5.stic.ull.es"/>
     <element xsi:type="archimate:Device" id="eeed1358" name="Web4">
-      <property key="IP" value="10.4.9.50"/>
       <property key="Dominio" value="web4.sis.ccti.ull.es"/>
       <property key="Status" value="Up"/>
     </element>
     <element xsi:type="archimate:Device" id="321bcab9" name="RProxy 1">
-      <property key="IP" value="193.145.118.35"/>
       <property key="Dominio" value="w4.stic.ull.es"/>
       <property key="Status" value="Up"/>
     </element>
     <element xsi:type="archimate:Device" id="74b0abd8" name="RProxy 2">
-      <property key="IP" value="193.145.118.36"/>
       <property key="Dominio" value="w4.stic.ull.es"/>
-      <property key="Status" value="Up"/>
+      <property key="Status" value="Down"/>
     </element>
     <element xsi:type="archimate:Device" id="50dac808" name="RProxy 3">
-      <property key="IP" value="193.145.118.37"/>
       <property key="Dominio" value="w4.stic.ull.es"/>
       <property key="Status" value="Up"/>
     </element>
     <element xsi:type="archimate:Device" id="0406fbc1" name="BBDD NFS 1">
-      <property key="IP"/>
       <property key="Dominio" value="webfs1.stic.ull.es "/>
       <property key="Status" value="Up"/>
     </element>
     <element xsi:type="archimate:Device" id="f07b7b55" name="BBDD NFS 2">
-      <property key="IP"/>
       <property key="Dominio" value="webfs2.stic.ull.es "/>
       <property key="Status" value="Down"/>
     </element>
@@ -623,10 +615,6 @@
     <element xsi:type="archimate:Device" id="ce333fda" name="Web 5"/>
     <element xsi:type="archimate:InfrastructureService" id="92f16e7f" name="Monodevelop 3"/>
     <element xsi:type="archimate:SystemSoftware" id="485b5dc8" name="SQUID"/>
-    <element xsi:type="archimate:SystemSoftware" id="085684f5" name="NGINX"/>
-    <element xsi:type="archimate:SystemSoftware" id="a109be87" name="PROFTPD-BASIC"/>
-    <element xsi:type="archimate:SystemSoftware" id="fcc014fa" name="PostgreSQL"/>
-    <element xsi:type="archimate:SystemSoftware" id="5d2d1c2b"/>
     <element xsi:type="archimate:InfrastructureService" id="eaaa2c25" name="SQUID 1">
       <property key="Puerto" value="80"/>
       <property key="Version" value="3.1.6-1.2"/>
@@ -652,13 +640,6 @@
     <element xsi:type="archimate:InfrastructureService" id="f0eb80c9" name="Monodevelop 2">
       <property key="VIP" value="10.4.9.50"/>
     </element>
-    <element xsi:type="archimate:InfrastructureInterface" id="adb01a1d" name="Infrastructure Interface"/>
-    <element xsi:type="archimate:InfrastructureService" id="cd083454" name="Infrastructure Service"/>
-    <element xsi:type="archimate:InfrastructureInterface" id="564caae2" name="Infrastructure Interface (copy)"/>
-    <element xsi:type="archimate:InfrastructureInterface" id="cebd9597" name="Infrastructure Interface (copy)"/>
-    <element xsi:type="archimate:InfrastructureService" id="557b9777" name="Infrastructure Service"/>
-    <element xsi:type="archimate:InfrastructureService" id="5c1d2106" name="Infrastructure Service (copy)"/>
-    <element xsi:type="archimate:InfrastructureService" id="e8b521de" name="Infrastructure Service (copy)"/>
   </folder>
   <folder name="Motivation" id="4538e2e6" type="motivation"/>
   <folder name="Implementation &amp; Migration" id="702f6c9d" type="implementation_migration"/>
@@ -716,20 +697,13 @@
     <element xsi:type="archimate:UsedByRelationship" id="f52cc540" source="f19c200b" target="782d8305"/>
     <element xsi:type="archimate:UsedByRelationship" id="374a2e94" source="db9e9da5" target="f19c200b"/>
     <element xsi:type="archimate:UsedByRelationship" id="6f73ef1b" source="92f16e7f" target="ce333fda"/>
-    <element xsi:type="archimate:UsedByRelationship" id="504f1dce" source="92f16e7f" target="37380ec2"/>
     <element xsi:type="archimate:UsedByRelationship" id="5ac6c449" source="eaaa2c25" target="321bcab9"/>
     <element xsi:type="archimate:UsedByRelationship" id="7579454e" source="9818db4d" target="74b0abd8"/>
     <element xsi:type="archimate:UsedByRelationship" id="dd210764" source="3db5b2dc" target="50dac808"/>
-    <element xsi:type="archimate:UsedByRelationship" id="3dcc4e4e" source="eaaa2c25" target="aa3981ae"/>
-    <element xsi:type="archimate:UsedByRelationship" id="b14b04f5" source="9818db4d" target="aa3981ae"/>
-    <element xsi:type="archimate:UsedByRelationship" id="97598015" source="3db5b2dc" target="aa3981ae"/>
     <element xsi:type="archimate:UsedByRelationship" id="2f34d2fa" source="62583bfd" target="ce333fda"/>
     <element xsi:type="archimate:UsedByRelationship" id="2496b340" source="62583bfd" target="37380ec2"/>
-    <element xsi:type="archimate:FlowRelationship" id="2e0a77ce" source="321bcab9" target="74b0abd8"/>
     <element xsi:type="archimate:UsedByRelationship" id="0b395e7b" source="7c76eb36" target="a7d11a12"/>
     <element xsi:type="archimate:UsedByRelationship" id="b638d26f" source="f0eb80c9" target="eeed1358"/>
-    <element xsi:type="archimate:UsedByRelationship" id="61e93360" source="7c76eb36" target="37380ec2"/>
-    <element xsi:type="archimate:UsedByRelationship" id="28b89709" source="f0eb80c9" target="37380ec2"/>
     <element xsi:type="archimate:UsedByRelationship" id="4510e751" source="f0eb80c9" target="3cafe04f"/>
     <element xsi:type="archimate:UsedByRelationship" id="8f4f65b1" source="7c76eb36" target="3cafe04f"/>
     <element xsi:type="archimate:UsedByRelationship" id="8e5a1d8a" source="af6b6d61" target="0ebb6b21"/>
@@ -739,11 +713,6 @@
     <element xsi:type="archimate:UsedByRelationship" id="14851ecf" source="92f16e7f" target="3cafe04f"/>
     <element xsi:type="archimate:UsedByRelationship" id="81e6b3dd" source="30140939" target="4a67fd88"/>
     <element xsi:type="archimate:UsedByRelationship" id="4d7a3f93" source="f7444e22" target="e9e878ae"/>
-    <element xsi:type="archimate:AssociationRelationship" id="bd6b70e6" source="321bcab9" target="74b0abd8"/>
-    <element xsi:type="archimate:AssociationRelationship" id="627bfbab" source="50dac808" target="74b0abd8"/>
-    <element xsi:type="archimate:AssociationRelationship" id="ecfcebc6" source="0406fbc1" target="f07b7b55"/>
-    <element xsi:type="archimate:AssociationRelationship" id="a5811a8f" source="a7d11a12" target="eeed1358"/>
-    <element xsi:type="archimate:AssociationRelationship" id="0fc96b10" source="321bcab9" target="50dac808"/>
   </folder>
   <folder name="Views" id="082fba3d" type="diagrams">
     <folder name="Servicios Aplicacion" id="905bbe45">
