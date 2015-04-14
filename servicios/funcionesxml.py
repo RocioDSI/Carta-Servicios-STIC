@@ -66,10 +66,14 @@ lista = nodos[0].getElementsByTagName("element")
 BusinessServiceArray =[]
 BusinessRoleArray =[]
 AssociationRelationshipArray = []
+UsedByRelationshipArray = []
 GroupArray = []
 GroupCriticArray = []
 GroupRoleArray = []
 GroupAccessArray = []
+DeviceArray = []
+ApplicationComponentArray = []
+GroupDeviceArray = []
 ServicesPerGroupArray = []
 ViewsNameArray = []
 
@@ -113,11 +117,48 @@ def cargaBusinessRole():
 #Almacenamiento de las relaciones
 def cargaAssociationRelationship():
   for nodo in lista:
-   if(nodo.attributes.get("xsi:type").value == "archimate:AssociationRelationship"):
+   if(nodo.attributes.get("xsi:type").value == "archimate:UsedByRelationship"):
+    id_relacion = nodo.attributes.get("id").value
+    source = nodo.attributes.get("source").value
+    target = nodo.attributes.get("target").value
+    AssociationRelationshipArray.append([id_relacion,source,target])
+    
+#Almacenamiento de las relaciones used-by
+def cargaUsedByRelationship():
+  for nodo in lista:
+   if(nodo.attributes.get("xsi:type").value == "archimate:UsedByRelationship"):
     id_relacion_asociacion = nodo.attributes.get("id").value
     source = nodo.attributes.get("source").value
     target = nodo.attributes.get("target").value
-    AssociationRelationshipArray.append([id_relacion_asociacion,source,target])
+    UsedByRelationshipArray.append([id_relacion_asociacion,source,target])
+    
+# Almacenamiento de componentes de aplicación    
+def cargaAppComponent():
+  for nodo in lista:
+   if(nodo.attributes.get("xsi:type").value == "archimate:ApplicationComponent"):    
+    nombre_app = nodo.attributes.get("name").value
+    id_app = nodo.attributes.get("id").value
+    ApplicationComponentArray.append([id_app,nombre_app])
+     
+#Almacenamiento de máquinas fisicas
+def cargaDevice():
+  for nodo in lista:
+   if(nodo.attributes.get("xsi:type").value == "archimate:Device"):    
+    nombre_device = nodo.attributes.get("name").value
+    id_device = nodo.attributes.get("id").value
+    listahijos = nodo.getElementsByTagName("property")
+    clave = []
+    valor = []
+    grupoDisp = DeviceGroup(id_device)
+    for hijo in listahijos:
+      clave.append(hijo.attributes.get("key").value)
+      if(hijo.attributes.get("value") != None):
+       valor.append(hijo.attributes.get("value").value)     
+      else:
+       valor.append("Campo Vacío")
+     
+    DeviceArray.append([id_device,nombre_device, clave, valor, grupoDisp])
+
 
 #Almacenamiento de los grupos de servicio por Criticidad, Rol o Grupo de Servicio
 def cargaGroup():
@@ -136,7 +177,9 @@ def cargaGroup():
          GroupRoleArray.append([id_grupo,nombre_grupo])
         elif(nodo.attributes.get("name").value == VistaAcceso):
          GroupAccessArray.append([id_grupo,nombre_grupo])
-         
+        elif(nodo.attributes.get("name").value == "Web institucional"):
+         GroupDeviceArray.append([id_grupo,nombre_grupo])
+                  
 #Almacenamiento de todos los servicios por grupo para grupos de Servicio, Criticidad, Roles y Nivel de Acceso      
 def BusinessServicePorGroup():
   for nodo in lista:
@@ -178,7 +221,58 @@ def ServiceAccess(serviceID):
         id_nieto = nieto.attributes.get("archimateElement").value
         if(serviceID == id_nieto):
          return hijo.attributes.get("name").value
+
+#Almacenamiento del grupo de dispositivos para un dispositivo
+def DeviceGroup(deviceID):
+  for nodo in lista:
+   if((nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel") and (str(nodo.attributes.get("name").value)) == "Web institucional"):
+    listahijos = nodo.getElementsByTagName("child")
+    for hijo in listahijos:
+      if (hijo.attributes.get("xsi:type").value == "archimate:Group"):
+       listanietos = hijo.getElementsByTagName("child")
+       for nieto in listanietos:
+        id_nieto = nieto.attributes.get("archimateElement").value
+        if(deviceID == id_nieto):
+         return hijo.attributes.get("name").value
+                  
+#A partir de un Device o Infraestructure Service, llegar a la componente de aplicación afectada
+def getUsedByChain(id_random):
+
+    for j in UsedByRelationshipArray:
+      if str(j[1]) == str(id_random):
+       k = 0
+       for i in ApplicationComponentArray:
+        if str(i[0]) == str(j[2]):
+         print "	>>El app component "+ str(i[1]) + " está afectado"
+         getAffectedApplication(str(i[0]))
+         return
          
+    for j in UsedByRelationshipArray:
+      if str(j[2]) == str(id_random):
+     	for i in ApplicationComponentArray:
+         if str(i[0]) == str(j[2]):
+          return 
+        getUsedByChain(str(j[1]))
+
+
+#Para un componente afectado, llegar hasta el Business Service afectado
+def getAffectedApplication(id_componente):
+    listahijo = nodos[0].getElementsByTagName("folder")
+    for hijo in listahijo:
+     if (hijo.attributes.get("name").value == "Servicios Aplicacion"):
+      listanietos = hijo.getElementsByTagName("element")
+      for nieto in listanietos:
+       if (nieto.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel"):
+        listabis = nieto.getElementsByTagName("child")
+        for bis in listabis:
+           if(bis.attributes.get("archimateElement").value == str(id_componente)):
+            for rebis in listabis:
+
+             for j in BusinessServiceArray:
+
+              if rebis.attributes.get("archimateElement").value == str(j[0]):
+                print "		>>"+ j[1] + " está afectado"
+                   
 #Obtencion del nivel de acceso para un servicio
 def getServiceAccess(serviceID):
   for i in BusinessServiceArray:
@@ -247,6 +341,18 @@ def getRoleServices(roleID):
       print("\n"+ str(j)+") " + str(getBusinessServiceName(i[1])))
       j = j+1
 
+# Comprobar qué dispositivos físicos están caídos
+def getDownDevice():
+  for i in DeviceArray:
+    for j in i[3]:
+     if str(j) == "Down":
+       print "El dispositvo " + i[1] + " está caído \n"
+       getUsedByChain(str(i[0]))
+     elif str(j) == "Up":
+	   print "El dispositvo " + i[1] + " funciona correctamente \n"
+
+
+
 ##Obtener nombres a partir de IDs##
 def getBusinessRoleName(BusinessRoleID):
   for i in BusinessRoleArray:
@@ -306,6 +412,7 @@ def getGroupID(GroupName):
        return ID
   
 
+
 #Devuelve doble lista Key-Value de propiedades de un servicio
 def getServiceProperties(serviceID):
 
@@ -321,7 +428,11 @@ def inicializacion():
  cargaBusinessService()
  cargaBusinessRole()
  cargaAssociationRelationship()
+ cargaAppComponent()
+ cargaUsedByRelationship()
  cargaGroup()
+ cargaDevice()
+ getDownDevice()
  BusinessServicePorGroup()
  #runtest()
  
