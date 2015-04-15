@@ -432,7 +432,7 @@ def inicializacion():
  cargaUsedByRelationship()
  cargaGroup()
  cargaDevice()
- getDownDevice()
+ #getDownDevice()
  BusinessServicePorGroup()
  #runtest()
  
