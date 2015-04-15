@@ -3,7 +3,6 @@
 
 import funcionesxml
 
-
 lista = funcionesxml.nodos[0].getElementsByTagName("folder")
 listaEl = funcionesxml.nodos[0].getElementsByTagName("element")
 listaFinal = []
@@ -11,23 +10,21 @@ ArrayRediris = []
 
 def main():
  funcionesxml.inicializacion()
+ LecturaPuertosValores()
+ 
+     
+     
+def LecturaPuertosValores():
 	
- #f = open('datos.csv','w')
- 
- #for i in funcionesxml.BusinessServiceArray:
-  #f.write(str(i[0]))
-  #f.write('\n')
- 
-  #for i in lista:
  nombre_servicios=[]
  
-#SELECCIÓN DE SERVICIOS ACCESIBLES DESDE INTERNET CON CRITICIDAD ALTA 
+ #SELECCIÓN DE SERVICIOS ACCESIBLES DESDE INTERNET CON CRITICIDAD ALTA 
  for aux in funcionesxml.BusinessServiceArray:	 
   if(aux[4] == "Alta") and (aux[5] == "Internet"):
   # print("Nombre: " + aux[1] + ".\tCriticidad: " + str(aux[4]) + ".\tNivel de acceso: " + str(aux[5]))
    ArrayRediris.append(str(aux[1]))
-   
-#SELECCIÓN DE NOMBRES DE 
+  
+  
  for i in lista:
   if(i.attributes.get("name").value == "Application"):  
    for j in listaEl:
@@ -52,11 +49,6 @@ def main():
       listaFinal.append(claveiris)
       listaFinal.append(valoriris)
       print listaFinal
-     
- #for i in ArrayRediris:
-  #print str(i)
-  
- #print listaFinal
   
   
 main()
