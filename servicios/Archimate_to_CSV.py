@@ -12,8 +12,6 @@ def main():
  funcionesxml.inicializacion()
  LecturaPuertosValores()
  
-     
-     
 def LecturaPuertosValores():
 	
  nombre_servicios=[]
@@ -21,36 +19,42 @@ def LecturaPuertosValores():
  #SELECCIÓN DE SERVICIOS ACCESIBLES DESDE INTERNET CON CRITICIDAD ALTA 
  for aux in funcionesxml.BusinessServiceArray:	 
   if(aux[4] == "Alta") and (aux[5] == "Internet"):
-  # print("Nombre: " + aux[1] + ".\tCriticidad: " + str(aux[4]) + ".\tNivel de acceso: " + str(aux[5]))
    ArrayRediris.append(str(aux[1]))
+
   
-  
- for i in lista:
-  if(i.attributes.get("name").value == "Application"):  
-   for j in listaEl:
-    if(j.attributes.get("xsi:type").value  == "archimate:ApplicationService"):
-     list_prop = j.getElementsByTagName("property")
-     nombre_servicios.append(j.attributes.get("name").value)
-     for k in list_prop:
-      clave = []
-      valor = []
-      valoriris = []
-      claveiris = []
-      if(k.attributes.get("value") != None):
-       valor.append(k.attributes.get("value").value) 
-      else:
-       valor.append("Campo Vacío")
-      if (k.attributes.get("key").value == "URL_Servicio"):
-       claveiris.append(k.attributes.get("key").value)  
-       valoriris.append(k.attributes.get("value").value)
-      if (k.attributes.get("key").value == "Puerto_Servicio"):  
-       claveiris.append(k.attributes.get("key").value)  
-       valoriris.append(k.attributes.get("value").value)
-      listaFinal.append(claveiris)
-      listaFinal.append(valoriris)
-      print listaFinal
-  
-  
+ for j in listaEl:
+  if(j.attributes.get("xsi:type").value  == "archimate:ApplicationService"):
+   servicio = funcionesxml.getUsedByBusiness(j.attributes.get("id").value)
+   list_prop = j.getElementsByTagName("property")
+   nombre_servicios.append(j.attributes.get("name").value)
+   for k in list_prop:
+    valor = []
+    if(k.attributes.get("value") != None):
+     valor.append(k.attributes.get("value").value) 
+    else:
+     valor.append("Campo Vacío")
+    if (k.attributes.get("key").value == "URL_Servicio") or (k.attributes.get("key").value == "Puerto_Servicio"):
+     claveiris = str(k.attributes.get("key").value)  
+     valoriris = (str(k.attributes.get("value").value))
+    if servicio in ArrayRediris:
+     if servicio not in listaFinal:		
+       listaFinal.append(str(servicio))
+     listaFinal.append(str(valoriris))
+ 
+ 
+ cont = 0
+ csvstr = "Servicio, Enlace, Puerto, \n"
+ for i in listaFinal:
+  csvstr = csvstr + i + ", "
+  cont = cont + 1
+  if cont == 3:
+   cont = 0
+   csvstr = csvstr + "\n"
+   
+ f = open("out.csv","w")
+ f.write(csvstr)
+ f.close()
+ print csvstr
 main()
 	
 	

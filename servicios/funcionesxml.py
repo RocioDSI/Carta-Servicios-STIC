@@ -273,6 +273,15 @@ def getAffectedApplication(id_componente):
               if rebis.attributes.get("archimateElement").value == str(j[0]):
                 print "		>>"+ j[1] + " está afectado"
                    
+
+# Para un Application Service, obtener el Business Service al que afecta
+def getUsedByBusiness(id_app):
+  for i in UsedByRelationshipArray:
+   if(i[1] == id_app):
+    for j in BusinessServiceArray:
+      if j[0] == i[2]:
+       return j[1]
+		
 #Obtencion del nivel de acceso para un servicio
 def getServiceAccess(serviceID):
   for i in BusinessServiceArray:
