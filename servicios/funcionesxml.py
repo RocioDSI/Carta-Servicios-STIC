@@ -243,7 +243,7 @@ def getUsedByChain(id_random):
        k = 0
        for i in ApplicationComponentArray:
         if str(i[0]) == str(j[2]):
-         print "	>>El app component "+ str(i[1]) + " está afectado"
+         print "|------El Componente "+ str(i[1]) + " está afectado"
          getAffectedApplication(str(i[0]))
          return
          
@@ -271,7 +271,7 @@ def getAffectedApplication(id_componente):
              for j in BusinessServiceArray:
 
               if rebis.attributes.get("archimateElement").value == str(j[0]):
-                print "		>>"+ j[1] + " está afectado"
+                print "|---------"+ j[1] + " está afectado"
                    
 
 # Para un Application Service, obtener el Business Service al que afecta
@@ -351,17 +351,38 @@ def getRoleServices(roleID):
       j = j+1
 
 # Comprobar qué dispositivos físicos están caídos
-def getDownDevice():
+def getDownDevice(grupo):  
   for i in DeviceArray:
+   if grupo == i[4]:
     for j in i[3]:
      if str(j) == "Down":
-       print "El dispositvo " + i[1] + " está caído \n"
+       print "\n|---El dispositvo " + i[1] + " está caído:"
        getUsedByChain(str(i[0]))
-     elif str(j) == "Up":
-	   print "El dispositvo " + i[1] + " funciona correctamente \n"
+     #elif str(j) == "Up":
+	   #print "El dispositvo " + i[1] + " funciona correctamente \n"
 
-
-
+def getDownDeviceGroup():
+  for i in GroupDeviceArray:
+   global_status = 0
+   status = 1
+   for j in DeviceArray:
+    if i[1] == j[4]:
+     for k in j[3]:
+      if str(k) == "Up":
+        global_status = 1
+      elif str(k) == "Down":
+		status = 0;
+      else:
+       global_status = global_status
+       status = status
+   
+   if global_status == 0:
+    print "\n *** ERROR: CLUSTER "+ i[1] + " NO OPERATIVO  *** "
+    getDownDevice(str(i[1]))
+   elif global_status == 1 and status == 0:
+    print "\n [!] WARNING: Dispositivo de "+i[1]+" NO OPERATIVO [!]" 
+    getDownDevice(str(i[1]))
+    
 ##Obtener nombres a partir de IDs##
 def getBusinessRoleName(BusinessRoleID):
   for i in BusinessRoleArray:
@@ -441,7 +462,7 @@ def inicializacion():
  cargaUsedByRelationship()
  cargaGroup()
  cargaDevice()
- #getDownDevice()
+ getDownDeviceGroup()
  BusinessServicePorGroup()
  #runtest()
  
