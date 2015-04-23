@@ -55,7 +55,7 @@ def LecturaPuertosValores():
      valor.append(k.attributes.get("value").value) 
     else:
      valor.append("Campo Vacío")
-    if (k.attributes.get("key").value == "URL_Servicio") or (k.attributes.get("key").value == "Puerto_Servicio"):
+    if (k.attributes.get("key").value == "URL_Servicio") or (k.attributes.get("key").value == "Puerto_Servicio") or (k.attributes.get("key").value == "Protocolo_Servicio"):
      claveiris = str(k.attributes.get("key").value)  
      valoriris = (str(k.attributes.get("value").value))
     if servicio in ArrayRediris:
@@ -65,11 +65,11 @@ def LecturaPuertosValores():
  
  
  cont = 0
- csvstr = "Servicio, Enlace, Puerto, \n"
+ csvstr = "Servicio, Enlace, Puerto, Protocolo \n"
  for i in listaFinal:
   csvstr = csvstr + i + ", "
   cont = cont + 1
-  if cont == 3:
+  if cont == 4:
    cont = 0
    csvstr = csvstr + "\n"
    
