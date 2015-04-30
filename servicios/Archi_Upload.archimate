@@ -502,7 +502,6 @@
     <element xsi:type="archimate:ApplicationService" id="ebb9f54b" name="Web ">
       <property key="URL_Servicio" value="www.ull.es"/>
       <property key="Puerto_Servicio" value="80"/>
-      <property key="Protocolo_Servicio" value="HTTP"/>
     </element>
     <element xsi:type="archimate:ApplicationService" id="eac9c369" name="Ficheros"/>
     <element xsi:type="archimate:ApplicationService" id="0ebb6b21" name="RProxy"/>
@@ -531,7 +530,6 @@
     <element xsi:type="archimate:ApplicationService" id="f19c200b" name="Web  Edit">
       <property key="URL_Servicio" value="www.ull.es/login/index.aspx"/>
       <property key="Puerto_Servicio" value="443"/>
-      <property key="Protocolo_Servicio" value="HTTPS"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" id="af6b6d61" name="Servidor SQUID"/>
   </folder>

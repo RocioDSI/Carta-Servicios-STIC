@@ -21,15 +21,15 @@
 #    <http://www.gnu.org/licenses/>.
 #
 -->
-	{% extends "plantilla.html" %}
+	{% extends "plantilla_upload.html" %}
 	{% block titulo %}
 		<li class="active">Universidad de La Laguna - Generador de Webs HTML</li>
 	{% endblock %}
 	{% block content %}
 	<h1 class="main-title" align="left">&nbsp &nbsp Generador de Webs HTML - Carta de Servicios</h1>
-	<div class="container-fluid">
-		<div class="col-sm-4">
-			<div class="col-md-9 col-md-push-3" role="main"> 
+	<div class="container">
+		<div class="col-md-offset-3 col-md-4">
+			<div class="col-md-9" role="main"> 
 				<br><br>
 				<form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
 				{{ form.as_p }}
