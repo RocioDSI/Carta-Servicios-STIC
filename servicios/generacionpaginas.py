@@ -145,7 +145,7 @@ def generahtmlservicio(serviceID,nombreuni="",nombrecorto=""):
 {% block contenido %}
 {% block titulo %}
 																																    
-	<li class="active">""" + nombreuni + """ - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views."""+ formatstring(funcionesxml.getServiceGroup(serviceID)) + """" %}"> """ + str(funcionesxml.getServiceGroup(serviceID)) + """</a> - """+ nombreServicio + """</li>
+	<li class="active">""" + nombreuni + """ - <a href="{% url "servicios_stic.views.index"%}">Carta de Servicios del STIC</a> - <a href="{% url "servicios_stic.views."""+ str(funcionesxml.getServiceGroup(serviceID)) + """" %}"> """ + str(funcionesxml.getServiceGroup(serviceID)) + """</a> - """+ nombreServicio + """</li>
 {% endblock %}
 
 {% block content %}
@@ -157,7 +157,7 @@ def generahtmlservicio(serviceID,nombreuni="",nombrecorto=""):
 					<p> ID: """ + serviceID + """ </p>
 					<p> Grupo de Servicio: """ + str(funcionesxml.getServiceGroup(serviceID)) + """ </p>
 					<p> Criticidad: """+ str(funcionesxml.getServiceCritic(serviceID)) +"""</p>
-					<p> Nivel de Acceso: """+ str(funcionesxml.getServiceAccess(serviceID)) +"""</p>
+					<p> Nivel de Acceso: """+ str(funcionesxml.ServiceAccess(serviceID)) +"""</p>
                     <p> Roles: """  
 		 
   

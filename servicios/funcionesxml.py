@@ -102,6 +102,7 @@ def cargaBusinessService():
     acceso = ServiceAccess(id_servicio)
     if(nombre_servicio not in ["Servicio","Servicio 1","Servicio 2","Servicio 3"]):
      BusinessServiceArray.append([id_servicio,nombre_servicio, clave, valor, criticidad, acceso])
+
          
 #Almacenamiento de roles
 def cargaBusinessRole():
@@ -462,9 +463,9 @@ def inicializacion():
  cargaUsedByRelationship()
  cargaGroup()
  cargaDevice()
- getDownDeviceGroup()
+ #getDownDeviceGroup()
  BusinessServicePorGroup()
- #runtest()
+ runtest()
  
 ############### TEST ###############
  
