@@ -110,15 +110,18 @@ def cargaBusinessService():
 #Recorrer SondaArray
 def recorrerSondaArray():
   for i in SondaArray: 
-   print i[1] 
+   print "###### Sonda: " + i[1] + " - [Nivel: " + str(getNivelAcceso(getGroupID(i[4]))) + ", " + i[4] + "] ######" 
+   print "Servicios Monitorizados: "
    for j in getGroupServices(getGroupID(i[4])):
-    print getBusinessServiceName(j)
+    print "->" + getBusinessServiceName(j)
+
    for k in GroupAccessArray:
     if(getNivelAcceso(k[0]) < getNivelAcceso(getGroupID(i[4]))):
-     print getNivelAcceso(k[0]) 
+     print " ###### Nivel Inferior: [Nivel: " + getNivelAcceso(k[0]) +", "+k[1]+"] ######"
+     print "    Servicios Monitorizados: "
      for z in getGroupServices(k[0]):
-      print "            " + getBusinessServiceName(z)
-    
+      print "    ->" + getBusinessServiceName(z)
+   print "\n\n"
          
 #Almacenamiento de roles
 def cargaBusinessRole():
