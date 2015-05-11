@@ -24,7 +24,7 @@
 #
 
 import funcionesxml
-
+import os 
 lista = funcionesxml.nodos[0].getElementsByTagName("folder")
 listaEl = funcionesxml.nodos[0].getElementsByTagName("element")
 listaFinal = []
@@ -32,6 +32,7 @@ ArrayRediris = []
 
 def main():
  funcionesxml.inicializacion()
+ os.system('clear')
  LecturaPuertosValores()
  
 def LecturaPuertosValores():

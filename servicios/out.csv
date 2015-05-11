@@ -1,3 +1,4 @@
 Servicio, Enlace, Puerto, Protocolo 
-Web institucional, www.ull.es, 80, HTTP, 
-Web edit, www.ull.es/login/index.aspx, 443, HTTPS, 
+ Web institucional, www.ull.es, 80, http, 
+ Docencia Virtual, campusvirtual.ull.es, 443, https, 
+ Sede electrónica, sede.ull.es, 443, https, 
