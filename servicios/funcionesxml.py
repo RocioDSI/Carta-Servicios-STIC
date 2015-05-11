@@ -190,7 +190,10 @@ def cargaGroup():
         elif(nodo.attributes.get("name").value == VistaRoles):
          GroupRoleArray.append([id_grupo,nombre_grupo])
         elif(nodo.attributes.get("name").value == VistaAcceso):
+         listanietos = hijo.getElementsByTagName("property")
+         nivel_grupo = listanietos[0].attributes.get("value").value
          GroupAccessArray.append([id_grupo,nombre_grupo, nivel_grupo])
+         print [id_grupo,nombre_grupo, nivel_grupo]
         elif(nodo.attributes.get("name").value == "Web institucional"):
          GroupDeviceArray.append([id_grupo,nombre_grupo])
                   
