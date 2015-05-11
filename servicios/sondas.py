@@ -20,42 +20,7 @@
 #    <http://www.gnu.org/licenses/>.
 #
 
-desc "Ejecutar la aplicacion en Firefox"
-task :runapp do
-  sh "python ejecutable.py"
-  sh "python manage.py runserver &"
-  sh "firefox localhost:8000 &"
-end
+import funcionesxml
 
-desc "Iniciar servidor"
-task :server do
-  sh "python manage.py runserver"
-end
-
-desc "Volver a generar las paginas"
-task :recargar do
-  sh "python ejecutable.py"
-end
-
-desc "Parar el servidor"
-task :stopserver do
-  sh "killall python"
-end
-
-desc "Ejecutar el modulo upload"
-task :upload do
-  sh "python ejecutable.py"
-  sh "python manage.py runserver &"
-  sh "firefox localhost:8000/uploads &"
-end
-
-desc "Ejecutar los test"
-task :test do
-  sh "python test_unittest.py Archi_Test.archimate"
-  sh "python test_selenium.py"
-end
-
-desc "Comprobar Sondas"
-task :sonda do
-  sh "python sondas.py"
-end
+funcionesxml.inicializacion()
+funcionesxml.recorrerSondaArray()

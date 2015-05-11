@@ -495,7 +495,6 @@ def inicializacion():
  cargaDevice()
  #getDownDeviceGroup()
  BusinessServicePorGroup()
- recorrerSondaArray()
  #runtest()
  
  
