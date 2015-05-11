@@ -113,9 +113,12 @@ def recorrerSondaArray():
    print i[1] 
    for j in getGroupServices(getGroupID(i[4])):
     print getBusinessServiceName(j)
-  
-   
-   
+   for k in GroupAccessArray:
+    if(getNivelAcceso(k[0]) < getNivelAcceso(getGroupID(i[4]))):
+     print getNivelAcceso(k[0]) 
+     for z in getGroupServices(k[0]):
+      print "            " + getBusinessServiceName(z)
+    
          
 #Almacenamiento de roles
 def cargaBusinessRole():
@@ -251,6 +254,13 @@ def DeviceGroup(deviceID):
         if(deviceID == id_nieto):
          return hijo.attributes.get("name").value
                   
+#Obtener nivel de acceso a través de la ID de un grupo de acceso     
+def getNivelAcceso(GroupID):
+ for i in GroupAccessArray:
+  if (GroupID == i[0]):
+	return i[2]
+	
+	
 #A partir de un Device o Infraestructure Service, llegar a la componente de aplicación afectada
 def getUsedByChain(id_random):
 
