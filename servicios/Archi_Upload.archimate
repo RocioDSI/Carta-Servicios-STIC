@@ -490,6 +490,28 @@
       <element xsi:type="archimate:BusinessService" id="d3c674ca" name="Servicio 2"/>
       <element xsi:type="archimate:BusinessService" id="ccac76fa" name="Servicio 3"/>
     </folder>
+    <folder name="Sondas" id="dc9fcb6c">
+      <element xsi:type="archimate:BusinessService" id="1fb66d26" name="Sonda1">
+        <property key="Nombre"/>
+        <property key="IP"/>
+      </element>
+      <element xsi:type="archimate:BusinessService" id="ffd41a4c" name="Sonda2">
+        <property key="Nombre"/>
+        <property key="IP"/>
+      </element>
+      <element xsi:type="archimate:BusinessService" id="4e9685ab" name="Sonda3">
+        <property key="Nombre"/>
+        <property key="IP"/>
+      </element>
+      <element xsi:type="archimate:BusinessService" id="861f45f3" name="Sonda4">
+        <property key="Nombre"/>
+        <property key="IP"/>
+      </element>
+      <element xsi:type="archimate:BusinessService" id="8535e878" name="Sonda5">
+        <property key="Nombre"/>
+        <property key="IP"/>
+      </element>
+    </folder>
   </folder>
   <folder name="Application" id="6ee50dd0" type="application">
     <element xsi:type="archimate:ApplicationService" id="2c1ef40d" name="DNS"/>
@@ -2889,8 +2911,15 @@
           <bounds x="204" y="48" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="2a25cd2e" textAlignment="2" archimateElement="ef332f00">
-          <bounds x="134" y="147" width="120" height="55"/>
+          <bounds x="204" y="154" width="120" height="55"/>
         </child>
+        <child xsi:type="archimate:DiagramObject" id="35439873" textAlignment="2" archimateElement="1fb66d26">
+          <bounds x="39" y="154" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="e5ab168d" textAlignment="2" archimateElement="861f45f3">
+          <bounds x="108" y="110" width="120" height="55"/>
+        </child>
+        <property key="Nivel" value="1"/>
       </child>
       <child xsi:type="archimate:Group" id="7003e83a" name="ULL">
         <bounds x="528" y="288" width="517" height="109"/>
@@ -2939,17 +2968,24 @@
         <child xsi:type="archimate:DiagramObject" id="e7bf6f10" textAlignment="2" archimateElement="460b7b5a">
           <bounds x="393" y="442" width="120" height="55"/>
         </child>
+        <child xsi:type="archimate:DiagramObject" id="e3446b49" textAlignment="2" archimateElement="4e9685ab">
+          <bounds y="36" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="d2d4c3b3" textAlignment="2" archimateElement="8535e878">
+          <bounds x="231" y="33" width="120" height="55"/>
+        </child>
+        <property key="Nivel" value="3"/>
       </child>
       <child xsi:type="archimate:Group" id="21fca227" name="Administracion TIC">
         <bounds x="528" y="156" width="517" height="109"/>
         <child xsi:type="archimate:DiagramObject" id="601c7660" textAlignment="2" archimateElement="86df0ec6">
-          <bounds x="73" y="46" width="120" height="55"/>
+          <bounds x="144" y="48" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="8219cab2" textAlignment="2" archimateElement="a1a88947">
-          <bounds x="223" y="46" width="120" height="55"/>
+          <bounds x="271" y="46" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="ba6da472" textAlignment="2" archimateElement="f2b4cebe">
-          <bounds x="373" y="46" width="120" height="55"/>
+          <bounds x="390" y="46" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="73d6d5a3" textAlignment="2" archimateElement="9046e7ee">
           <bounds x="73" y="146" width="120" height="55"/>
@@ -3242,6 +3278,10 @@
         <child xsi:type="archimate:DiagramObject" id="4e9d216d" textAlignment="2" archimateElement="4cc234be">
           <bounds x="390" y="821" width="120" height="55"/>
         </child>
+        <child xsi:type="archimate:DiagramObject" id="60a3d905" textAlignment="2" archimateElement="ffd41a4c">
+          <bounds x="12" y="48" width="120" height="55"/>
+        </child>
+        <property key="Nivel " value="2"/>
       </child>
       <child xsi:type="archimate:Note" id="30d0aee0" font="1|DejaVu Sans|24.0|1|GTK|1|" textAlignment="1" borderType="2">
         <bounds x="408" y="60" width="445" height="44"/>

@@ -23,7 +23,7 @@
 #    <http://www.gnu.org/licenses/>.
 #
 
-import os, sys, getopt
+import os, sys, getopt, re
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -76,6 +76,7 @@ ApplicationComponentArray = []
 GroupDeviceArray = []
 ServicesPerGroupArray = []
 ViewsNameArray = []
+SondaArray = []
 
 #Nombre de las vistas
 VistaGruposServicios = "Carta de servicios"
@@ -100,9 +101,21 @@ def cargaBusinessService():
        valor.append("Campo Vacío")
     criticidad = ServiceCritic(id_servicio)
     acceso = ServiceAccess(id_servicio)
-    if(nombre_servicio not in ["Servicio","Servicio 1","Servicio 2","Servicio 3"]):
+    if not re.match('Servicio.*', nombre_servicio):
      BusinessServiceArray.append([id_servicio,nombre_servicio, clave, valor, criticidad, acceso])
-
+    if re.match('Sonda.*', nombre_servicio):
+	 SondaArray.append([id_servicio,nombre_servicio, clave, valor, acceso])
+ 
+ 
+#Recorrer SondaArray
+def recorrerSondaArray():
+  for i in SondaArray: 
+   print i[1] 
+   for j in getGroupServices(getGroupID(i[4])):
+    print getBusinessServiceName(j)
+  
+   
+   
          
 #Almacenamiento de roles
 def cargaBusinessRole():
@@ -177,7 +190,7 @@ def cargaGroup():
         elif(nodo.attributes.get("name").value == VistaRoles):
          GroupRoleArray.append([id_grupo,nombre_grupo])
         elif(nodo.attributes.get("name").value == VistaAcceso):
-         GroupAccessArray.append([id_grupo,nombre_grupo])
+         GroupAccessArray.append([id_grupo,nombre_grupo, nivel_grupo])
         elif(nodo.attributes.get("name").value == "Web institucional"):
          GroupDeviceArray.append([id_grupo,nombre_grupo])
                   
@@ -318,7 +331,8 @@ def getGroupServices(groupID):
          for i in BusinessServiceArray:
           if( i[0] == nieto.attributes.get("archimateElement").value):
            id_nieto = nieto.attributes.get("archimateElement").value
-           services.append(id_nieto)
+           if not re.match('Sonda.*', getBusinessServiceName(id_nieto)):
+            services.append(id_nieto)
   return services
 
 # Obtener los roles para los que un servicio está disponible
@@ -437,10 +451,11 @@ def getGroupID(GroupName):
     if(GroupName == i[1]):
        ID = i[0]
        return ID
-  for i in GroupRoleArray:
+  for i in GroupAccessArray:
     if(GroupName == i[1]):
        ID = i[0]
        return ID
+   
   
 
 
@@ -465,7 +480,9 @@ def inicializacion():
  cargaDevice()
  #getDownDeviceGroup()
  BusinessServicePorGroup()
- runtest()
+ recorrerSondaArray()
+ #runtest()
+ 
  
 ############### TEST ###############
  

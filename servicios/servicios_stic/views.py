@@ -555,8 +555,8 @@ def _videoconferencia_inmersion(request):
  return response
 	   
 	   
-def web_institucional(request):
- response = render_to_response('web_institucional.html')
+def _web_institucional(request):
+ response = render_to_response('_web_institucional.html')
  return response
 	   
 	   
@@ -702,6 +702,31 @@ def _autenticacion_centralizada(request):
 	   
 def _gestion_de_certificados(request):
  response = render_to_response('_gestion_de_certificados.html')
+ return response
+	   
+	   
+def sonda1(request):
+ response = render_to_response('sonda1.html')
+ return response
+	   
+	   
+def sonda2(request):
+ response = render_to_response('sonda2.html')
+ return response
+	   
+	   
+def sonda3(request):
+ response = render_to_response('sonda3.html')
+ return response
+	   
+	   
+def sonda4(request):
+ response = render_to_response('sonda4.html')
+ return response
+	   
+	   
+def sonda5(request):
+ response = render_to_response('sonda5.html')
  return response
 	   
 	   
