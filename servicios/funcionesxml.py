@@ -105,6 +105,7 @@ def cargaBusinessService():
      BusinessServiceArray.append([id_servicio,nombre_servicio, clave, valor, criticidad, acceso])
     if re.match('Sonda.*', nombre_servicio):
 	 SondaArray.append([id_servicio,nombre_servicio, clave, valor, acceso])
+
  
  
 #Recorrer SondaArray

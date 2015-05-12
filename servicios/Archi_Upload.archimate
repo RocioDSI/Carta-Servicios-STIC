@@ -492,26 +492,36 @@
     </folder>
     <folder name="Sondas" id="dc9fcb6c">
       <element xsi:type="archimate:BusinessService" id="1fb66d26" name="Sonda1">
-        <property key="Nombre"/>
-        <property key="IP"/>
+        <property key="Nombre" value="Sonda Edificio Central"/>
+        <property key="IP" value="1.1.1.1"/>
+        <property key="Coordenadas" value="-16.316443, 28.482153"/>
       </element>
       <element xsi:type="archimate:BusinessService" id="ffd41a4c" name="Sonda2">
-        <property key="Nombre"/>
-        <property key="IP"/>
+        <property key="Nombre" value="Sonda ESIT"/>
+        <property key="IP" value="2.2.2.2"/>
+        <property key="Coordenadas" value="-16.321392, 28.483155"/>
       </element>
       <element xsi:type="archimate:BusinessService" id="4e9685ab" name="Sonda3">
-        <property key="Nombre"/>
-        <property key="IP"/>
+        <property key="Nombre" value="Sonda Departamental de Guajara"/>
+        <property key="IP" value="3.3.3.3"/>
+        <property key="Coordenadas" value="-16.303571, 28.468318"/>
       </element>
       <element xsi:type="archimate:BusinessService" id="861f45f3" name="Sonda4">
-        <property key="Nombre"/>
-        <property key="IP"/>
+        <property key="Nombre" value="Sonda Física y Matemáticas"/>
+        <property key="IP" value="4.4.4.4"/>
+        <property key="Coordenadas" value="-16.320892, 28.482176"/>
       </element>
       <element xsi:type="archimate:BusinessService" id="8535e878" name="Sonda5">
-        <property key="Nombre"/>
-        <property key="IP"/>
+        <property key="Nombre" value="Sonda Facultad de Educación"/>
+        <property key="IP" value="5.5.5.5"/>
+        <property key="Coordenadas" value="-16.317670,  28.481746"/>
       </element>
     </folder>
+    <element xsi:type="archimate:BusinessService" id="663295dd" name="Sonda 6">
+      <property key="Nombre" value="Sonda RedIris"/>
+      <property key="IP" value="3.3.3.3"/>
+      <property key="Coordenadas" value=" -3.698101,  40.409567"/>
+    </element>
   </folder>
   <folder name="Application" id="6ee50dd0" type="application">
     <element xsi:type="archimate:ApplicationService" id="2c1ef40d" name="DNS"/>
@@ -2905,7 +2915,7 @@
       <child xsi:type="archimate:Group" id="10db4a08" name="Internet">
         <bounds x="84" y="156" width="400" height="229"/>
         <child xsi:type="archimate:DiagramObject" id="1002c368" textAlignment="2" archimateElement="55768270">
-          <bounds x="38" y="56" width="120" height="55"/>
+          <bounds x="25" y="48" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="1f0aaac9" textAlignment="2" archimateElement="f7290be7">
           <bounds x="204" y="48" width="120" height="55"/>
@@ -2914,10 +2924,13 @@
           <bounds x="204" y="154" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="35439873" textAlignment="2" archimateElement="1fb66d26">
-          <bounds x="39" y="154" width="120" height="55"/>
+          <bounds x="25" y="154" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="e5ab168d" textAlignment="2" archimateElement="861f45f3">
-          <bounds x="108" y="110" width="120" height="55"/>
+          <bounds x="120" y="102" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="7186e1f9" textAlignment="2" archimateElement="663295dd">
+          <bounds x="264" y="102" width="120" height="55"/>
         </child>
         <property key="Nivel" value="1"/>
       </child>

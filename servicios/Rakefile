@@ -59,3 +59,8 @@ desc "Comprobar Sondas"
 task :sonda do
   sh "python sondas.py"
 end
+
+desc "Generar fichero KML de sondas"
+task :maps do
+  sh "python maps.py"
+end

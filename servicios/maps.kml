@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>	
+	<Style id="stic_icon">
+		<IconStyle>
+			<Icon>
+				<href>IconMap.jpg</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+      <Placemark>
+        <name>Sonda Edificio Central</name>
+        <description> 1.1.1.1</description>
+        <styleUrl>#stic_icon</styleUrl>
+        <Point>
+          <coordinates>-16.316443, 28.482153,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sonda ESIT</name>
+        <description> 2.2.2.2</description>
+        <styleUrl>#stic_icon</styleUrl>
+        <Point>
+          <coordinates>-16.321392, 28.483155,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sonda Departamental de Guajara</name>
+        <description> 3.3.3.3</description>
+        <styleUrl>#stic_icon</styleUrl>
+        <Point>
+          <coordinates>-16.303571, 28.468318,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sonda Física y Matemáticas</name>
+        <description> 4.4.4.4</description>
+        <styleUrl>#stic_icon</styleUrl>
+        <Point>
+          <coordinates>-16.320892, 28.482176,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sonda Facultad de Educación</name>
+        <description> 5.5.5.5</description>
+        <styleUrl>#stic_icon</styleUrl>
+        <Point>
+          <coordinates>-16.317670,  28.481746,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sonda RedIris</name>
+        <description> 3.3.3.3</description>
+        <styleUrl>#stic_icon</styleUrl>
+        <Point>
+          <coordinates> -3.698101,  40.409567,0</coordinates>
+        </Point>
+      </Placemark>
+       </Document>
+</kml>
