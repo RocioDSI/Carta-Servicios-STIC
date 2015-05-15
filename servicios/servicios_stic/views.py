@@ -730,3 +730,8 @@ def sonda5(request):
  return response
 	   
 	   
+def sonda_6(request):
+ response = render_to_response('sonda_6.html')
+ return response
+	   
+	   

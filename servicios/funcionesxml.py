@@ -84,6 +84,38 @@ VistaRoles = "Roles"
 VistaCriticidad = "Criticidad"
 VistaAcceso = "Nivel de Acceso"
 
+
+def getPuerto(ServiceID):
+ list1_prop = []
+ for k in lista:
+  if(k.attributes.get("xsi:type").value  == "archimate:ApplicationService"):
+   if(str(ServiceID) == str(getBusinessServiceID(getUsedByBusiness(k.attributes.get("id").value)))):
+    list1_prop = k.getElementsByTagName("property")
+    for z in list1_prop: 
+     if(str(z.attributes.get("key").value) == "Puerto_Servicio"):
+      return z.attributes.get("value").value
+
+def getProtocolo(ServiceID):
+ list1_prop = []
+ for k in lista:
+  if(k.attributes.get("xsi:type").value  == "archimate:ApplicationService"):
+   if(str(ServiceID) == str(getBusinessServiceID(getUsedByBusiness(k.attributes.get("id").value)))):
+    list1_prop = k.getElementsByTagName("property")
+    for z in list1_prop: 
+     if(str(z.attributes.get("key").value) == "Protocolo_Servicio"):
+      return z.attributes.get("value").value
+      
+def getURL(ServiceID):
+ list1_prop = []
+ for k in lista:
+  if(k.attributes.get("xsi:type").value  == "archimate:ApplicationService"):
+   if(str(ServiceID) == str(getBusinessServiceID(getUsedByBusiness(k.attributes.get("id").value)))):
+    list1_prop = k.getElementsByTagName("property")
+    for z in list1_prop: 
+     if(str(z.attributes.get("key").value) == "URL_Servicio"):
+      return z.attributes.get("value").value     
+
+
 #Almacenamiento de servicios
 def cargaBusinessService():
   for nodo in lista:
