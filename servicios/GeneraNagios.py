@@ -32,15 +32,21 @@ ServicioSonda = [] #Vector que contendrá los servicios de una sonda
 def GeneraNagios():
  nagstr = ""
  funcionesxml.inicializacion()
- nagstr += "Fichero configuracion nagios"
+  
  
  for i in funcionesxml.SondaArray: 
   fichero = open("./confgSonda/host/" + generacionpaginas.formatstring(i[3][0]) + ".cfg","w")
+  nagstr += "## services/" + generacionpaginas.formatstring(i[3][0]) + ".cfg \n\n"
   for j in funcionesxml.getGroupServices(funcionesxml.getGroupID(i[4])):
    ServicioSonda.append(funcionesxml.getBusinessServiceName(j))
-   print "Servicio: "+ str(funcionesxml.getBusinessServiceName(j)) + " PUERTO: " + str(funcionesxml.getPuerto(j))+ " PROTOCOLO: " + str(funcionesxml.getProtocolo(j))+ " URL: " +str(funcionesxml.getURL(j))
+   #print "Servicio: "+ str(funcionesxml.getBusinessServiceName(j)) + " PUERTO: " + str(funcionesxml.getPuerto(j))+ " PROTOCOLO: " + str(funcionesxml.getProtocolo(j))+ " URL: " +str(funcionesxml.getURL(j))
+ 
+  for i in ServicioSonda:
+   nagstr += "define service{\n use: "
+   nagstr += i + "\n"
+   nagstr += "}\n\n"
   
-  nagstr += str(ServicioSonda)
+  
   fichero.write(nagstr)
   fichero.close
  
