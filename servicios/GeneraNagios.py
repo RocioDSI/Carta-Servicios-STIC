@@ -30,25 +30,46 @@ ServicioSonda = [] #Vector que contendrá los servicios de una sonda
 
 #Creacion fichero configuracion Nagios
 def GeneraNagios():
- nagstr = ""
+ nagstr1 = ""
+ nagstr2 = ""
+ nagstr3 = ""
+ 
  funcionesxml.inicializacion()
   
  
  for i in funcionesxml.SondaArray: 
-  fichero = open("./confgSonda/host/" + generacionpaginas.formatstring(i[3][0]) + ".cfg","w")
-  nagstr += "## services/" + generacionpaginas.formatstring(i[3][0]) + ".cfg \n\n"
+  #CREACION DE FICHEROS NAGIOS
+  ficheroservicio = open("./confgSonda/servicio/" + generacionpaginas.formatstring(i[3][0]) + ".cfg","w")
+  ficherohost = open("./confgSonda/host/" + generacionpaginas.formatstring(i[3][0]) + ".cfg","w")
+  ficherohost_group = open("./confgSonda/host_group/" + generacionpaginas.formatstring(i[3][0]) + ".cfg","w")
+  
+  #CREACION FICHEROS SERVICIO
+  nagstr1 += "## services/" + generacionpaginas.formatstring(i[3][0]) + ".cfg \n\n"
   for j in funcionesxml.getGroupServices(funcionesxml.getGroupID(i[4])):
    ServicioSonda.append(funcionesxml.getBusinessServiceName(j))
    #print "Servicio: "+ str(funcionesxml.getBusinessServiceName(j)) + " PUERTO: " + str(funcionesxml.getPuerto(j))+ " PROTOCOLO: " + str(funcionesxml.getProtocolo(j))+ " URL: " +str(funcionesxml.getURL(j))
- 
-  for i in ServicioSonda:
-   nagstr += "define service{\n use: "
-   nagstr += i + "\n"
-   nagstr += "}\n\n"
+  for k in ServicioSonda:
+   nagstr1 += "define service{\n use: "
+   nagstr1 += k + "\n" + " host_name: " + "---\n" + " contact_groups: " + "---\n"
+   nagstr1 += "}\n\n"
   
+  #CREACION FICHEROS HOST_GROUP
+  nagstr2 += "## host_group/" + generacionpaginas.formatstring(i[3][0]) + ".cfg \n\n"
+  nagstr2 += "define hostgroup{\n hostgroup_name: " + "---\n " + "alias: " + "---\n " + "members: " + "---\n"
+  nagstr2 += "}\n\n"
+   
+   
+  #CREACION FICHEROS HOST_GROUP
+  nagstr3 += "## host/" + generacionpaginas.formatstring(i[3][0]) + ".cfg \n\n"
+  nagstr3 += " "
+
   
-  fichero.write(nagstr)
-  fichero.close
+  ficheroservicio.write(nagstr1)
+  ficherohost.write(nagstr3)
+  ficherohost_group.write(nagstr2)
+  ficheroservicio.close
+  ficherohost.close
+  ficherohost_group.close
  
  
 GeneraNagios()
