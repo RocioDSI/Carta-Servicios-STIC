@@ -364,6 +364,23 @@ def getServiceAllGroups(serviceID):
      groups.append(i[0])
   return group
 
+
+def getGroupArqu():
+  services=[]
+  for nodo in lista:
+   if(nodo.attributes.get("xsi:type").value == "archimate:ArchimateDiagramModel"):
+    listahijos = nodo.getElementsByTagName("child")
+    for hijo in listahijos:
+     if (hijo.attributes.get("xsi:type").value == "archimate:Group"):      
+      listanietos = hijo.getElementsByTagName("child")
+      print listanietos
+      #for nieto in listanietos:
+       #id_nieto = nieto.attributes.get("archimateElement").value
+       #print hijo.attributes.get("name").value
+
+  return services
+
+
 # Obtener los servicios de un grupo (de Servicios, Crticidad o por Rol) a través del identificador de grupo
 def getGroupServices(groupID):
   services=[]
@@ -527,6 +544,7 @@ def inicializacion():
  cargaGroup()
  cargaDevice()
  #getDownDeviceGroup()
+ getGroupArqu()
  BusinessServicePorGroup()
  #runtest()
  
